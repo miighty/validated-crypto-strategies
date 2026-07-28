@@ -1,0 +1,11 @@
+strategy,status,validated_coin_count,evidence,claim_boundary
+breakout,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
+contrarian,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
+dca,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
+funding_arbitrage,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
+grid,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
+market_making,not_validated_missing_historical_order_book_and_fills,0,specification only; historical order-book and fill evidence absent,"research backtest, not a proven edge or live-trading approval"
+mean_reversion,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
+momentum,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
+statistical_arbitrage,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
+trend_following,historical_backtest_completed,10,"real Binance candles/funding plus committed trades, returns, and metrics","research backtest, not a proven edge or live-trading approval"
