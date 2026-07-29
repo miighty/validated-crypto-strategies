@@ -12,6 +12,27 @@ A public, reproducible research package that states exactly which requested cryp
 
 See [REPORT.md](REPORT.md) for the result tables and [docs/METHODOLOGY.md](docs/METHODOLOGY.md) for exact strategy and validation rules.
 
+## Strategies run and historical P&L
+
+The figures below use each strategy's committed daily return series to build a hypothetical **$10,000 equal-weight portfolio across the ten requested assets**. P&L is ending equity minus $10,000 after the documented fees and slippage. These are in-sample historical research results, not forecasts or evidence of a durable trading edge.
+
+| Strategy | What was tested | Timeframe | Result status | Ending equity | Net P&L | Total return | Max drawdown |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: |
+| Trend following | EMA(20) cross in the EMA(50) direction with a 2×ATR trailing exit | 1d | Completed | $38,300.47 | +$28,300.47 | +283.00% | 58.35% |
+| Mean reversion | Bollinger Band touch plus RSI extreme, middle-band exit and 1.5×ATR stop | 4h | Completed | $109.98 | -$9,890.02 | -98.90% | 99.10% |
+| Cross-sectional momentum | Weekly long top three and short bottom three by 20-day return | 1d | Completed | $11,505.22 | +$1,505.22 | +15.05% | 8.13% |
+| Breakout | Prior 20-bar high/low break with 1.5× volume confirmation and 2×ATR trail | 4h | Completed | $13,956.25 | +$3,956.25 | +39.56% | 61.25% |
+| Grid | Twenty 2% levels around the prior finalized daily close, capped at ±1 exposure | 1h | Completed | $302.85 | -$9,697.15 | -96.97% | 97.23% |
+| DCA | Invest $100 weekly from each asset run's fixed $10,000 cash balance until depleted | 1d | Completed | $238,963.48 | +$228,963.48 | +2,289.63% | 78.33% |
+| Funding arbitrage | Delta-neutral spot/perpetual position when real absolute funding exceeds 0.05% | Funding events | Preliminary backtest completed | $6,891.51 | -$3,108.49 | -31.08% | 31.50% |
+| Statistical arbitrage | Five requested pairs using a 30-day log-ratio z-score with ±2 entry | 4h | Completed | $3,782.96 | -$6,217.04 | -62.17% | 63.02% |
+| Market making | Requested 0.3% two-sided spread and inventory rules | Order-book data required | **Not run / not validated** | — | — | — | — |
+| Contrarian | RSI below 20/above 80 with 2× volume confirmation and 3×ATR stop | 1d | Completed | $4,174.81 | -$5,825.19 | -58.25% | 64.96% |
+
+No requested strategy is absent from the report. Market making is the only strategy without a backtest result or P&L because the dataset contains candles rather than historical order-book events and executable fills. Funding arbitrage has a result, but it remains preliminary because borrow costs, basis movement, collateral yield, margin and liquidation are not modeled.
+
+The figures can be reproduced from [results/strategy_daily_returns.csv](results/strategy_daily_returns.csv). Per-asset/per-regime metrics are in [results/all_metrics.csv](results/all_metrics.csv), and the evidence status for every requested strategy is in [results/validation_status.csv](results/validation_status.csv).
+
 ## Quick start
 
 ```bash
