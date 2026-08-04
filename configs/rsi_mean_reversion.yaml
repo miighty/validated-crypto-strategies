@@ -1,0 +1,30 @@
+experiment_id: EXP-2026-08-04-RSI-001
+experiment_type: rsi_mean_reversion
+data_config: configs/data.yaml
+initial_capital: 10000
+fee_rate: 0.0005
+slippage_rate: 0.0005
+entry_delay_bars: 1
+sizing: fixed_fraction
+allocation_fraction: 1.0
+risk_fraction: 0.01
+max_allocation: 1.0
+parameters:
+  rsi_period: 14
+  entry_thresholds: [25, 30, 35]
+  holding_periods: [2, 4, 8]
+  exit_rsi: 50
+  stop_atr_multiple: 2.0
+  random_repetitions: 20
+  random_seed: 1729
+  negative_candle_atr: 1.0
+splits:
+  development_start: "2016-01-01T00:00:00Z"
+  development_end: "2020-01-01T00:00:00Z"
+  validation_end: "2024-01-01T00:00:00Z"
+  test_end: latest_data
+tradingview:
+  pine_script: pine/rsi_mean_reversion_strategy.pine
+  default_charts: ["BINANCE:BTCUSDT", "BINANCE:ETHUSDT", "BINANCE:SOLUSDT"]
+  timeframe: "240"
+report_directory: reports

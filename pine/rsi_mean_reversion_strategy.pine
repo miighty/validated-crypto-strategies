@@ -1,0 +1,73 @@
+//@version=6
+strategy(
+     "Edge Research — RSI Mean Reversion",
+     overlay = true,
+     initial_capital = 10000,
+     default_qty_type = strategy.percent_of_equity,
+     default_qty_value = 100,
+     commission_type = strategy.commission.percent,
+     commission_value = 0.05,
+     slippage = 0,
+     pyramiding = 0,
+     process_orders_on_close = false)
+
+// TradingView fills market orders on the next available tick (normally the next
+// bar open) because process_orders_on_close is false. Configure chart-specific
+// slippage in Strategy Properties; Pine's built-in slippage is denominated in ticks.
+
+windowMode = input.string("Forward 2024–2026", "Research window", options = ["Development 2016–2020", "Validation 2020–2024", "Forward 2024–2026", "Custom"])
+customStart = input.time(timestamp("01 Jan 2016 00:00 +0000"), "Custom start (UTC)")
+customEnd = input.time(timestamp("01 Jan 2027 00:00 +0000"), "Custom end, exclusive (UTC)")
+rsiPeriod = input.int(14, "RSI period", minval = 2)
+entryThreshold = input.float(30.0, "RSI entry threshold", options = [25.0, 30.0, 35.0])
+exitThreshold = input.float(50.0, "RSI exit threshold", minval = 0, maxval = 100)
+maximumHoldingBars = input.int(4, "Maximum holding bars", options = [2, 4, 8])
+atrPeriod = input.int(14, "ATR period", minval = 2)
+stopAtrMultiple = input.float(2.0, "Stop distance (ATR)", minval = 0.1, step = 0.1)
+
+developmentStart = timestamp("01 Jan 2016 00:00 +0000")
+developmentEnd = timestamp("01 Jan 2020 00:00 +0000")
+validationEnd = timestamp("01 Jan 2024 00:00 +0000")
+forwardEnd = timestamp("01 Jan 2027 00:00 +0000")
+windowStart = switch windowMode
+    "Development 2016–2020" => developmentStart
+    "Validation 2020–2024" => developmentEnd
+    "Forward 2024–2026" => validationEnd
+    => customStart
+windowEnd = switch windowMode
+    "Development 2016–2020" => developmentEnd
+    "Validation 2020–2024" => validationEnd
+    "Forward 2024–2026" => forwardEnd
+    => customEnd
+inWindow = time >= windowStart and time < windowEnd
+
+rsiValue = ta.rsi(close, rsiPeriod)
+atrValue = ta.atr(atrPeriod)
+entrySignal = barstate.isconfirmed and inWindow and rsiValue < entryThreshold
+
+var float pendingAtr = na
+var float entryAtr = na
+var int entryBar = na
+
+if entrySignal and strategy.position_size == 0
+    pendingAtr := atrValue
+    strategy.entry("RSI Long", strategy.long)
+
+openedLong = strategy.position_size > 0 and strategy.position_size[1] <= 0
+if openedLong
+    entryAtr := pendingAtr
+    entryBar := bar_index
+
+if strategy.position_size > 0
+    stopPrice = strategy.position_avg_price - stopAtrMultiple * entryAtr
+    strategy.exit("RSI ATR Stop", from_entry = "RSI Long", stop = stopPrice)
+    heldBars = bar_index - entryBar + 1
+    if barstate.isconfirmed and (rsiValue > exitThreshold or heldBars >= maximumHoldingBars)
+        strategy.close("RSI Long", comment = rsiValue > exitThreshold ? "RSI exit" : "Time exit")
+
+if not inWindow and strategy.position_size != 0
+    strategy.close_all(comment = "Window end")
+
+plot(rsiValue, "RSI", display = display.data_window)
+plot(entryThreshold, "RSI entry", display = display.data_window)
+bgcolor(inWindow ? color.new(color.teal, 94) : na, title = "Active research window")

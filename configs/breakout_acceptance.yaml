@@ -1,0 +1,30 @@
+experiment_id: EXP-2026-08-04-BO-001
+experiment_type: breakout_acceptance_rejection
+data_config: configs/data.yaml
+initial_capital: 10000
+fee_rate: 0.0005
+slippage_rate: 0.0005
+entry_delay_bars: 1
+sizing: fixed_fraction
+allocation_fraction: 1.0
+risk_fraction: 0.01
+max_allocation: 1.0
+parameters:
+  lookbacks: [20, 50]
+  acceptance_windows: [1, 2]
+  atr_buffers: [0.0, 0.1]
+  atr_period: 14
+  stop_atr_multiple: 2.0
+  holding_period: 24
+  nearby_lookbacks: [15, 20, 30, 50, 75]
+  horizon_sensitivity: [12, 24, 48]
+splits:
+  development_start: "2016-01-01T00:00:00Z"
+  development_end: "2020-01-01T00:00:00Z"
+  validation_end: "2024-01-01T00:00:00Z"
+  test_end: latest_data
+tradingview:
+  pine_script: pine/breakout_acceptance_rejection_strategy.pine
+  default_charts: ["BINANCE:BTCUSDT", "BINANCE:ETHUSDT", "BINANCE:SOLUSDT"]
+  timeframe: "240"
+report_directory: reports

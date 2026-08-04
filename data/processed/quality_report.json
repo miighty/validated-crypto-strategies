@@ -1,0 +1,55 @@
+{
+  "dataset_version": "crypto_edge_4h_v1",
+  "source": "binance_spot",
+  "timeframe": "4h",
+  "start_requested": "2016-01-01T00:00:00+00:00",
+  "end_exclusive": "2026-08-04T12:00:00+00:00",
+  "generated_at": "2026-08-04T12:02:34.413625+00:00",
+  "datasets": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "4h",
+      "rows": 19630,
+      "first_timestamp": "2017-08-17T04:00:00+00:00",
+      "last_timestamp": "2026-08-04T08:00:00+00:00",
+      "missing_candles": 16,
+      "largest_gap_hours": 32.0,
+      "source": "Binance spot REST /api/v3/klines",
+      "source_symbol": "BTCUSDT",
+      "duplicates_removed": 0,
+      "downloaded_at": "2026-08-04T12:02:18.669939+00:00",
+      "end_exclusive": "2026-08-04T12:00:00+00:00",
+      "file": "data/processed/BTCUSDT_4h.parquet"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "4h",
+      "rows": 19630,
+      "first_timestamp": "2017-08-17T04:00:00+00:00",
+      "last_timestamp": "2026-08-04T08:00:00+00:00",
+      "missing_candles": 16,
+      "largest_gap_hours": 32.0,
+      "source": "Binance spot REST /api/v3/klines",
+      "source_symbol": "ETHUSDT",
+      "duplicates_removed": 0,
+      "downloaded_at": "2026-08-04T12:02:28.726531+00:00",
+      "end_exclusive": "2026-08-04T12:00:00+00:00",
+      "file": "data/processed/ETHUSDT_4h.parquet"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "4h",
+      "rows": 13106,
+      "first_timestamp": "2020-08-11T04:00:00+00:00",
+      "last_timestamp": "2026-08-04T08:00:00+00:00",
+      "missing_candles": 0,
+      "largest_gap_hours": 4.0,
+      "source": "Binance spot REST /api/v3/klines",
+      "source_symbol": "SOLUSDT",
+      "duplicates_removed": 0,
+      "downloaded_at": "2026-08-04T12:02:34.353808+00:00",
+      "end_exclusive": "2026-08-04T12:00:00+00:00",
+      "file": "data/processed/SOLUSDT_4h.parquet"
+    }
+  ]
+}

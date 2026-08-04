@@ -1,0 +1,131 @@
+//@version=6
+strategy(
+     "Edge Research — Breakout Acceptance & Rejection",
+     overlay = true,
+     initial_capital = 10000,
+     default_qty_type = strategy.percent_of_equity,
+     default_qty_value = 100,
+     commission_type = strategy.commission.percent,
+     commission_value = 0.05,
+     slippage = 0,
+     pyramiding = 0,
+     process_orders_on_close = false)
+
+// Market orders fill on the following bar under normal bar-close calculation.
+// Configure chart-specific slippage in Strategy Properties (it is measured in ticks).
+
+variant = input.string("Immediate Long", "Variant", options = ["Immediate Long", "Acceptance Long", "Rejection Short"])
+windowMode = input.string("Forward 2024–2026", "Research window", options = ["Development 2016–2020", "Validation 2020–2024", "Forward 2024–2026", "Custom"])
+customStart = input.time(timestamp("01 Jan 2016 00:00 +0000"), "Custom start (UTC)")
+customEnd = input.time(timestamp("01 Jan 2027 00:00 +0000"), "Custom end, exclusive (UTC)")
+lookback = input.int(50, "Previous-high lookback", options = [15, 20, 30, 50, 75])
+confirmationWindow = input.int(2, "Acceptance/rejection window", options = [1, 2])
+atrPeriod = input.int(14, "ATR period", minval = 2)
+atrBuffer = input.float(0.1, "Level buffer (ATR)", options = [0.0, 0.1])
+stopAtrMultiple = input.float(2.0, "Stop distance (ATR)", minval = 0.1, step = 0.1)
+maximumHoldingBars = input.int(24, "Maximum holding bars", options = [12, 24, 48])
+
+developmentStart = timestamp("01 Jan 2016 00:00 +0000")
+developmentEnd = timestamp("01 Jan 2020 00:00 +0000")
+validationEnd = timestamp("01 Jan 2024 00:00 +0000")
+forwardEnd = timestamp("01 Jan 2027 00:00 +0000")
+windowStart = switch windowMode
+    "Development 2016–2020" => developmentStart
+    "Validation 2020–2024" => developmentEnd
+    "Forward 2024–2026" => validationEnd
+    => customStart
+windowEnd = switch windowMode
+    "Development 2016–2020" => developmentEnd
+    "Validation 2020–2024" => validationEnd
+    "Forward 2024–2026" => forwardEnd
+    => customEnd
+inWindow = time >= windowStart and time < windowEnd
+
+previousHigh = ta.highest(high[1], lookback)
+atrValue = ta.atr(atrPeriod)
+
+var float candidateLevel = na
+var int candidateBar = na
+var float pendingLevel = na
+var float pendingAtr = na
+var float tradeLevel = na
+var float entryAtr = na
+var int entryBar = na
+
+bool enterLong = false
+bool enterShort = false
+
+if barstate.isconfirmed and inWindow and strategy.position_size == 0
+    if variant == "Immediate Long"
+        if close > previousHigh
+            enterLong := true
+            pendingLevel := previousHigh
+            pendingAtr := atrValue
+    else if variant == "Acceptance Long"
+        if not na(candidateLevel)
+            age = bar_index - candidateBar
+            if age >= 1 and age <= confirmationWindow and close > candidateLevel + atrBuffer * atrValue
+                enterLong := true
+                pendingLevel := candidateLevel
+                pendingAtr := atrValue
+                candidateLevel := na
+                candidateBar := na
+            else if age >= confirmationWindow
+                candidateLevel := na
+                candidateBar := na
+        if na(candidateLevel) and not enterLong and close > previousHigh
+            candidateLevel := previousHigh
+            candidateBar := bar_index
+    else
+        if not na(candidateLevel)
+            age = bar_index - candidateBar
+            if age <= confirmationWindow and close < candidateLevel - atrBuffer * atrValue
+                enterShort := true
+                pendingLevel := candidateLevel
+                pendingAtr := atrValue
+                candidateLevel := na
+                candidateBar := na
+            else if age >= confirmationWindow
+                candidateLevel := na
+                candidateBar := na
+        if na(candidateLevel) and not enterShort and high > previousHigh
+            candidateLevel := previousHigh
+            candidateBar := bar_index
+            if close < candidateLevel - atrBuffer * atrValue
+                enterShort := true
+                pendingLevel := candidateLevel
+                pendingAtr := atrValue
+                candidateLevel := na
+                candidateBar := na
+
+if enterLong
+    strategy.entry("Breakout Long", strategy.long)
+if enterShort
+    strategy.entry("Rejection Short", strategy.short)
+
+openedPosition = strategy.position_size != 0 and strategy.position_size[1] == 0
+if openedPosition
+    tradeLevel := pendingLevel
+    entryAtr := pendingAtr
+    entryBar := bar_index
+
+if strategy.position_size > 0
+    stopPrice = strategy.position_avg_price - stopAtrMultiple * entryAtr
+    strategy.exit("Long ATR Stop", from_entry = "Breakout Long", stop = stopPrice)
+    heldBars = bar_index - entryBar + 1
+    if barstate.isconfirmed and (close < tradeLevel - atrBuffer * atrValue or heldBars >= maximumHoldingBars)
+        strategy.close("Breakout Long", comment = heldBars >= maximumHoldingBars ? "Time exit" : "Acceptance failed")
+
+if strategy.position_size < 0
+    stopPrice = strategy.position_avg_price + stopAtrMultiple * entryAtr
+    strategy.exit("Short ATR Stop", from_entry = "Rejection Short", stop = stopPrice)
+    heldBars = bar_index - entryBar + 1
+    if barstate.isconfirmed and (close > tradeLevel + atrBuffer * atrValue or heldBars >= maximumHoldingBars)
+        strategy.close("Rejection Short", comment = heldBars >= maximumHoldingBars ? "Time exit" : "Level reclaimed")
+
+if not inWindow and strategy.position_size != 0
+    strategy.close_all(comment = "Window end")
+
+plot(previousHigh, "Prior rolling high (current bar excluded)", color = color.new(color.orange, 0), linewidth = 1)
+plot(strategy.position_size != 0 ? tradeLevel : na, "Active breakout level", color = color.new(color.blue, 0), linewidth = 2, style = plot.style_linebr)
+bgcolor(inWindow ? color.new(color.teal, 94) : na, title = "Active research window")

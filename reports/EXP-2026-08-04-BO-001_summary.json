@@ -1,0 +1,11 @@
+{
+  "experiment_id": "EXP-2026-08-04-BO-001",
+  "date": "2026-08-04",
+  "hypothesis": "A breakout that remains above prior resistance contains more persistent demand than an immediate breakout, while a rapid close back inside the range identifies trapped late buyers and a tradeable short.",
+  "dataset": "Finalized Binance spot 4h OHLCV, requested from 2016-01-01T00:00:00+00:00 through 2026-08-04T12:00:00+00:00 (exclusive). Actual coverage starts at each symbol's exchange listing and gaps are not filled.",
+  "status": "COMPLETED",
+  "primary_result": "Selected Immediate Long; forward net return 28.15%; full-sample net return 546.21%.",
+  "verdict": "RESEARCH CANDIDATE",
+  "report_path": "reports/EXP-2026-08-04-BO-001.md",
+  "follow_up_question": "Add a predeclared volatility-compression filter to the selected acceptance rule and require incremental validation improvement over the unfiltered parent."
+}
