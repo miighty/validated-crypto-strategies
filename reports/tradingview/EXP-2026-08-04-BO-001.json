@@ -1,0 +1,88 @@
+{
+  "experiment_id": "EXP-2026-08-04-BO-001",
+  "status": "SUPPLEMENTARY_FORWARD_TESTED_HISTORICAL_WINDOWS_DEFERRED",
+  "validation_authority": "PYTHON",
+  "checked_at": "2026-08-04T12:35:00Z",
+  "chart_symbols": [
+    "BINANCE:BTCUSDT",
+    "BINANCE:ETHUSDT",
+    "BINANCE:SOLUSDT"
+  ],
+  "timeframe": "4h",
+  "pine_script": "pine/breakout_acceptance_rejection_strategy.pine",
+  "compile_result": "Pine v6 source compiled successfully on TradingView. Defaults were reconciled to the Python-selected candidate: Immediate Long, 50-bar prior high, two-bar confirmation setting, 0.1 ATR buffer, 2 ATR stop, and 24-bar maximum hold.",
+  "strategy_properties": {
+    "initial_capital_usdt": 10000,
+    "order_size_percent_of_equity": 100,
+    "commission_percent_per_side": 0.05,
+    "slippage_ticks": 0,
+    "pyramiding": 0,
+    "process_orders_on_close": false
+  },
+  "research_windows": {
+    "forward_2024_2026": {
+      "status": "COMPLETED",
+      "actual_range": "2024-01-01 through 2026-08-04"
+    },
+    "validation_2020_2024": {
+      "status": "DEFERRED_OUT_OF_SCOPE"
+    },
+    "development_2016_2020": {
+      "status": "DEFERRED_OUT_OF_SCOPE"
+    }
+  },
+  "strategy_tester_results": {
+    "BINANCE:BTCUSDT": {
+      "window": "Forward 2024-2026",
+      "total_pnl_usdt": 148.97,
+      "total_return_percent": 1.49,
+      "maximum_drawdown_usdt": 1788.56,
+      "maximum_drawdown_percent": 15.07,
+      "profitable_trades_percent": 22.78,
+      "winning_trades": 18,
+      "total_trades": 79,
+      "profit_factor": 1.016,
+      "sharpe_ratio": -0.012,
+      "cagr_percent": 0.57
+    },
+    "BINANCE:ETHUSDT": {
+      "window": "Forward 2024-2026",
+      "total_pnl_usdt": 9106.60,
+      "total_return_percent": 91.07,
+      "maximum_drawdown_usdt": 3786.91,
+      "maximum_drawdown_percent": 16.92,
+      "profitable_trades_percent": 31.43,
+      "winning_trades": 22,
+      "total_trades": 70,
+      "profit_factor": 1.578,
+      "sharpe_ratio": 0.317,
+      "cagr_percent": 28.36
+    },
+    "BINANCE:SOLUSDT": {
+      "window": "Forward 2024-2026",
+      "total_pnl_usdt": 2127.18,
+      "total_return_percent": 21.27,
+      "maximum_drawdown_usdt": 2804.05,
+      "maximum_drawdown_percent": 28.04,
+      "profitable_trades_percent": 24.14,
+      "winning_trades": 21,
+      "total_trades": 87,
+      "profit_factor": 1.159,
+      "sharpe_ratio": 0.10,
+      "cagr_percent": 7.72
+    }
+  },
+  "comparison_runs": {
+    "BINANCE:BTCUSDT_ACCEPTANCE_LONG_LOOKBACK_20": {
+      "purpose": "Preliminary adjustable-variant comparison; not the selected candidate",
+      "window": "Forward 2024-2026",
+      "total_return_percent": -5.57,
+      "maximum_drawdown_percent": 29.36,
+      "total_trades": 98,
+      "profit_factor": 0.957
+    }
+  },
+  "reconciliation_note": "TradingView supports the cross-market character of the selected breakout: positive forward return on BTC, ETH, and SOL, with ETH contributing the strongest result. These are independent per-symbol runs using 5 bp commission per side and zero slippage ticks. The Python portfolio combines all three symbols and also charges 5 bp proportional slippage per side, so exact percentage parity is not expected.",
+  "limitation": "TradingView displayed its Deep Backtesting upgrade notice: the current Basic plan can calculate only with data loaded on the chart. Entire History and Custom Date Range triggered the upgrade gate, while Range from Chart and Bar Replay produced no usable pre-2024 4h tester data. Those historical platform runs are deferred and do not affect the Python verdict.",
+  "published": false
+}

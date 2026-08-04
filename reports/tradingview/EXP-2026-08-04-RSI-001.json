@@ -1,0 +1,78 @@
+{
+  "experiment_id": "EXP-2026-08-04-RSI-001",
+  "status": "SUPPLEMENTARY_FORWARD_TESTED_HISTORICAL_WINDOWS_DEFERRED",
+  "validation_authority": "PYTHON",
+  "checked_at": "2026-08-04T12:35:00Z",
+  "chart_symbols": [
+    "BINANCE:BTCUSDT",
+    "BINANCE:ETHUSDT",
+    "BINANCE:SOLUSDT"
+  ],
+  "timeframe": "4h",
+  "pine_script": "pine/rsi_mean_reversion_strategy.pine",
+  "compile_result": "Pine v6 source compiled successfully on TradingView with no look-ahead warning.",
+  "strategy_properties": {
+    "initial_capital_usdt": 10000,
+    "order_size_percent_of_equity": 100,
+    "commission_percent_per_side": 0.05,
+    "slippage_ticks": 0,
+    "pyramiding": 0,
+    "process_orders_on_close": false
+  },
+  "research_windows": {
+    "forward_2024_2026": {
+      "status": "COMPLETED",
+      "actual_range": "2024-01-01 through 2026-08-04"
+    },
+    "validation_2020_2024": {
+      "status": "DEFERRED_OUT_OF_SCOPE"
+    },
+    "development_2016_2020": {
+      "status": "DEFERRED_OUT_OF_SCOPE"
+    }
+  },
+  "strategy_tester_results": {
+    "BINANCE:BTCUSDT": {
+      "window": "Forward 2024-2026",
+      "total_pnl_usdt": -1609.52,
+      "total_return_percent": -16.10,
+      "maximum_drawdown_usdt": 2891.77,
+      "maximum_drawdown_percent": 27.00,
+      "profitable_trades_percent": 51.49,
+      "winning_trades": 52,
+      "total_trades": 101,
+      "profit_factor": 0.86,
+      "sharpe_ratio": -0.191,
+      "cagr_percent": -6.54
+    },
+    "BINANCE:ETHUSDT": {
+      "window": "Forward 2024-2026",
+      "total_pnl_usdt": -6004.15,
+      "total_return_percent": -60.04,
+      "maximum_drawdown_usdt": 6345.81,
+      "maximum_drawdown_percent": 63.46,
+      "profitable_trades_percent": 40.16,
+      "winning_trades": 49,
+      "total_trades": 122,
+      "profit_factor": 0.606,
+      "sharpe_ratio": -0.673,
+      "cagr_percent": -29.80
+    },
+    "BINANCE:SOLUSDT": {
+      "window": "Forward 2024-2026",
+      "total_pnl_usdt": -4050.68,
+      "total_return_percent": -40.51,
+      "maximum_drawdown_usdt": 7360.57,
+      "maximum_drawdown_percent": 58.75,
+      "profitable_trades_percent": 38.71,
+      "winning_trades": 48,
+      "total_trades": 124,
+      "profit_factor": 0.818,
+      "sharpe_ratio": -0.272,
+      "cagr_percent": -18.15
+    }
+  },
+  "reconciliation_note": "TradingView confirms the RSI failure on every default market. These are independent per-symbol runs using 5 bp commission per side and zero slippage ticks. The Python portfolio run combines all three symbols and also charges 5 bp proportional slippage per side, so exact percentage parity is not expected.",
+  "limitation": "TradingView displayed its Deep Backtesting upgrade notice: the current Basic plan can calculate only with data loaded on the chart. Entire History and Custom Date Range triggered the upgrade gate, while Range from Chart and Bar Replay produced no usable pre-2024 4h tester data. Those historical platform runs are deferred and do not affect the Python verdict.",
+  "published": false
+}

@@ -1,0 +1,806 @@
+{
+  "selection": {
+    "family": "Immediate Long",
+    "lookback": 50,
+    "window": 2,
+    "atr_buffer": 0.1
+  },
+  "main": [
+    {
+      "variant": "Selected: Immediate Long",
+      "total_return": 5.462141891340221,
+      "cagr": 0.23140704199877815,
+      "sharpe": 0.9964647808727173,
+      "sortino": 0.6687964590909904,
+      "maximum_drawdown": 0.21333249580902647,
+      "win_rate": 0.29577464788732394,
+      "profit_factor": 1.5102478146676845,
+      "trades": 710,
+      "exposure": 0.15223297673628797
+    },
+    {
+      "variant": "Doubled costs",
+      "total_return": 2.974426565177273,
+      "cagr": 0.16641239495313553,
+      "sharpe": 0.768249128017812,
+      "sortino": 0.5182520470194047,
+      "maximum_drawdown": 0.25210241703895053,
+      "win_rate": 0.28973277074542897,
+      "profit_factor": 1.370297907241807,
+      "trades": 711,
+      "exposure": 0.15204618780777718
+    },
+    {
+      "variant": "Entry delayed one extra bar",
+      "total_return": 3.2904106141100398,
+      "cagr": 0.1764093710167265,
+      "sharpe": 0.8323322007119852,
+      "sortino": 0.550390695676551,
+      "maximum_drawdown": 0.22270871535162817,
+      "win_rate": 0.33428981348637016,
+      "profit_factor": 1.4572270617273473,
+      "trades": 697,
+      "exposure": 0.14555951774494819
+    },
+    {
+      "variant": "Volatility-adjusted sizing",
+      "total_return": 0.8957630474295541,
+      "cagr": 0.07396030297560485,
+      "sharpe": 1.2704691616571724,
+      "sortino": 0.9389486927541694,
+      "maximum_drawdown": 0.05498134383847508,
+      "win_rate": 0.29577464788732394,
+      "profit_factor": 1.5102478146676845,
+      "trades": 710,
+      "exposure": 0.15223297673628797
+    }
+  ],
+  "splits": [
+    {
+      "variant": "Development 2016\u20132020",
+      "total_return": 0.8092167032059348,
+      "cagr": 0.2838592896503802,
+      "sharpe": 0.9074331761719732,
+      "sortino": 0.5299123234122338,
+      "maximum_drawdown": 0.24607956534329678,
+      "win_rate": 0.3140495867768595,
+      "profit_factor": 1.5983878130712066,
+      "trades": 121,
+      "exposure": 0.16178172001542615
+    },
+    {
+      "variant": "Validation 2020\u20132024",
+      "total_return": 1.9373953225922684,
+      "cagr": 0.3091938219527539,
+      "sharpe": 1.1653643897926838,
+      "sortino": 0.8422485773222282,
+      "maximum_drawdown": 0.22853418950487903,
+      "win_rate": 0.3041095890410959,
+      "profit_factor": 1.5843492661582446,
+      "trades": 365,
+      "exposure": 0.17170564746149458
+    },
+    {
+      "variant": "Forward 2024\u20132026",
+      "total_return": 0.28148678570693253,
+      "cagr": 0.10044005161755343,
+      "sharpe": 0.6057437789937524,
+      "sortino": 0.4487722547307747,
+      "maximum_drawdown": 0.20204613274557848,
+      "win_rate": 0.27232142857142855,
+      "profit_factor": 1.2746925499963169,
+      "trades": 224,
+      "exposure": 0.16270470153195984
+    },
+    {
+      "variant": "2017",
+      "total_return": 0.2043853732481753,
+      "cagr": 0.6428115147482636,
+      "sharpe": 1.6971253420454209,
+      "sortino": 1.1828479663638343,
+      "maximum_drawdown": 0.10816839117184607,
+      "win_rate": 0.3333333333333333,
+      "profit_factor": 2.053663741341323,
+      "trades": 27,
+      "exposure": 0.15062931384490458
+    },
+    {
+      "variant": "2018",
+      "total_return": -0.004810711597698858,
+      "cagr": -0.004816192534552233,
+      "sharpe": 0.08448954204465099,
+      "sortino": 0.04414018249693824,
+      "maximum_drawdown": 0.1863058791951281,
+      "win_rate": 0.2558139534883721,
+      "profit_factor": 1.0666940188494305,
+      "trades": 43,
+      "exposure": 0.08658405996634543
+    },
+    {
+      "variant": "2019",
+      "total_return": 0.28440582266373515,
+      "cagr": 0.28477303128783427,
+      "sharpe": 1.110806489489214,
+      "sortino": 0.6466862596235672,
+      "maximum_drawdown": 0.14072477816893736,
+      "win_rate": 0.35294117647058826,
+      "profit_factor": 1.8389284909917467,
+      "trades": 51,
+      "exposure": 0.11299176578225069
+    },
+    {
+      "variant": "2020",
+      "total_return": 0.6516540737944416,
+      "cagr": 0.6503331132201198,
+      "sharpe": 1.8887493381256257,
+      "sortino": 1.212288400345488,
+      "maximum_drawdown": 0.19806445630931657,
+      "win_rate": 0.3875,
+      "profit_factor": 2.216954747332776,
+      "trades": 80,
+      "exposure": 0.1662870159453303
+    },
+    {
+      "variant": "2021",
+      "total_return": 0.4053238909523311,
+      "cagr": 0.405651454103793,
+      "sharpe": 1.2106074113941987,
+      "sortino": 1.0387730715285366,
+      "maximum_drawdown": 0.15252614976723988,
+      "win_rate": 0.2558139534883721,
+      "profit_factor": 1.5495950706280346,
+      "trades": 129,
+      "exposure": 0.22085235920852359
+    },
+    {
+      "variant": "2022",
+      "total_return": -0.0049337621253754405,
+      "cagr": -0.004937133058744547,
+      "sharpe": 0.0651064280558078,
+      "sortino": 0.03859290519327185,
+      "maximum_drawdown": 0.17002890454948139,
+      "win_rate": 0.21428571428571427,
+      "profit_factor": 0.8500522758407657,
+      "trades": 70,
+      "exposure": 0.11689497716894975
+    },
+    {
+      "variant": "2023",
+      "total_return": 0.3329106875016379,
+      "cagr": 0.3331730639590411,
+      "sharpe": 1.4773200644360618,
+      "sortino": 1.235843197356439,
+      "maximum_drawdown": 0.09900927271734217,
+      "win_rate": 0.37209302325581395,
+      "profit_factor": 1.8921181104407672,
+      "trades": 86,
+      "exposure": 0.1828006088280061
+    },
+    {
+      "variant": "2024",
+      "total_return": 0.22332635787305777,
+      "cagr": 0.22282115405371017,
+      "sharpe": 1.0901912086985064,
+      "sortino": 0.8153756080760163,
+      "maximum_drawdown": 0.15595572435861216,
+      "win_rate": 0.2857142857142857,
+      "profit_factor": 1.3371558315809324,
+      "trades": 105,
+      "exposure": 0.19626593806921674
+    },
+    {
+      "variant": "2025",
+      "total_return": 0.24263244660089334,
+      "cagr": 0.24281735050628095,
+      "sharpe": 1.2220127009710733,
+      "sortino": 0.925367286837671,
+      "maximum_drawdown": 0.1353996777507147,
+      "win_rate": 0.2972972972972973,
+      "profit_factor": 1.7489810131132124,
+      "trades": 74,
+      "exposure": 0.15053272450532723
+    },
+    {
+      "variant": "2026",
+      "total_return": -0.10304744277642697,
+      "cagr": -0.16833354069732276,
+      "sharpe": -1.3047863914536415,
+      "sortino": -0.8341887305858671,
+      "maximum_drawdown": 0.16173262904382413,
+      "win_rate": 0.2,
+      "profit_factor": 0.47467964666861245,
+      "trades": 45,
+      "exposure": 0.12632121680845576
+    }
+  ],
+  "assets": [
+    {
+      "total_return": 3.4086914392362573,
+      "cagr": 0.17998377425427003,
+      "sharpe": 0.7440913189977407,
+      "sortino": 0.41983709213532017,
+      "maximum_drawdown": 0.3848315763276072,
+      "win_rate": 0.2943396226415094,
+      "profit_factor": 1.4768895901239647,
+      "trades": 265,
+      "exposure": 0.1774325012735609,
+      "asset": "BTCUSDT"
+    },
+    {
+      "total_return": 11.342578691418376,
+      "cagr": 0.323585187408407,
+      "sharpe": 0.9698214645202337,
+      "sortino": 0.5293036792641498,
+      "maximum_drawdown": 0.3269509552205141,
+      "win_rate": 0.3253968253968254,
+      "profit_factor": 1.6970377330900739,
+      "trades": 252,
+      "exposure": 0.1694345389709628,
+      "asset": "ETHUSDT"
+    },
+    {
+      "total_return": 1.6351555433661393,
+      "cagr": 0.17588400398622794,
+      "sharpe": 0.5716964294666778,
+      "sortino": 0.35258751973630703,
+      "maximum_drawdown": 0.4840183251997232,
+      "win_rate": 0.25906735751295334,
+      "profit_factor": 1.3572180203923419,
+      "trades": 193,
+      "exposure": 0.1645048069586449,
+      "asset": "SOLUSDT"
+    }
+  ],
+  "variants": [
+    {
+      "section": "Acceptance parameter matrix",
+      "lookback": 20,
+      "window": 1,
+      "atr_buffer": 0.0,
+      "development_return": 0.3744661085098817,
+      "validation_return": 1.9153253317375447,
+      "development_sharpe": 0.5543113096137253,
+      "validation_sharpe": 1.0168354157495656,
+      "selection_score": 0.7855733626816455
+    },
+    {
+      "section": "Acceptance parameter matrix",
+      "lookback": 20,
+      "window": 1,
+      "atr_buffer": 0.1,
+      "development_return": 0.5212523655150338,
+      "validation_return": 1.6311098062675584,
+      "development_sharpe": 0.6735608685493495,
+      "validation_sharpe": 0.9419226527786223,
+      "selection_score": 0.8077417606639858
+    },
+    {
+      "section": "Acceptance parameter matrix",
+      "lookback": 20,
+      "window": 2,
+      "atr_buffer": 0.0,
+      "development_return": 0.44619268630065556,
+      "validation_return": 2.739409824211735,
+      "development_sharpe": 0.6085863297228511,
+      "validation_sharpe": 1.1585153615554797,
+      "selection_score": 0.8835508456391654
+    },
+    {
+      "section": "Acceptance parameter matrix",
+      "lookback": 20,
+      "window": 2,
+      "atr_buffer": 0.1,
+      "development_return": 0.5271078141430201,
+      "validation_return": 2.650399399623058,
+      "development_sharpe": 0.6742492001540966,
+      "validation_sharpe": 1.158481718527157,
+      "selection_score": 0.9163654593406267
+    },
+    {
+      "section": "Acceptance parameter matrix",
+      "lookback": 50,
+      "window": 1,
+      "atr_buffer": 0.0,
+      "development_return": 0.3608854891692648,
+      "validation_return": 1.5165621469312986,
+      "development_sharpe": 0.5647137335446153,
+      "validation_sharpe": 1.100728777628634,
+      "selection_score": 0.8327212555866247
+    },
+    {
+      "section": "Acceptance parameter matrix",
+      "lookback": 50,
+      "window": 1,
+      "atr_buffer": 0.1,
+      "development_return": 0.41002674054525623,
+      "validation_return": 1.6888278704356892,
+      "development_sharpe": 0.6103069809388512,
+      "validation_sharpe": 1.1652544179677413,
+      "selection_score": 0.8877806994532962
+    },
+    {
+      "section": "Acceptance parameter matrix",
+      "lookback": 50,
+      "window": 2,
+      "atr_buffer": 0.0,
+      "development_return": 0.48709968125286274,
+      "validation_return": 1.667767643467986,
+      "development_sharpe": 0.6791033890682601,
+      "validation_sharpe": 1.1392547737313794,
+      "selection_score": 0.9091790813998197
+    },
+    {
+      "section": "Acceptance parameter matrix",
+      "lookback": 50,
+      "window": 2,
+      "atr_buffer": 0.1,
+      "development_return": 0.5288632794277393,
+      "validation_return": 1.713507539813122,
+      "development_sharpe": 0.714871508853634,
+      "validation_sharpe": 1.1483481177697634,
+      "selection_score": 0.9316098133116988
+    },
+    {
+      "section": "Family comparison",
+      "family": "Immediate Long",
+      "lookback": 50,
+      "window": 2,
+      "atr_buffer": 0.1,
+      "development_return": 0.8092167032059348,
+      "validation_return": 1.9373953225922684,
+      "development_sharpe": 0.9074331761719732,
+      "validation_sharpe": 1.1653643897926838,
+      "selection_score": 1.0363987829823285
+    },
+    {
+      "section": "Family comparison",
+      "family": "Acceptance Long",
+      "lookback": 50,
+      "window": 2,
+      "atr_buffer": 0.1,
+      "development_return": 0.5288632794277393,
+      "validation_return": 1.713507539813122,
+      "development_sharpe": 0.714871508853634,
+      "validation_sharpe": 1.1483481177697634,
+      "selection_score": 0.9316098133116988
+    },
+    {
+      "section": "Family comparison",
+      "family": "Rejection Short",
+      "lookback": 50,
+      "window": 2,
+      "atr_buffer": 0.1,
+      "development_return": -0.660740506024013,
+      "validation_return": -0.8054300619465327,
+      "development_sharpe": -1.2876779639020173,
+      "validation_sharpe": -1.3058822658941656,
+      "selection_score": -11.466170567970545
+    }
+  ],
+  "baselines": [
+    {
+      "variant": "Immediate Long",
+      "total_return": 5.462141891340221,
+      "cagr": 0.23140704199877815,
+      "sharpe": 0.9964647808727173,
+      "sortino": 0.6687964590909904,
+      "maximum_drawdown": 0.21333249580902647,
+      "win_rate": 0.29577464788732394,
+      "profit_factor": 1.5102478146676845,
+      "trades": 710,
+      "exposure": 0.15223297673628797,
+      "return_5th_percentile": null,
+      "return_95th_percentile": null
+    },
+    {
+      "variant": "Acceptance Long",
+      "total_return": 3.491008758350845,
+      "cagr": 0.1824214273699052,
+      "sharpe": 0.8819125033610365,
+      "sortino": 0.5746274416086014,
+      "maximum_drawdown": 0.2199526024431172,
+      "win_rate": 0.34507042253521125,
+      "profit_factor": 1.4778929969909145,
+      "trades": 568,
+      "exposure": 0.13961623365596876,
+      "return_5th_percentile": null,
+      "return_95th_percentile": null
+    },
+    {
+      "variant": "Rejection Short",
+      "total_return": -0.9365145815948963,
+      "cagr": -0.2647548420137169,
+      "sharpe": -0.9563815636222303,
+      "sortino": -0.7598304236350127,
+      "maximum_drawdown": 0.9567928715881219,
+      "win_rate": 0.2379421221864952,
+      "profit_factor": 0.7199098072948749,
+      "trades": 1244,
+      "exposure": 0.2413312956359314,
+      "return_5th_percentile": null,
+      "return_95th_percentile": null
+    },
+    {
+      "variant": "Simple 50-bar trend",
+      "total_return": 11.90241612473574,
+      "cagr": 0.3301512375874984,
+      "sharpe": 0.8521051002210465,
+      "sortino": 0.9066881245072659,
+      "maximum_drawdown": 0.5791413519189452,
+      "win_rate": 0.1969525959367946,
+      "profit_factor": 1.5156413228763115,
+      "trades": 1772,
+      "exposure": 0.47940227542876546,
+      "return_5th_percentile": null,
+      "return_95th_percentile": null
+    },
+    {
+      "variant": "Buy and hold",
+      "total_return": 14.241677992198944,
+      "cagr": 0.3551062363520361,
+      "sharpe": 0.7807528597904808,
+      "sortino": 1.0121111756925343,
+      "maximum_drawdown": 0.9079089495125544,
+      "win_rate": 1.0,
+      "profit_factor": null,
+      "trades": 3,
+      "exposure": 0.8891662421463747,
+      "return_5th_percentile": null,
+      "return_95th_percentile": null
+    },
+    {
+      "variant": "Random baseline mean (20 seeds)",
+      "total_return": 1.660437699838458,
+      "cagr": null,
+      "sharpe": 0.38964638932780443,
+      "sortino": null,
+      "maximum_drawdown": 0.6093218523934607,
+      "win_rate": null,
+      "profit_factor": null,
+      "trades": 710,
+      "exposure": null,
+      "return_5th_percentile": -0.4290687669264643,
+      "return_95th_percentile": 5.064479597381189
+    }
+  ],
+  "robustness": [
+    {
+      "test": "Base costs",
+      "result": "return=5.462141891340221; Sharpe=0.9964647808727173; maxDD=0.21333249580902647",
+      "status": "Pass"
+    },
+    {
+      "test": "Doubled costs",
+      "result": "return=2.974426565177273; Sharpe=0.768249128017812; maxDD=0.25210241703895053",
+      "status": "Pass"
+    },
+    {
+      "test": "One-extra-bar delay",
+      "result": "return=3.2904106141100398; Sharpe=0.8323322007119852; maxDD=0.22270871535162817",
+      "status": "Pass"
+    },
+    {
+      "test": "Forward 2024\u20132026",
+      "result": "return=0.28148678570693253; Sharpe=0.6057437789937524; maxDD=0.20204613274557848",
+      "status": "Pass"
+    },
+    {
+      "test": "Remove best asset (ETHUSDT)",
+      "result": "return=2.521923491301222; Sharpe=0.733388466758779; maxDD=0.2594704656343998",
+      "status": "Pass"
+    },
+    {
+      "test": "Remove best year (2020)",
+      "result": "return=2.9125274437730035; Sharpe=0.8595907430958696; maxDD=0.21333249580902613",
+      "status": "Pass"
+    },
+    {
+      "test": "Volatility-adjusted sizing",
+      "result": "return=0.8957630474295541; Sharpe=1.2704691616571724; maxDD=0.05498134383847508",
+      "status": "Pass"
+    },
+    {
+      "test": "Winner concentration",
+      "result": "largest=0.024779868240995904; top5=0.10382015853573999",
+      "status": "Pass"
+    },
+    {
+      "test": "Immediate breakout comparison",
+      "result": "selected 5.4621 vs immediate 5.4621",
+      "status": "Selected baseline"
+    },
+    {
+      "test": "Nearby lookback 15",
+      "result": "return=1.7204295540875467; Sharpe=0.5262781517272451",
+      "status": "Pass"
+    },
+    {
+      "test": "Nearby lookback 20",
+      "result": "return=2.524351502867056; Sharpe=0.6334302370621678",
+      "status": "Pass"
+    },
+    {
+      "test": "Nearby lookback 30",
+      "result": "return=3.285951430403845; Sharpe=0.7511350161541428",
+      "status": "Pass"
+    },
+    {
+      "test": "Nearby lookback 50",
+      "result": "return=5.462141891340221; Sharpe=0.9964647808727173",
+      "status": "Pass"
+    },
+    {
+      "test": "Nearby lookback 75",
+      "result": "return=5.971132919383636; Sharpe=1.0927537652258263",
+      "status": "Pass"
+    },
+    {
+      "test": "Exit horizon 12",
+      "result": "return=2.1317417178177176; Sharpe=0.7616222436736624",
+      "status": "Pass"
+    },
+    {
+      "test": "Exit horizon 24",
+      "result": "return=5.462141891340221; Sharpe=0.9964647808727173",
+      "status": "Pass"
+    },
+    {
+      "test": "Exit horizon 48",
+      "result": "return=10.95913241250407; Sharpe=1.0982027844420033",
+      "status": "Pass"
+    },
+    {
+      "test": "Entry regime: bull",
+      "result": "trades=604; compounded trade return=165.4699",
+      "status": "Descriptive"
+    },
+    {
+      "test": "Entry regime: sideways",
+      "result": "trades=106; compounded trade return=-0.1386",
+      "status": "Descriptive"
+    }
+  ],
+  "random_runs": [
+    {
+      "variant": "Random seed 2718",
+      "total_return": 1.3487916976941294,
+      "cagr": 0.0999415222867166,
+      "sharpe": 0.44589519581969433,
+      "sortino": 0.44505689493797596,
+      "maximum_drawdown": 0.5500444387564003,
+      "win_rate": 0.5408450704225352,
+      "profit_factor": 1.2390175207224767,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 3727",
+      "total_return": 3.6792996167759133,
+      "cagr": 0.1878513463301672,
+      "sharpe": 0.6365917594659888,
+      "sortino": 0.6484312356893864,
+      "maximum_drawdown": 0.5970560518993187,
+      "win_rate": 0.4971830985915493,
+      "profit_factor": 1.2302108609010873,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 4736",
+      "total_return": -0.42673385987768,
+      "cagr": -0.06018275203905232,
+      "sharpe": -0.025162602525330858,
+      "sortino": -0.025227498643931714,
+      "maximum_drawdown": 0.7436543657484956,
+      "win_rate": 0.4647887323943662,
+      "profit_factor": 1.046101593345602,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 5745",
+      "total_return": -0.4734320008533661,
+      "cagr": -0.06904899771412942,
+      "sharpe": -0.10052164723806828,
+      "sortino": -0.09505572632734262,
+      "maximum_drawdown": 0.7425600807321371,
+      "win_rate": 0.49014084507042255,
+      "profit_factor": 0.9865128169359553,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 6754",
+      "total_return": 0.6444438994354422,
+      "cagr": 0.05705608045138799,
+      "sharpe": 0.33342825099836965,
+      "sortino": 0.3260748654267582,
+      "maximum_drawdown": 0.5623148230712438,
+      "win_rate": 0.5098591549295775,
+      "profit_factor": 1.1490476791172204,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 7763",
+      "total_return": 1.2685206162034026,
+      "cagr": 0.09568298368745398,
+      "sharpe": 0.4284569046870001,
+      "sortino": 0.43217954693990007,
+      "maximum_drawdown": 0.6711341728472324,
+      "win_rate": 0.5070422535211268,
+      "profit_factor": 1.165763530283988,
+      "trades": 710,
+      "exposure": 0.3014094073696723
+    },
+    {
+      "variant": "Random seed 8772",
+      "total_return": 0.30217553161901267,
+      "cagr": 0.029892679776055253,
+      "sharpe": 0.26442172769784533,
+      "sortino": 0.2532738007336958,
+      "maximum_drawdown": 0.5951726313017249,
+      "win_rate": 0.5183098591549296,
+      "profit_factor": 1.1436577758124855,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 9781",
+      "total_return": 1.1147708319576406,
+      "cagr": 0.08713826499693056,
+      "sharpe": 0.4099801361016963,
+      "sortino": 0.4097055244616971,
+      "maximum_drawdown": 0.5220724529426102,
+      "win_rate": 0.5028169014084507,
+      "profit_factor": 1.2279313002035128,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 10790",
+      "total_return": 0.5905102542727834,
+      "cagr": 0.053131061116251654,
+      "sharpe": 0.32268881231659696,
+      "sortino": 0.3162057467009716,
+      "maximum_drawdown": 0.6573800809565423,
+      "win_rate": 0.49295774647887325,
+      "profit_factor": 1.1939847393349878,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 11799",
+      "total_return": 1.1982699744730696,
+      "cagr": 0.0918447353064098,
+      "sharpe": 0.43428361534886595,
+      "sortino": 0.434155649194366,
+      "maximum_drawdown": 0.6093874601101313,
+      "win_rate": 0.48450704225352115,
+      "profit_factor": 1.1870557920889397,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 12808",
+      "total_return": 4.832468904280224,
+      "cagr": 0.2174040634294856,
+      "sharpe": 0.6976421592570948,
+      "sortino": 0.7071397019339951,
+      "maximum_drawdown": 0.4452461788247294,
+      "win_rate": 0.4887323943661972,
+      "profit_factor": 1.2842024005143404,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 13817",
+      "total_return": 0.026926786669995373,
+      "cagr": 0.00296848772883207,
+      "sharpe": 0.1817667761733114,
+      "sortino": 0.18001976288775973,
+      "maximum_drawdown": 0.6742947516724882,
+      "win_rate": 0.5126760563380282,
+      "profit_factor": 1.1414853446602966,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 14826",
+      "total_return": 0.5880766758986895,
+      "cagr": 0.052951183925375345,
+      "sharpe": 0.3216818263692612,
+      "sortino": 0.32635311609954665,
+      "maximum_drawdown": 0.740552502592725,
+      "win_rate": 0.4788732394366197,
+      "profit_factor": 1.163545989064876,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 15835",
+      "total_return": 2.8897001676281406,
+      "cagr": 0.16361190045327456,
+      "sharpe": 0.5626800630650852,
+      "sortino": 0.5587184351274259,
+      "maximum_drawdown": 0.5898803952158718,
+      "win_rate": 0.5084507042253521,
+      "profit_factor": 1.1986343913023656,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 16844",
+      "total_return": 0.6332325229963127,
+      "cagr": 0.05624968826518684,
+      "sharpe": 0.33149833777852167,
+      "sortino": 0.3318716197434219,
+      "maximum_drawdown": 0.5641607890541596,
+      "win_rate": 0.5,
+      "profit_factor": 1.1549901419188022,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 17853",
+      "total_return": 0.3120850371533468,
+      "cagr": 0.030764045071260293,
+      "sharpe": 0.2633805907311019,
+      "sortino": 0.2532259878474942,
+      "maximum_drawdown": 0.6449504972593265,
+      "win_rate": 0.48732394366197185,
+      "profit_factor": 1.1599560971558318,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 18862",
+      "total_return": 0.42124135678805263,
+      "cagr": 0.03999410176940632,
+      "sharpe": 0.294396864712629,
+      "sortino": 0.3002761072397983,
+      "maximum_drawdown": 0.566656153402116,
+      "win_rate": 0.48169014084507045,
+      "profit_factor": 1.1529026596121834,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 19871",
+      "total_return": 2.8910823719135808,
+      "cagr": 0.16365802001379803,
+      "sharpe": 0.6001364999168468,
+      "sortino": 0.605704338036502,
+      "maximum_drawdown": 0.5368299202029387,
+      "win_rate": 0.4943661971830986,
+      "profit_factor": 1.3454540610288348,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 20880",
+      "total_return": 1.894640845440994,
+      "cagr": 0.12588295106207448,
+      "sharpe": 0.5143106395857432,
+      "sortino": 0.5216866002666565,
+      "maximum_drawdown": 0.5152953620244964,
+      "win_rate": 0.5197183098591549,
+      "profit_factor": 1.293550439664696,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    },
+    {
+      "variant": "Random seed 21889",
+      "total_return": 9.47268276629948,
+      "cagr": 0.2995490304621333,
+      "sharpe": 0.8753718762938344,
+      "sortino": 0.8773482268502129,
+      "maximum_drawdown": 0.6577939392545264,
+      "win_rate": 0.5380281690140845,
+      "profit_factor": 1.5150811200710892,
+      "trades": 710,
+      "exposure": 0.30140940736967226
+    }
+  ],
+  "verdict": "RESEARCH CANDIDATE"
+}

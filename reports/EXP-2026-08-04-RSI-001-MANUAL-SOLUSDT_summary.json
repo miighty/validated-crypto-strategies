@@ -1,0 +1,11 @@
+{
+  "experiment_id": "EXP-2026-08-04-RSI-001-MANUAL-SOLUSDT",
+  "date": "2026-08-04",
+  "hypothesis": "Crypto assets rebound after RSI(14) closes below an oversold threshold.",
+  "dataset": "Finalized Binance spot 4h OHLCV, requested from 2016-01-01T00:00:00+00:00 through 2026-08-04T12:00:00+00:00 (exclusive). Actual coverage starts at each symbol's exchange listing and gaps are not filled.",
+  "status": "COMPLETED",
+  "primary_result": "Forward net return -50.45%; full-sample net return -90.50%.",
+  "verdict": "REJECTED",
+  "report_path": "reports/EXP-2026-08-04-RSI-001-MANUAL-SOLUSDT.md",
+  "follow_up_question": "Test whether volatility compression improves breakout acceptance; do not tune another RSI threshold from the forward window."
+}

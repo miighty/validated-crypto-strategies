@@ -1,0 +1,11 @@
+experiment_data_version: crypto_edge_4h_v1
+source: binance_spot
+quote_asset: USDT
+symbols:
+  - BTCUSDT
+  - ETHUSDT
+  - SOLUSDT
+timeframe: 4h
+start: "2016-01-01T00:00:00Z"
+end: latest_complete
+output_directory: data/processed

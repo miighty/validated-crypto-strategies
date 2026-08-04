@@ -2,6 +2,42 @@
 
 A public, reproducible research package that states exactly which requested crypto strategies received a completed historical backtest, preserves every real exchange input used, and refuses to label unsupported simulations as validation.
 
+## Minimum viable edge-research loop
+
+The repository now also contains a smaller falsification-first workflow for moving from a frozen hypothesis to Python backtest, hostile robustness checks, Pine Script replication, and a conservative verdict. Its governing requirements are in [docs/research_brief.md](docs/research_brief.md) and [docs/research_constitution.md](docs/research_constitution.md).
+
+Current completed experiments:
+
+- **RSI oversold mean reversion — REJECTED.** The frozen RSI(14) < 30, four-bar rule lost 92.5% over the available full sample and 48.0% in the 2024–2026 forward window after costs. See [reports/EXP-2026-08-04-RSI-001.md](reports/EXP-2026-08-04-RSI-001.md).
+- **Breakout family — RESEARCH CANDIDATE.** Pre-2024 selection chose the simpler 50-bar immediate long breakout, not acceptance or rejection. It returned 28.1% in the Python 2024–2026 forward window and survived the declared robustness checks. The corresponding Pine strategy is ready for TradingView review and adjustment, but this is not a paper- or live-trading approval. See [reports/EXP-2026-08-04-BO-001.md](reports/EXP-2026-08-04-BO-001.md).
+
+The default research windows are development 2016–2020, validation 2020–2024, and untouched forward test 2024–2026. Reports use actual exchange coverage: Binance BTCUSDT and ETHUSDT begin in August 2017 and SOLUSDT in August 2020, so unavailable history is never fabricated.
+
+### Install and run
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -e '.[dev]'
+.venv/bin/edge-research download --config configs/data.yaml
+.venv/bin/edge-research run --config configs/rsi_mean_reversion.yaml
+.venv/bin/edge-research run --config configs/breakout_acceptance.yaml
+.venv/bin/edge-research verify
+.venv/bin/pytest -q
+```
+
+Run a manually chosen Binance universe after downloading that same snapshot:
+
+```bash
+.venv/bin/edge-research download --config configs/data.yaml --symbols SOL ETC
+.venv/bin/edge-research run --config configs/breakout_acceptance.yaml --symbols SOL ETC
+```
+
+Bare tickers default to USDT, so `SOL ETC`, `SOLUSDT ETCUSDT`, and `SOL/USDT ETC/USDT` are equivalent. Comma-separated input is also accepted. Adding a manually selected market updates that market in the data catalog without deleting previously downloaded symbols. A manual experiment receives a stable `-MANUAL-<symbols>` report ID, so it never overwrites the canonical BTC/ETH/SOL evidence.
+
+Python is the validation authority. The chart-agnostic, adjustable handoff strategies are [pine/rsi_mean_reversion_strategy.pine](pine/rsi_mean_reversion_strategy.pine) and [pine/breakout_acceptance_rejection_strategy.pine](pine/breakout_acceptance_rejection_strategy.pine). Choose any TradingView chart symbol and the four-hour timeframe, select a frozen or custom window in Inputs, and record chart-specific tick slippage in Strategy Properties. TradingView history availability is supplementary rather than a completion gate. The scripts are private source artifacts until you explicitly choose to publish or share them.
+
+The completed requirement-by-requirement audit is recorded in [docs/completion_audit.md](docs/completion_audit.md).
+
 ## Evidence boundary
 
 - **Data:** finalized public Binance spot OHLCV and USD-M perpetual funding observations, pinned from 2018-01-01 through 2026-07-28 (exclusive), subject to actual listing dates.
