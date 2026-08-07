@@ -9,6 +9,7 @@ from .pipeline import require_inputs, run
 from .polymarket_crypto_validation import run_polymarket_crypto_validation
 from .regimes import generate as generate_regimes
 from .report import generate as generate_report
+from .sol_eth_etf_validation import run_sol_eth_etf_validation
 from .verify import verify
 
 
@@ -30,6 +31,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-eth-btc-etf",
         help="Validate ETH ETF odds -> ETH/BTC spread against ETH DCA baselines",
+    )
+    subcommands.add_parser(
+        "validate-sol-eth-etf",
+        help="Validate SOL ETF odds -> SOL/ETH spread against SOL DCA baselines",
     )
     subcommands.add_parser("all", help="Fetch if needed, run, report, and verify")
     return command
@@ -55,6 +60,9 @@ def main() -> None:
     elif args.command == "validate-eth-btc-etf":
         require_inputs(paths)
         run_eth_btc_etf_validation(paths)
+    elif args.command == "validate-sol-eth-etf":
+        require_inputs(paths)
+        run_sol_eth_etf_validation(paths)
     elif args.command == "all":
         try:
             require_inputs(paths)
