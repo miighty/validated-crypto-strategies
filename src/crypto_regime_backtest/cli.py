@@ -4,6 +4,7 @@ import argparse
 
 from .config import Paths, project_root
 from .data import collect
+from .eth_btc_etf_validation import run_eth_btc_etf_validation
 from .pipeline import require_inputs, run
 from .polymarket_crypto_validation import run_polymarket_crypto_validation
 from .regimes import generate as generate_regimes
@@ -26,6 +27,10 @@ def parser() -> argparse.ArgumentParser:
         "validate-polymarket-crypto",
         help="Backtest Polymarket event-odds strategies against crypto price action",
     )
+    subcommands.add_parser(
+        "validate-eth-btc-etf",
+        help="Validate ETH ETF odds -> ETH/BTC spread against ETH DCA baselines",
+    )
     subcommands.add_parser("all", help="Fetch if needed, run, report, and verify")
     return command
 
@@ -47,6 +52,9 @@ def main() -> None:
     elif args.command == "validate-polymarket-crypto":
         require_inputs(paths)
         run_polymarket_crypto_validation(paths)
+    elif args.command == "validate-eth-btc-etf":
+        require_inputs(paths)
+        run_eth_btc_etf_validation(paths)
     elif args.command == "all":
         try:
             require_inputs(paths)

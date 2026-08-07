@@ -1,0 +1,44 @@
+{
+  "config": {
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "contribution_hour_utc": 9,
+    "sample_start": "2021-01-01T00:00:00Z",
+    "validation_start": "2024-01-01T00:00:00Z",
+    "holdout_start": "2025-01-01T00:00:00Z",
+    "primary_delta_threshold": 0.1,
+    "primary_level_threshold": 0.6,
+    "primary_hold_hours": 72,
+    "primary_cooldown_hours": 24,
+    "cash_rule": "Each strategy receives the same fixed $10,000 reserve, released as equal daily contributions at 09:00 UTC. Daily DCA spends the same-day tranche immediately; weekly DCA spends the accrued reserve every Monday 09:00 UTC; the ETH/BTC spread strategy deploys the full currently accrued reserve when the ETF-odds trigger fires, then returns to cash on exit."
+  },
+  "eth_data": {
+    "path": "data/raw/ETH_1h.csv.gz",
+    "kind": "spot_ohlcv",
+    "coin": "ETH",
+    "timeframe": "1h",
+    "source": "Binance",
+    "source_symbols": "ETHUSDT",
+    "first_timestamp": "2018-01-01T00:00:00+00:00",
+    "last_timestamp": "2026-07-27T23:00:00+00:00",
+    "rows": 74998,
+    "sha256": "2de408f963ab72324e508830740f1477818d8c80417b33bbdd4cd4889f221058"
+  },
+  "btc_data": {
+    "path": "data/raw/BTC_1h.csv.gz",
+    "kind": "spot_ohlcv",
+    "coin": "BTC",
+    "timeframe": "1h",
+    "source": "Binance",
+    "source_symbols": "BTCUSDT",
+    "first_timestamp": "2018-01-01T00:00:00+00:00",
+    "last_timestamp": "2026-07-27T23:00:00+00:00",
+    "rows": 74998,
+    "sha256": "8c594e1fb43e69088efd8d5980ae7e6db1e3d7dba7f943bde82ba54f008eeadc"
+  },
+  "sample_rows": 48802,
+  "sample_start": "2021-01-01T00:00:00+00:00",
+  "sample_end": "2026-07-27T23:00:00+00:00",
+  "market_slug": "ethereum-etf-approved-by-may-31",
+  "market_question": "Ethereum ETF approved by May 31?"
+}
