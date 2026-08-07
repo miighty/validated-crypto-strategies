@@ -1,0 +1,347 @@
+{
+  "specification": {
+    "instrument": "MSTR common stock, Nasdaq one-minute OHLCV",
+    "signal": "BTC prior US close to completed 09:25 ET return below its expanding 95th percentile absolute threshold; long only when BTC return is negative",
+    "entry": "09:30 ET opening print",
+    "exits_tested": {
+      "h5": "09:34 close",
+      "h10": "09:39 close",
+      "h15": "09:44 close"
+    },
+    "cost_model": "20 bps per executed round trip",
+    "selection": "highest positive mean return in 2021-2023 among exactly h5, h10, h15"
+  },
+  "selected_horizon": null,
+  "periods": {
+    "development_2021_2023": {
+      "h5": {
+        "events": 7,
+        "mean_net_return": -0.005063468872315601,
+        "median_net_return": -0.0009649070085813154,
+        "total_return": -0.04077905989807673,
+        "ending_equity": 9592.209401019232,
+        "net_profit": -407.79059898076775,
+        "win_rate": 0.42857142857142855,
+        "maximum_drawdown": -0.0803410138248849,
+        "maximum_event_profit_share": 0.46429510633314863,
+        "bootstrap_mean_95": [
+          -0.03593496825980765,
+          0.023320441940445788
+        ]
+      },
+      "h10": {
+        "events": 7,
+        "mean_net_return": -0.013892374454198537,
+        "median_net_return": -0.015322648502454237,
+        "total_return": -0.09919825417545403,
+        "ending_equity": 9008.01745824546,
+        "net_profit": -991.9825417545399,
+        "win_rate": 0.2857142857142857,
+        "maximum_drawdown": -0.12088684381706305,
+        "maximum_event_profit_share": 0.9100298983358587,
+        "bootstrap_mean_95": [
+          -0.04446655018736971,
+          0.017725158128889525
+        ]
+      },
+      "h15": {
+        "events": 7,
+        "mean_net_return": -0.005811473877557538,
+        "median_net_return": -0.01903388261433059,
+        "total_return": -0.04607079201055164,
+        "ending_equity": 9539.292079894483,
+        "net_profit": -460.7079201055167,
+        "win_rate": 0.2857142857142857,
+        "maximum_drawdown": -0.07005529953917056,
+        "maximum_event_profit_share": 0.6276455362927644,
+        "bootstrap_mean_95": [
+          -0.035115672659188885,
+          0.027466125465081447
+        ]
+      }
+    },
+    "validation_2024": {
+      "h5": {
+        "events": 3,
+        "mean_net_return": 0.015355930211619406,
+        "median_net_return": -0.004064993829699713,
+        "total_return": 0.04537812528025187,
+        "ending_equity": 10453.781252802519,
+        "net_profit": 453.7812528025188,
+        "win_rate": 0.3333333333333333,
+        "maximum_drawdown": -0.004064993829699715,
+        "maximum_event_profit_share": 1.0,
+        "bootstrap_mean_95": [
+          -0.00834293369055594,
+          0.058475718155113876
+        ]
+      },
+      "h10": {
+        "events": 3,
+        "mean_net_return": 0.03560243762291345,
+        "median_net_return": 0.00992924722336497,
+        "total_return": 0.10729972779619312,
+        "ending_equity": 11072.997277961931,
+        "net_profit": 1072.997277961931,
+        "win_rate": 0.6666666666666666,
+        "maximum_drawdown": 0.0,
+        "maximum_event_profit_share": 0.9108600048832859,
+        "bootstrap_mean_95": [
+          -0.004582049564634925,
+          0.1014601152100103
+        ]
+      },
+      "h15": {
+        "events": 3,
+        "mean_net_return": 0.030493477616956827,
+        "median_net_return": 0.005610037021801741,
+        "total_return": 0.09084883661941712,
+        "ending_equity": 10908.488366194171,
+        "net_profit": 908.4883661941712,
+        "win_rate": 0.6666666666666666,
+        "maximum_drawdown": 0.0,
+        "maximum_event_profit_share": 0.9454617279902542,
+        "bootstrap_mean_95": [
+          -0.011383791024782262,
+          0.09725418685385101
+        ]
+      }
+    },
+    "observed_2025_2026": {
+      "h5": {
+        "events": 5,
+        "mean_net_return": 0.011021390712755607,
+        "median_net_return": 0.020446861667371197,
+        "total_return": 0.05545990219972974,
+        "ending_equity": 10554.599021997297,
+        "net_profit": 554.5990219972973,
+        "win_rate": 0.8,
+        "maximum_drawdown": -0.024292236357151276,
+        "maximum_event_profit_share": 0.3221993074374989,
+        "bootstrap_mean_95": [
+          -0.007901348964303567,
+          0.022815221653137603
+        ]
+      },
+      "h10": {
+        "events": 5,
+        "mean_net_return": 0.013177084865135802,
+        "median_net_return": 0.023778732545649772,
+        "total_return": 0.06587323103617271,
+        "ending_equity": 10658.732310361727,
+        "net_profit": 658.7323103617273,
+        "win_rate": 0.6,
+        "maximum_drawdown": -0.03278117327779795,
+        "maximum_event_profit_share": 0.39790014018830205,
+        "bootstrap_mean_95": [
+          -0.013441991065737157,
+          0.034755567613534266
+        ]
+      },
+      "h15": {
+        "events": 5,
+        "mean_net_return": 0.010323782385274894,
+        "median_net_return": 0.025721668872327186,
+        "total_return": 0.051097030824628575,
+        "ending_equity": 10510.970308246286,
+        "net_profit": 510.97030824628564,
+        "win_rate": 0.6,
+        "maximum_drawdown": -0.03902882243407735,
+        "maximum_event_profit_share": 0.40983698848095507,
+        "bootstrap_mean_95": [
+          -0.011118461790182521,
+          0.03126950321851165
+        ]
+      }
+    },
+    "full_observed": {
+      "h5": {
+        "events": 15,
+        "mean_net_return": 0.004382030806161803,
+        "median_net_return": 0.011390619405657,
+        "total_return": 0.05836092671988102,
+        "ending_equity": 10583.60926719881,
+        "net_profit": 583.6092671988099,
+        "win_rate": 0.5333333333333333,
+        "maximum_drawdown": -0.09026148331076966,
+        "maximum_event_profit_share": 0.24231153977223996,
+        "bootstrap_mean_95": [
+          -0.014072077016226483,
+          0.020982234299748524
+        ]
+      },
+      "h10": {
+        "events": 15,
+        "mean_net_return": 0.00502974106766864,
+        "median_net_return": -0.0023294117647058004,
+        "total_return": 0.06316327813726574,
+        "ending_equity": 10631.632781372657,
+        "net_profit": 631.6327813726566,
+        "win_rate": 0.4666666666666667,
+        "maximum_drawdown": -0.12088684381706305,
+        "maximum_event_profit_share": 0.36254104938393766,
+        "bootstrap_mean_95": [
+          -0.01742393025807192,
+          0.02734759619695196
+        ]
+      },
+      "h15": {
+        "events": 15,
+        "mean_net_return": 0.0068279351756228126,
+        "median_net_return": -0.011383791024782262,
+        "total_return": 0.0937637572118073,
+        "ending_equity": 10937.637572118074,
+        "net_profit": 937.6375721180739,
+        "win_rate": 0.4666666666666667,
+        "maximum_drawdown": -0.073491998592083,
+        "maximum_event_profit_share": 0.32103967706251024,
+        "bootstrap_mean_95": [
+          -0.013944460624932015,
+          0.028032382761664375
+        ]
+      }
+    }
+  },
+  "selected_results": null,
+  "validation_passed": false,
+  "failure_reasons": [
+    "No 5/10/15-minute horizon had a positive 2021-2023 mean return."
+  ],
+  "event_returns": [
+    {
+      "session": "2021-12-06 00:00:00",
+      "btc_event_return": -0.09437217046432445,
+      "btc_threshold": 0.06581783648619535,
+      "entry": 594.92,
+      "h5": -0.026087272238284,
+      "h10": -0.040206817723391186,
+      "h15": -0.028322866940092783
+    },
+    {
+      "session": "2022-01-21 00:00:00",
+      "btc_event_return": -0.10026516891908488,
+      "btc_threshold": 0.0600969847822877,
+      "entry": 425.0,
+      "h5": 0.02023529411764713,
+      "h10": -0.0023294117647058004,
+      "h15": -0.01955294117647055
+    },
+    {
+      "session": "2022-01-24 00:00:00",
+      "btc_event_return": -0.12778358896169384,
+      "btc_threshold": 0.06799081483275042,
+      "entry": 321.0,
+      "h5": 0.048031152647975084,
+      "h10": 0.06342056074766345,
+      "h15": 0.06843613707165108
+    },
+    {
+      "session": "2022-05-09 00:00:00",
+      "btc_event_return": -0.08772643248100409,
+      "btc_threshold": 0.06567468084780922,
+      "entry": 271.25,
+      "h5": -0.08034101382488479,
+      "h10": -0.08775115207373274,
+      "h15": -0.07005529953917056
+    },
+    {
+      "session": "2022-06-13 00:00:00",
+      "btc_event_return": -0.19149710731738623,
+      "btc_threshold": 0.06744120541723778,
+      "entry": 149.53,
+      "h5": 0.03518317394502768,
+      "h10": -0.021327225305958764,
+      "h15": 0.040600147127666686
+    },
+    {
+      "session": "2022-08-19 00:00:00",
+      "btc_event_return": -0.07741868880885239,
+      "btc_threshold": 0.06614119893928838,
+      "entry": 299.49,
+      "h5": -0.0009649070085813154,
+      "h10": -0.015322648502454237,
+      "h15": -0.012751611072156053
+    },
+    {
+      "session": "2022-11-11 00:00:00",
+      "btc_event_return": -0.08360282033610766,
+      "btc_threshold": 0.06619654146293259,
+      "entry": 162.03,
+      "h5": -0.03150070974510899,
+      "h10": 0.0062700734431895295,
+      "h15": -0.01903388261433059
+    },
+    {
+      "session": "2024-04-02 00:00:00",
+      "btc_event_return": -0.06808651101445684,
+      "btc_threshold": 0.05941144359969503,
+      "entry": 1493.0,
+      "h5": -0.00834293369055594,
+      "h10": -0.004582049564634925,
+      "h15": -0.011383791024782262
+    },
+    {
+      "session": "2024-07-05 00:00:00",
+      "btc_event_return": -0.07395707469780177,
+      "btc_threshold": 0.05878882640952163,
+      "entry": 1215.5,
+      "h5": -0.004064993829699713,
+      "h10": 0.00992924722336497,
+      "h15": 0.005610037021801741
+    },
+    {
+      "session": "2024-08-05 00:00:00",
+      "btc_event_return": -0.20093984743325344,
+      "btc_threshold": 0.05922015719217377,
+      "entry": 1048.52,
+      "h5": 0.058475718155113876,
+      "h10": 0.1014601152100103,
+      "h15": 0.09725418685385101
+    },
+    {
+      "session": "2025-02-03 00:00:00",
+      "btc_event_return": -0.07079080039520069,
+      "btc_threshold": 0.057846925899287416,
+      "entry": 309.85,
+      "h5": 0.021979344844279325,
+      "h10": 0.03569565918993045,
+      "h15": 0.037309343230595315
+    },
+    {
+      "session": "2025-04-03 00:00:00",
+      "btc_event_return": -0.0584351994395399,
+      "btc_threshold": 0.05780238279030031,
+      "entry": 287.14,
+      "h5": 0.025582364003621905,
+      "h10": 0.03930389357108033,
+      "h15": 0.025721668872327186
+    },
+    {
+      "session": "2025-04-07 00:00:00",
+      "btc_event_return": -0.08266850168652573,
+      "btc_threshold": 0.05818637483993135,
+      "entry": 260.17,
+      "h5": 0.020446861667371197,
+      "h10": -0.0038449475343045308,
+      "h15": -0.020949148633585768
+    },
+    {
+      "session": "2025-12-01 00:00:00",
+      "btc_event_return": -0.05600798674577401,
+      "btc_threshold": 0.055124305050422526,
+      "entry": 168.22,
+      "h5": -0.024292236357151387,
+      "h10": -0.02904791344667701,
+      "h15": -0.018466531922482488
+    },
+    {
+      "session": "2026-02-02 00:00:00",
+      "btc_event_return": -0.06919369859297875,
+      "btc_threshold": 0.054998996034592386,
+      "entry": 139.65,
+      "h5": 0.011390619405657,
+      "h10": 0.023778732545649772,
+      "h15": 0.02800358037952022
+    }
+  ]
+}

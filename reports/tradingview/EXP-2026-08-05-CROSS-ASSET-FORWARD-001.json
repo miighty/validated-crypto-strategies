@@ -1,0 +1,31 @@
+{
+  "experiment_id": "EXP-2026-08-05-CROSS-ASSET-FORWARD-001",
+  "status": "COMPILED_FORWARD_WINDOW_AWAITING_DATA",
+  "tested_at_utc": "2026-08-05T17:25:38Z",
+  "pine_file": "pine/btc_crypto_equity_residual_continuation.pine",
+  "pine_sha256": "daf16338279d7ae060b02cf76b841a457b2041bdc5db55e702a6e475aed0fa19",
+  "published": false,
+  "saved_to_tradingview_account": false,
+  "python_portfolio_authority": true,
+  "test": {
+    "requested_symbol": "NASDAQ:MSTR",
+    "displayed_feed": "BATS:MSTR",
+    "feed_note": "TradingView Basic displayed NASDAQ by Cboe One rather than Databento XNAS.ITCH.",
+    "timeframe": "1 minute",
+    "session": "Extended",
+    "evidence_window": "Forward only — from 2026-08-05",
+    "btc_reference": "BINANCE:BTCUSDT",
+    "chart_range_displayed": "2026-07-27 through 2026-08-05",
+    "compiled": true,
+    "runtime_error": false,
+    "trade_report_available": false,
+    "trades": 0
+  },
+  "interpretation": "Compilation and runtime compatibility passed. No performance result exists: the independent window began on the test date, the US session was still open, and the Basic-plan one-minute chart did not expose the 60 prior sessions required by the frozen event threshold and factor regression.",
+  "limitations": [
+    "TradingView can simulate only the chart symbol, not the authoritative 20-stock equal-slot portfolio.",
+    "The Basic-plan one-minute chart history was shorter than the frozen 60-session warm-up.",
+    "TradingView bar fills and the BATS/Cboe One feed do not equal Databento XNAS.ITCH volume-weighted typical-price proxies.",
+    "No alert, broker connection, publication, or live order was created."
+  ]
+}

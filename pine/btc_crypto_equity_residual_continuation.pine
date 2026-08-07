@@ -1,0 +1,258 @@
+//@version=6
+strategy(
+     "Edge Research — BTC/Crypto-Equity Residual Continuation",
+     overlay = true,
+     initial_capital = 10000,
+     default_qty_type = strategy.percent_of_equity,
+     default_qty_value = 5,
+     commission_type = strategy.commission.percent,
+     commission_value = 0.10,
+     slippage = 0,
+     pyramiding = 0,
+     calc_on_order_fills = false,
+     calc_on_every_tick = false,
+     process_orders_on_close = false)
+
+// SUPPLEMENTARY PER-STOCK REPLICATION ONLY.
+// Python remains the authority for the equal-slot 20-stock portfolio and promotion gates.
+// Use a standard 1-minute US equity chart with Extended Trading Hours enabled.
+// A market entry submitted after the 09:40 bar closes fills at the next available tick,
+// inside the frozen 09:40–09:44 entry window. The 15:58 close request normally fills
+// at 15:59, inside the frozen 15:55–15:59 exit window.
+
+testMode = input.string(
+     "Forward only — from 2026-08-05",
+     "Evidence window",
+     options = ["Forward only — from 2026-08-05", "Historical review — from 2021-08-05"])
+btcSymbol = input.symbol("BINANCE:BTCUSDT", "BTC reference feed")
+
+string ny = "America/New_York"
+int forwardStart = timestamp(ny, 2026, 8, 5, 0, 0)
+int historicalStart = timestamp(ny, 2021, 8, 5, 0, 0)
+int testStart = testMode == "Forward only — from 2026-08-05" ? forwardStart : historicalStart
+bool inWindow = time >= testStart
+
+if barstate.isfirst and (not timeframe.isminutes or timeframe.multiplier != 1)
+    runtime.error("This strategy requires a standard 1-minute chart with extended hours enabled.")
+
+// Confirmed higher-timeframe BTC values. The one-bar offset plus lookahead_on exposes only
+// the last completed five-minute candle and prevents historical/realtime repainting.
+float btcCompleted5m = request.security(
+     btcSymbol, "5", close[1], gaps = barmerge.gaps_off, lookahead = barmerge.lookahead_on)
+
+// One-minute benchmark bars are sampled only during the two frozen US-session windows.
+[spyTypical, spyVolume] = request.security(
+     "AMEX:SPY", "1", [hlc3, volume], gaps = barmerge.gaps_on, lookahead = barmerge.lookahead_off)
+[qqqTypical, qqqVolume] = request.security(
+     "NASDAQ:QQQ", "1", [hlc3, volume], gaps = barmerge.gaps_on, lookahead = barmerge.lookahead_off)
+
+int hourNy = hour(time, ny)
+int minuteNy = minute(time, ny)
+int dayKey = year(time, ny) * 10000 + month(time, ny) * 100 + dayofmonth(time, ny)
+bool newSessionDate = na(dayKey[1]) or dayKey != dayKey[1]
+bool at0925 = hourNy == 9 and minuteNy == 25
+bool inObservation = hourNy == 9 and minuteNy >= 35 and minuteNy <= 39
+bool at0940 = hourNy == 9 and minuteNy == 40
+bool inCloseProxy = hourNy == 15 and minuteNy >= 55 and minuteNy <= 59
+bool at1558 = hourNy == 15 and minuteNy == 58
+bool at1600 = hourNy == 16 and minuteNy == 0
+
+var array<float> eventAbsHistory = array.new_float()
+var array<float> responseHistory = array.new_float()
+var array<float> btcFactorHistory = array.new_float()
+var array<float> spyFactorHistory = array.new_float()
+var array<float> qqqFactorHistory = array.new_float()
+
+var float priorStockClose = na
+var float priorBtcClose = na
+var float priorSpyClose = na
+var float priorQqqClose = na
+
+var float stockObsNumerator = 0.0
+var float stockObsVolume = 0.0
+var float spyObsNumerator = 0.0
+var float spyObsVolume = 0.0
+var float qqqObsNumerator = 0.0
+var float qqqObsVolume = 0.0
+
+var float stockCloseNumerator = 0.0
+var float stockCloseVolume = 0.0
+var float spyCloseNumerator = 0.0
+var float spyCloseVolume = 0.0
+var float qqqCloseNumerator = 0.0
+var float qqqCloseVolume = 0.0
+
+var float btcEventReturn = na
+var float wildThreshold = na
+var bool wildEvent = false
+var bool saw0925 = false
+var float residualGap = na
+var float expectedGap = na
+
+if newSessionDate
+    stockObsNumerator := 0.0
+    stockObsVolume := 0.0
+    spyObsNumerator := 0.0
+    spyObsVolume := 0.0
+    qqqObsNumerator := 0.0
+    qqqObsVolume := 0.0
+    stockCloseNumerator := 0.0
+    stockCloseVolume := 0.0
+    spyCloseNumerator := 0.0
+    spyCloseVolume := 0.0
+    qqqCloseNumerator := 0.0
+    qqqCloseVolume := 0.0
+    btcEventReturn := na
+    wildThreshold := na
+    wildEvent := false
+    saw0925 := false
+    residualGap := na
+    expectedGap := na
+
+if inObservation
+    stockObsNumerator += hlc3 * volume
+    stockObsVolume += volume
+    if not na(spyTypical) and not na(spyVolume)
+        spyObsNumerator += spyTypical * spyVolume
+        spyObsVolume += spyVolume
+    if not na(qqqTypical) and not na(qqqVolume)
+        qqqObsNumerator += qqqTypical * qqqVolume
+        qqqObsVolume += qqqVolume
+
+if inCloseProxy
+    stockCloseNumerator += hlc3 * volume
+    stockCloseVolume += volume
+    if not na(spyTypical) and not na(spyVolume)
+        spyCloseNumerator += spyTypical * spyVolume
+        spyCloseVolume += spyVolume
+    if not na(qqqTypical) and not na(qqqVolume)
+        qqqCloseNumerator += qqqTypical * qqqVolume
+        qqqCloseVolume += qqqVolume
+
+f_percentile95(array<float> values) =>
+    float result = na
+    if array.size(values) >= 60
+        array<float> ordered = array.copy(values)
+        array.sort(ordered, order.ascending)
+        result := array.percentile_linear_interpolation(ordered, 95)
+    result
+
+f_push_capped(array<float> values, float value, int maximum) =>
+    array.push(values, value)
+    if array.size(values) > maximum
+        array.shift(values)
+
+f_factor_betas(
+     array<float> response,
+     array<float> btcFactor,
+     array<float> spyFactor,
+     array<float> qqqFactor) =>
+    float betaBtc = na
+    float betaSpy = na
+    float betaQqq = na
+    int observations = array.size(response)
+    if observations >= 40
+        float a = 0.0
+        float b = 0.0
+        float c = 0.0
+        float d = 0.0
+        float e = 0.0
+        float f = 0.0
+        float g = 0.0
+        float h = 0.0
+        float i = 0.0
+        for index = 0 to observations - 1
+            float y = array.get(response, index)
+            float xb = array.get(btcFactor, index)
+            float xs = array.get(spyFactor, index)
+            float xq = array.get(qqqFactor, index)
+            a += xb * xb
+            b += xb * xs
+            c += xb * xq
+            d += xs * xs
+            e += xs * xq
+            f += xq * xq
+            g += xb * y
+            h += xs * y
+            i += xq * y
+        float determinant = a * (d * f - e * e) - b * (b * f - c * e) + c * (b * e - c * d)
+        if math.abs(determinant) > 1e-12
+            betaBtc := (g * (d * f - e * e) - b * (h * f - e * i) + c * (h * e - d * i)) / determinant
+            betaSpy := (a * (h * f - e * i) - g * (b * f - c * e) + c * (b * i - h * c)) / determinant
+            betaQqq := (a * (d * i - h * e) - b * (b * i - h * c) + g * (b * e - d * c)) / determinant
+    [betaBtc, betaSpy, betaQqq, observations]
+
+// Build the expanding threshold before the evidence window as well. Only trading is windowed;
+// the forward test must arrive on day one with the same prior-only history as Python.
+if at0925 and not na(priorBtcClose) and not na(btcCompleted5m)
+    saw0925 := true
+    btcEventReturn := btcCompleted5m / priorBtcClose - 1
+    wildThreshold := f_percentile95(eventAbsHistory)
+    wildEvent := inWindow and not na(wildThreshold) and math.abs(btcEventReturn) >= wildThreshold
+    array.push(eventAbsHistory, math.abs(btcEventReturn))
+
+[betaBtc, betaSpy, betaQqq, betaObservations] = f_factor_betas(
+     responseHistory, btcFactorHistory, spyFactorHistory, qqqFactorHistory)
+
+bool enterLong = false
+if at0940 and inWindow and wildEvent and strategy.position_size == 0
+    float observedStock = stockObsVolume > 0 ? stockObsNumerator / stockObsVolume : na
+    float observedSpy = spyObsVolume > 0 ? spyObsNumerator / spyObsVolume : na
+    float observedQqq = qqqObsVolume > 0 ? qqqObsNumerator / qqqObsVolume : na
+    float stockGap = observedStock / priorStockClose - 1
+    float spyGap = observedSpy / priorSpyClose - 1
+    float qqqGap = observedQqq / priorQqqClose - 1
+    bool complete = not na(stockGap) and not na(spyGap) and not na(qqqGap) and not na(betaBtc)
+    if complete
+        expectedGap := betaBtc * btcEventReturn + betaSpy * spyGap + betaQqq * qqqGap
+        residualGap := stockGap - expectedGap
+        enterLong := residualGap > 0
+
+if enterLong
+    strategy.entry("Residual continuation long", strategy.long, comment = "Positive residual")
+
+if at1558 and strategy.position_size > 0
+    strategy.close("Residual continuation long", comment = "Frozen close window")
+
+// Add the just-finished session only after all trade decisions, preserving prior-only betas.
+if at1600
+    float stockCloseProxy = stockCloseVolume > 0 ? stockCloseNumerator / stockCloseVolume : na
+    float spyCloseProxy = spyCloseVolume > 0 ? spyCloseNumerator / spyCloseVolume : na
+    float qqqCloseProxy = qqqCloseVolume > 0 ? qqqCloseNumerator / qqqCloseVolume : na
+    bool completeClose = not na(stockCloseProxy) and not na(spyCloseProxy) and not na(qqqCloseProxy) and not na(btcCompleted5m)
+    bool completePrior = not na(priorStockClose) and not na(priorBtcClose) and not na(priorSpyClose) and not na(priorQqqClose)
+    if completeClose and completePrior
+        float stockReturn = stockCloseProxy / priorStockClose - 1
+        float btcReturn = btcCompleted5m / priorBtcClose - 1
+        float spyReturn = spyCloseProxy / priorSpyClose - 1
+        float qqqReturn = qqqCloseProxy / priorQqqClose - 1
+        f_push_capped(responseHistory, stockReturn, 60)
+        f_push_capped(btcFactorHistory, btcReturn, 60)
+        f_push_capped(spyFactorHistory, spyReturn, 60)
+        f_push_capped(qqqFactorHistory, qqqReturn, 60)
+    if completeClose
+        priorStockClose := stockCloseProxy
+        priorBtcClose := btcCompleted5m
+        priorSpyClose := spyCloseProxy
+        priorQqqClose := qqqCloseProxy
+
+plotshape(at0940 and wildEvent, title = "Wild BTC event", style = shape.diamond, location = location.abovebar, color = color.orange, size = size.tiny)
+plotshape(enterLong, title = "Positive residual entry", style = shape.triangleup, location = location.belowbar, color = color.lime, size = size.small)
+bgcolor(inWindow ? color.new(color.teal, 95) : na, title = "Active evidence window")
+
+var table status = table.new(position.top_right, 2, 7, border_width = 1)
+if barstate.islast
+    table.cell(status, 0, 0, "Mode")
+    table.cell(status, 1, 0, testMode)
+    table.cell(status, 0, 1, "Chart requirement")
+    table.cell(status, 1, 1, "1m + extended hours")
+    table.cell(status, 0, 2, "09:25 bar seen")
+    table.cell(status, 1, 2, saw0925 ? "Yes" : "No — no valid signal")
+    table.cell(status, 0, 3, "Prior factor sessions")
+    table.cell(status, 1, 3, str.tostring(betaObservations))
+    table.cell(status, 0, 4, "BTC event return")
+    table.cell(status, 1, 4, na(btcEventReturn) ? "—" : str.tostring(btcEventReturn, format.percent))
+    table.cell(status, 0, 5, "Wild threshold")
+    table.cell(status, 1, 5, na(wildThreshold) ? "—" : str.tostring(wildThreshold, format.percent))
+    table.cell(status, 0, 6, "Residual gap")
+    table.cell(status, 1, 6, na(residualGap) ? "—" : str.tostring(residualGap, format.percent))

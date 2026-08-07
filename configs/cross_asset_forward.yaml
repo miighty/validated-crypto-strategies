@@ -1,0 +1,64 @@
+experiment_id: EXP-2026-08-05-CROSS-ASSET-FORWARD-001
+parent_experiment_id: EXP-2026-08-05-CROSS-ASSET-STRAT-001
+status: forward_paper_observation_only
+
+# Frozen before the 2026-08-05 09:25 America/New_York signal.
+first_eligible_session: "2026-08-05"
+timezone: America/New_York
+
+strategy:
+  rule: residual_continuation
+  direction: long_only
+  btc_signal_time: "09:25"
+  wild_event_quantile: 0.95
+  minimum_prior_observations: 60
+  factor_lookback_sessions: 60
+  factor_minimum_sessions: 40
+  factors: [BTC, SPY, QQQ]
+  observation_window: ["09:35", "09:40"]
+  entry_window: ["09:40", "09:45"]
+  exit_window: ["15:55", "16:00"]
+  round_trip_cost_bps: 20
+  stress_round_trip_cost_bps: 50
+  weighting: equal_slots_with_non_signals_in_cash
+  initial_paper_capital_usd: 10000
+
+universe:
+  benchmarks: [SPY, QQQ]
+  equities:
+    - MSTR
+    - COIN
+    - MARA
+    - RIOT
+    - CLSK
+    - HUT
+    - HIVE
+    - IREN
+    - WULF
+    - CORZ
+    - CIFR
+    - BTDR
+    - APLD
+    - HOOD
+    - PYPL
+    - XYZ
+    - IBKR
+    - CAN
+    - BTBT
+    - GLXY
+
+promotion_gate:
+  minimum_new_event_sessions: 30
+  require_positive_total_return: true
+  require_bootstrap_lower_bound_above_zero: true
+  require_positive_50bps_stress_return: true
+  require_positive_liquid_session_return: true
+  liquid_session_minimum_minutes: 300
+  maximum_single_event_profit_share: 0.25
+  action_on_pass: independent_review_only
+
+safety:
+  order_submission: prohibited
+  broker_credentials: prohibited
+  historical_sessions_before_start: prohibited
+  ledger_mode: append_only_hash_chain

@@ -45,6 +45,39 @@ def verify_pine_contract(path: Path, experiment_type: str) -> None:
             raise ValueError(f"{path}: selected breakout contract is missing: {missing_breakout}")
 
 
+def verify_cross_asset_pine_contract(path: Path) -> None:
+    source = path.read_text()
+    required = (
+        "//@version=6",
+        "strategy(",
+        "default_qty_value = 5",
+        "commission_value = 0.10",
+        "pyramiding = 0",
+        "calc_on_order_fills = false",
+        "calc_on_every_tick = false",
+        "process_orders_on_close = false",
+        '"Forward only — from 2026-08-05"',
+        'input.symbol("BINANCE:BTCUSDT"',
+        '"AMEX:SPY"',
+        '"NASDAQ:QQQ"',
+        "array.percentile_linear_interpolation(ordered, 95)",
+        "observations >= 40",
+        "f_push_capped(responseHistory, stockReturn, 60)",
+        "if at0925 and not na(priorBtcClose)",
+        "if at0940",
+        "if at1558",
+        'strategy.entry("Residual continuation long", strategy.long',
+        'strategy.close("Residual continuation long"',
+    )
+    missing = [token for token in required if token not in source]
+    if missing:
+        raise ValueError(f"{path}: missing cross-asset Pine contract tokens: {missing}")
+    forbidden = ("strategy.short", "lookahead = barmerge.lookahead_on)\n[spyTypical")
+    present = [token for token in forbidden if token in source]
+    if present:
+        raise ValueError(f"{path}: forbidden cross-asset Pine tokens: {present}")
+
+
 def verify_tradingview_record(path: Path) -> str:
     record = json.loads(path.read_text())
     expected_status = "SUPPLEMENTARY_FORWARD_TESTED_HISTORICAL_WINDOWS_DEFERRED"
@@ -122,7 +155,22 @@ def verify_repository() -> None:
     missing_registry = [experiment_id for experiment_id in experiment_ids if experiment_id not in registry]
     if missing_registry:
         raise ValueError(f"Experiment registry is missing: {missing_registry}")
+
+    from .cross_asset_forward import forward_status, load_forward_config, read_ledger
+
+    forward_config = load_forward_config(root / "configs" / "cross_asset_forward.yaml")
+    forward_ledger = root / "forward" / "cross_asset_paper_ledger.jsonl"
+    derived_forward_status = forward_status(read_ledger(forward_ledger), forward_config)
+    recorded_forward_status = json.loads(
+        (root / "forward" / "cross_asset_paper_status.json").read_text()
+    )
+    if recorded_forward_status != derived_forward_status:
+        raise ValueError("Forward paper status does not match the verified append-only ledger")
+    verify_cross_asset_pine_contract(
+        root / "pine" / "btc_crypto_equity_residual_continuation.pine"
+    )
     print(
         "Verified edge-research data, two completed Python experiments, reports, trade ledgers, "
-        f"charts, registry, and Pine contracts. TradingView status: {tradingview}"
+        "charts, registry, Pine contracts, and the locked paper-forward ledger. "
+        f"TradingView status: {tradingview}"
     )

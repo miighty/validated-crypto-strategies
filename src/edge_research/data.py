@@ -17,6 +17,7 @@ from .config import load_yaml, resolve_from_root
 
 BINANCE_KLINES = "https://api.binance.com/api/v3/klines"
 INTERVALS = {
+    "5m": timedelta(minutes=5),
     "1h": timedelta(hours=1),
     "4h": timedelta(hours=4),
     "1d": timedelta(days=1),

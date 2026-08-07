@@ -1,0 +1,48 @@
+experiment_id: EXP-2026-08-05-CROSS-ASSET-STRAT-001
+parent_experiment_id: EXP-2026-08-04-CROSS-ASSET-001
+experiment_type: btc_crypto_equity_opening_gap
+research_status: completed_rejected_for_deployment
+
+windows:
+  start: "2021-08-05T00:00:00Z"
+  development_end_exclusive: "2024-01-01T00:00:00Z"
+  validation_end_exclusive: "2025-01-01T00:00:00Z"
+  end_exclusive: "2026-08-04T00:00:00Z"
+
+signal:
+  btc_cutoff_et: "09:25"
+  event_return_start_et: "prior US equity close"
+  wild_method: expanding_absolute_quantile
+  primary_quantile: 0.95
+  sensitivity_quantile: 0.90
+  minimum_prior_observations: 60
+
+execution:
+  gap_observation_window_et: ["09:35", "09:40"]
+  entry_window_et: ["09:40", "09:45"]
+  exit_window_et: ["15:55", "16:00"]
+  weighting: equal_weight_eligible_equities
+  initial_capital_usd: 10000
+  primary_round_trip_cost_bps: 20
+  stress_round_trip_cost_bps: 50
+
+candidate_rules:
+  - btc_continuation
+  - btc_reversal
+  - residual_continuation
+  - residual_reversion
+
+selection:
+  policy: highest_positive_development_mean
+  no_trade_if_all_development_means_nonpositive: true
+  factor_beta_lookback_sessions: 60
+  factor_beta_minimum_sessions: 40
+  factors: [BTC, SPY, QQQ]
+
+validation:
+  liquid_session_minimum_minutes: 300
+  long_only_sensitivity: true
+  require_positive_validation_return: true
+  require_positive_forward_return: true
+  require_forward_bootstrap_lower_bound_above_zero: true
+  maximum_single_event_profit_share: 0.25

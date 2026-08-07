@@ -1,0 +1,34 @@
+{
+  "experiment_id": "EXP-2026-08-05-CROSS-ASSET-STRAT-001",
+  "formal_verdict": "REJECTED_FOR_DEPLOYMENT",
+  "selected_rule": "btc_continuation",
+  "selected_rule_full_return": -0.3267878565450194,
+  "selected_rule_ending_equity": 6732.121434549806,
+  "selected_rule_net_profit": -3267.8785654501944,
+  "research_candidate": {
+    "rule": "residual_continuation",
+    "implementation": "long_only",
+    "status": "HISTORICALLY_PROFITABLE_NOT_VALIDATED",
+    "initial_capital": 10000,
+    "events": 34,
+    "full_return": 0.5614517718478202,
+    "ending_equity": 15614.517718478202,
+    "net_profit": 5614.517718478202,
+    "maximum_drawdown": -0.05662609391197426,
+    "forward_events": 7,
+    "forward_return": 0.16506384100437854,
+    "forward_bootstrap_mean_95": [-0.005457185010134332, 0.05618133385319092],
+    "forward_maximum_event_profit_share": 0.5522741498124492
+  },
+  "data": {
+    "start": "2021-08-05",
+    "end_exclusive": "2026-08-04",
+    "databento_jobs": ["XNAS-20260805-44DUDHGBMW", "XNAS-20260804-ED35KSK6WW"],
+    "databento_source_records": 12410872,
+    "additional_databento_cost_usd": 3.08464774489403,
+    "btc_5m_records": 525506,
+    "processed_asset_sessions": 24543
+  },
+  "claim_boundary": "The alternative made money historically but failed the frozen deployment gates."
+}
+

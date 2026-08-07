@@ -1,0 +1,8 @@
+experiment_data_version: cross_asset_btc_5m_forward_v1
+source: binance_spot
+quote_asset: USDT
+symbols: [BTCUSDT]
+timeframe: 5m
+start: "2021-08-05T00:00:00Z"
+end: latest_complete
+output_directory: data/cache/cross_asset

@@ -1,0 +1,43 @@
+{
+  "experiment_id": "EXP-2026-08-04-CROSS-ASSET-001",
+  "studies_completed": [6, 7],
+  "study_6_verdict": "REACTION_CONFIRMED_TRADABLE_EDGE_REJECTED",
+  "study_7_verdict": "BTC_LEAD_CONFIRMED_ORIGINAL_PNL_WITHDRAWN",
+  "execution_correction": {
+    "status": "SUPERSEDED",
+    "reason": "The original residual signal observation and assumed fill windows overlapped.",
+    "corrected_experiment": "EXP-2026-08-05-CROSS-ASSET-STRAT-001"
+  },
+  "study_8_status": "NOT_RUN",
+  "data_window": {
+    "start": "2024-01-01",
+    "end_exclusive": "2026-08-04"
+  },
+  "data": {
+    "databento_job": "XNAS-20260804-ED35KSK6WW",
+    "databento_records": 7482129,
+    "databento_cost_usd": 4.68268123269081,
+    "btc_5m_records": 272448,
+    "symbols_including_benchmarks": 22,
+    "usable_asset_sessions": 13565
+  },
+  "study_6": {
+    "primary_wild_overnight_events": 25,
+    "btc_up_opening_gap_mean": 0.056128523564109745,
+    "btc_down_opening_gap_mean": -0.05487901249350476,
+    "post_entry_intervals_exclude_zero": false,
+    "primary_wild_weekend_events": 1,
+    "weekend_status": "UNDERPOWERED"
+  },
+  "study_7": {
+    "eligible_sessions": 607,
+    "btc_to_open_gap_correlation": 0.7357392876415352,
+    "wild_btc_to_open_gap_correlation": 0.9324596063838319,
+    "wild_direction_match": 1.0,
+    "all_session_reversion_mean_net_return": 0.0009607611817631618,
+    "all_session_reversion_bootstrap_95": [-0.0018219392159247313, 0.0035937274583179484],
+    "wild_continuation_mean_net_return": 0.004359873060101822,
+    "wild_continuation_bootstrap_95": [-0.017801087637782396, 0.027313012980125263]
+  },
+  "claim_boundary": "Historical event study only; no validated trading edge or execution approval."
+}

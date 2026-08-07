@@ -1,6 +1,10 @@
 from pathlib import Path
 
-from edge_research.verify import verify_pine_contract, verify_tradingview_record
+from edge_research.verify import (
+    verify_cross_asset_pine_contract,
+    verify_pine_contract,
+    verify_tradingview_record,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,3 +25,8 @@ def test_tradingview_records_cover_forward_default_universe():
         assert verify_tradingview_record(path) == (
             "SUPPLEMENTARY_FORWARD_TESTED_HISTORICAL_WINDOWS_DEFERRED"
         )
+
+
+def test_cross_asset_pine_contract_is_long_only_and_timing_locked():
+    path = ROOT / "pine" / "btc_crypto_equity_residual_continuation.pine"
+    verify_cross_asset_pine_contract(path)

@@ -1,0 +1,49 @@
+{
+  "experiment_id": "EXP-2026-08-05-CROSS-ASSET-FORWARD-001",
+  "lock_id": "0d2ee29db525e18b6e33558ff8e9a2c12e95e236b1a3a287203449cd3310f396",
+  "first_eligible_session": "2026-08-05",
+  "last_recorded_session": null,
+  "sessions_recorded": 0,
+  "new_event_sessions": 0,
+  "minimum_required_event_sessions": 30,
+  "primary": {
+    "events": 0,
+    "mean_net_return": null,
+    "total_return": null,
+    "ending_equity": 10000,
+    "net_profit": 0.0,
+    "win_rate": null,
+    "maximum_drawdown": null,
+    "bootstrap_mean_95": null
+  },
+  "stress_50bps": {
+    "events": 0,
+    "mean_net_return": null,
+    "total_return": null,
+    "ending_equity": 10000,
+    "net_profit": 0.0,
+    "win_rate": null,
+    "maximum_drawdown": null,
+    "bootstrap_mean_95": null
+  },
+  "liquid_sessions": {
+    "events": 0,
+    "mean_net_return": null,
+    "total_return": null,
+    "ending_equity": 10000,
+    "net_profit": 0.0,
+    "win_rate": null,
+    "maximum_drawdown": null,
+    "bootstrap_mean_95": null
+  },
+  "promotion_checks": {
+    "minimum_event_count": false,
+    "positive_total_return": false,
+    "bootstrap_lower_bound_above_zero": false,
+    "positive_50bps_stress_return": false,
+    "positive_liquid_session_return": false,
+    "maximum_event_profit_share": false
+  },
+  "ready_for_independent_review": false,
+  "live_trading_approved": false
+}

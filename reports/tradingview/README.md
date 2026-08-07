@@ -19,6 +19,7 @@ Python is the validation authority. TradingView is a supplementary review and op
 | --- | --- | --- | --- | --- | --- |
 | EXP-2026-08-04-RSI-001 | `pine/rsi_mean_reversion_strategy.pine` | Forward −16.10% | Forward −60.04% | Forward −40.51% | Compiled and forward-tested on all default markets; rejected consistently |
 | EXP-2026-08-04-BO-001 | `pine/breakout_acceptance_rejection_strategy.pine` | Forward +1.49% | Forward +91.07% | Forward +21.27% | Compiled and forward-tested on all default markets; selected candidate positive on each |
+| EXP-2026-08-05-CROSS-ASSET-FORWARD-001 | `pine/btc_crypto_equity_residual_continuation.pine` | MSTR per-stock companion | — | — | Compiled on 1m extended-hours MSTR; clean forward window and 60-session warm-up do not yet provide a performance result |
 
 The TradingView account is on the Basic plan. TradingView explicitly reported that it can calculate only with data loaded on the chart; on the four-hour charts used here, the available tester history began on 2024-01-01. Older TradingView windows are therefore deferred. The Python engine has completed all three frozen windows independently and determines the research verdict.
 

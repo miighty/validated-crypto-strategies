@@ -1,0 +1,77 @@
+experiment_id: EXP-2026-08-04-CROSS-ASSET-001
+experiment_type: crypto_equity_event_study
+research_status: studies_6_7_completed_study_8_data_gated
+
+windows:
+  start: "2024-01-01T00:00:00Z"
+  end_exclusive: "2026-08-04T00:00:00Z"
+  evaluation_mode: expanding_prior_only
+
+equity_data:
+  provider: databento
+  dataset: XNAS.ITCH
+  schema: ohlcv-1m
+  entry_window_et: ["09:35", "09:40"]
+  close_window_et: ["15:55", "16:00"]
+  benchmark_symbols: [SPY, QQQ]
+  symbols:
+    - MSTR
+    - COIN
+    - MARA
+    - RIOT
+    - CLSK
+    - HUT
+    - HIVE
+    - IREN
+    - WULF
+    - CORZ
+    - CIFR
+    - BTDR
+    - APLD
+    - HOOD
+    - PYPL
+    - XYZ
+    - IBKR
+    - CAN
+    - BTBT
+    - GLXY
+
+events:
+  weekend:
+    start_et: "Friday 16:00"
+    end_et: "Monday 09:25"
+  overnight:
+    start_et: "prior equity close"
+    end_et: "09:25"
+  wild_threshold:
+    method: expanding_absolute_quantile
+    primary_quantile: 0.95
+    sensitivity_quantile: 0.90
+    minimum_prior_observations: 60
+
+lead_lag:
+  beta_lookback_sessions: 60
+  beta_minimum_sessions: 40
+  horizons_sessions: [0, 1, 3]
+  signal_time_et: "09:35"
+
+liquidations:
+  provider: coinglass
+  symbol: BTC
+  interval: 1h
+  absolute_event_usd: 800000000
+  normalized_quantile: 0.99
+  rolling_hours: 24
+  required_incremental_features: [liquidation_size, liquidation_imbalance]
+
+validation:
+  block_bootstrap_samples: 2000
+  multiple_testing: benjamini_hochberg
+  maximum_single_event_profit_share: 0.25
+  maximum_single_ticker_profit_share: 0.25
+  require_leave_one_event_out: true
+  require_leave_one_ticker_out: true
+  costs_bps:
+    entry_slippage: 10
+    exit_slippage: 10
+    round_trip_commission: 0

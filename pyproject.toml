@@ -9,11 +9,13 @@ description = "Reproducible, evidence-labelled crypto regime strategy backtests 
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+  "databento>=0.82,<1",
   "matplotlib>=3.9,<4",
   "numpy>=2.1,<3",
   "pandas>=2.2,<3",
   "pyarrow>=18,<24",
   "PyYAML>=6.0,<7",
+  "requests>=2.32,<3",
   "seaborn>=0.13,<1",
 ]
 
