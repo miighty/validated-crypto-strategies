@@ -1,0 +1,172 @@
+strategy,market_slug,asset,signal_time,entry_time,exit_time,direction,entry_price,exit_price,return_pct,note
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2023-12-02 19:00:00+00:00,2023-12-02 20:00:00+00:00,2023-12-03 20:00:00+00:00,-1,39419.99,39565.99,-0.006703704643,24h odds delta=-0.130
+crypto_specific_lead_lag,bitcoin-etf-approved-by-jan-15,BTC,2023-12-02 19:00:00+00:00,2023-12-02 20:00:00+00:00,2023-12-04 20:00:00+00:00,-1,39419.99,41987.29,-0.06812685569,24h odds delta=-0.130
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2023-12-04 21:00:00+00:00,2023-12-04 22:00:00+00:00,2023-12-05 22:00:00+00:00,1,42039.99,43891.1,0.04103212275,24h odds delta=0.090
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2023-12-10 19:00:00+00:00,2023-12-10 20:00:00+00:00,2023-12-11 20:00:00+00:00,1,43797.1,40779.99,-0.07188835106,24h odds delta=0.080
+crypto_specific_lead_lag,bitcoin-etf-approved-by-jan-15,BTC,2023-12-10 19:00:00+00:00,2023-12-10 20:00:00+00:00,2023-12-12 20:00:00+00:00,1,43797.1,41137.99,-0.06371429387,24h odds delta=0.080
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2023-12-20 02:00:00+00:00,2023-12-20 03:00:00+00:00,2023-12-21 03:00:00+00:00,1,42428.01,43389.94,0.01967205085,24h odds delta=0.097
+crypto_specific_lead_lag,bitcoin-etf-approved-by-jan-15,BTC,2023-12-20 02:00:00+00:00,2023-12-20 03:00:00+00:00,2023-12-22 03:00:00+00:00,1,42428.01,43966.07,0.03325105208,24h odds delta=0.097
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2023-12-26 18:00:00+00:00,2023-12-26 19:00:00+00:00,2023-12-27 19:00:00+00:00,-1,42163.53,43183.99,-0.02720243277,24h odds delta=-0.080
+crypto_specific_lead_lag,bitcoin-etf-approved-by-jan-15,BTC,2023-12-26 18:00:00+00:00,2023-12-26 19:00:00+00:00,2023-12-28 19:00:00+00:00,-1,42163.53,42480,-0.01050577573,24h odds delta=-0.080
+crypto_specific_lead_lag,bitcoin-etf-approved-by-jan-15,BTC,2024-01-02 09:00:00+00:00,2024-01-02 10:00:00+00:00,2024-01-04 10:00:00+00:00,1,45673.48,43007.73,-0.06136537965,24h odds delta=0.148
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2024-01-02 09:00:00+00:00,2024-01-02 10:00:00+00:00,2024-01-03 10:00:00+00:00,1,45673.48,45344.66,-0.01019936383,24h odds delta=0.148
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2024-01-04 04:00:00+00:00,2024-01-04 05:00:00+00:00,2024-01-05 05:00:00+00:00,-1,43149.99,43589.87,-0.01319420862,24h odds delta=-0.085
+crypto_specific_lead_lag,bitcoin-etf-approved-by-jan-15,BTC,2024-01-06 11:00:00+00:00,2024-01-06 12:00:00+00:00,2024-01-08 12:00:00+00:00,1,43671.97,44636,0.01907434196,24h odds delta=0.090
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2024-01-06 11:00:00+00:00,2024-01-06 12:00:00+00:00,2024-01-07 12:00:00+00:00,1,43671.97,44061.1,0.005910291887,24h odds delta=0.090
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2024-01-08 15:00:00+00:00,2024-01-08 16:00:00+00:00,2024-01-09 16:00:00+00:00,1,44963.04,46868.08,0.03936902131,24h odds delta=0.082
+crypto_specific_lead_lag,bitcoin-etf-approved-by-jan-15,BTC,2024-01-09 18:00:00+00:00,2024-01-09 19:00:00+00:00,2024-01-11 19:00:00+00:00,-1,46640.5,46610,-0.002346061899,24h odds delta=-0.140
+odds_shock_catchup,bitcoin-etf-approved-by-jan-15,BTC,2024-01-10 17:00:00+00:00,2024-01-10 18:00:00+00:00,2024-01-11 18:00:00+00:00,1,46401.88,46497.14,-0.0009470659378,24h odds delta=0.090
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-01-11 00:00:00+00:00,2024-01-11 01:00:00+00:00,2024-01-13 01:00:00+00:00,-1,2606.42,2517.45,0.03113494372,24h odds delta=-0.090
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-01-12 07:00:00+00:00,2024-01-12 08:00:00+00:00,2024-01-13 08:00:00+00:00,-1,46008.19,43102.97,0.06014571384,24h odds delta=-0.152
+favorite_longshot_bias,bitcoin-etf-approved-by-jan-15,POLY_NATIVE,2024-01-14 00:00:00+00:00,2024-01-14 00:00:00+00:00,2024-01-15 00:00:00+00:00,1,0.999,1,-0.002998998999,buy_yes_24h_before
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-01-16 20:00:00+00:00,2024-01-16 21:00:00+00:00,2024-01-18 21:00:00+00:00,-1,2586.87,2446.44,0.05128568115,24h odds delta=-0.100
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-01-16 20:00:00+00:00,2024-01-16 21:00:00+00:00,2024-01-17 21:00:00+00:00,-1,43200.01,42722.9,0.008044210406,24h odds delta=-0.100
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-01-18 15:00:00+00:00,2024-01-18 16:00:00+00:00,2024-01-19 16:00:00+00:00,1,42619.31,40894.71,-0.04346522574,24h odds delta=0.080
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-02-13 13:00:00+00:00,2024-02-13 14:00:00+00:00,2024-02-15 14:00:00+00:00,-1,2643.61,2810.52,-0.06613714958,24h odds delta=-0.099
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-02-19 23:00:00+00:00,2024-02-20 00:00:00+00:00,2024-02-21 00:00:00+00:00,1,51774.74,52258.82,0.006349733094,24h odds delta=0.080
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-02-19 23:00:00+00:00,2024-02-20 00:00:00+00:00,2024-02-22 00:00:00+00:00,1,2944.8,2967.91,0.004847731595,24h odds delta=0.080
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-03-05 12:00:00+00:00,2024-03-05 13:00:00+00:00,2024-03-07 13:00:00+00:00,-1,3759,3781.6,-0.009012237297,24h odds delta=-0.170
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-03-08 14:00:00+00:00,2024-03-08 15:00:00+00:00,2024-03-10 15:00:00+00:00,1,3973.42,3896.84,-0.02227306955,24h odds delta=0.085
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-03-10 19:00:00+00:00,2024-03-10 20:00:00+00:00,2024-03-12 20:00:00+00:00,-1,3898.01,3980.23,-0.02409281403,24h odds delta=-0.100
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-03-10 19:00:00+00:00,2024-03-10 20:00:00+00:00,2024-03-11 20:00:00+00:00,-1,69400.19,71970,-0.04002886116,24h odds delta=-0.100
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-03-12 13:00:00+00:00,2024-03-12 14:00:00+00:00,2024-03-14 14:00:00+00:00,-1,4024.6,3878.68,0.03325701933,24h odds delta=-0.088
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-03-15 16:00:00+00:00,2024-03-15 17:00:00+00:00,2024-03-17 17:00:00+00:00,-1,3683.93,3611.36,0.01669907137,24h odds delta=-0.099
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-03-15 16:00:00+00:00,2024-03-15 17:00:00+00:00,2024-03-16 17:00:00+00:00,-1,67893.78,68187.05,-0.007319541496,24h odds delta=-0.099
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-03-17 10:00:00+00:00,2024-03-17 11:00:00+00:00,2024-03-18 11:00:00+00:00,1,67169.12,68129.99,0.01130523431,24h odds delta=0.117
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-03-19 22:00:00+00:00,2024-03-19 23:00:00+00:00,2024-03-20 23:00:00+00:00,-1,62633.97,67681.94,-0.08359476351,24h odds delta=-0.089
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-03-19 22:00:00+00:00,2024-03-19 23:00:00+00:00,2024-03-21 23:00:00+00:00,-1,3211.28,3483.19,-0.08767340126,24h odds delta=-0.089
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-03-20 19:00:00+00:00,2024-03-20 20:00:00+00:00,2024-03-22 20:00:00+00:00,1,3379,3340.46,-0.01440574134,24h odds delta=0.111
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-03-26 06:00:00+00:00,2024-03-26 07:00:00+00:00,2024-03-27 07:00:00+00:00,1,70616.01,70310,-0.007333436568,24h odds delta=0.090
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-03-26 06:00:00+00:00,2024-03-26 07:00:00+00:00,2024-03-28 07:00:00+00:00,1,3649.45,3574.39,-0.02356748277,24h odds delta=0.090
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-03-28 13:00:00+00:00,2024-03-28 14:00:00+00:00,2024-03-30 14:00:00+00:00,-1,3582.6,3543.47,0.007922235248,24h odds delta=-0.081
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-04-01 16:00:00+00:00,2024-04-01 17:00:00+00:00,2024-04-03 17:00:00+00:00,-1,3444.99,3349.14,0.02482301255,24h odds delta=-0.088
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-04-04 19:00:00+00:00,2024-04-04 20:00:00+00:00,2024-04-06 20:00:00+00:00,1,3366.09,3349.23,-0.008008778731,24h odds delta=0.109
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-04-09 08:00:00+00:00,2024-04-09 09:00:00+00:00,2024-04-11 09:00:00+00:00,1,3628.78,3608.18,-0.008676839048,24h odds delta=0.082
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-04-09 08:00:00+00:00,2024-04-09 09:00:00+00:00,2024-04-10 09:00:00+00:00,1,70500.01,69011.92,-0.02410765658,24h odds delta=0.082
+fed_cut_macro_beta,fed-rate-cut-by-june-12,ETH,2024-04-10 12:00:00+00:00,2024-04-10 13:00:00+00:00,2024-04-12 13:00:00+00:00,-1,3440,3497.74,-0.01978488372,24h odds delta=-0.231
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-04-19 12:00:00+00:00,2024-04-19 13:00:00+00:00,2024-04-21 13:00:00+00:00,-1,3099.68,3157.61,-0.02168902596,24h odds delta=-0.080
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-04-19 12:00:00+00:00,2024-04-19 13:00:00+00:00,2024-04-20 13:00:00+00:00,-1,64965.19,63824.08,0.01456494517,24h odds delta=-0.080
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-05-10 21:00:00+00:00,2024-05-10 22:00:00+00:00,2024-05-11 22:00:00+00:00,1,60709.99,60919.55,0.0004518206971,24h odds delta=0.100
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-05-10 21:00:00+00:00,2024-05-10 22:00:00+00:00,2024-05-12 22:00:00+00:00,1,2906.52,2929.21,0.004806586571,24h odds delta=0.100
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-05-19 15:00:00+00:00,2024-05-19 16:00:00+00:00,2024-05-21 16:00:00+00:00,-1,3077.25,3777.69,-0.2306188155,24h odds delta=-0.110
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-05-19 15:00:00+00:00,2024-05-19 16:00:00+00:00,2024-05-20 16:00:00+00:00,-1,66889.88,67420,-0.01092526463,24h odds delta=-0.110
+eth_etf_spread,ethereum-etf-approved-by-may-31,ETH/BTC,2024-05-20 20:00:00+00:00,2024-05-20 21:00:00+00:00,2024-05-23 21:00:00+00:00,1,0.05036072667,0.05539601631,0.09154296035,24h odds delta=0.550; level=0.640
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-05-21 05:00:00+00:00,2024-05-21 06:00:00+00:00,2024-05-22 06:00:00+00:00,1,71209.87,69898.12,-0.02142090148,24h odds delta=0.450
+crypto_specific_lead_lag,ethereum-etf-approved-by-may-31,ETH,2024-05-22 17:00:00+00:00,2024-05-22 18:00:00+00:00,2024-05-24 18:00:00+00:00,-1,3740,3711.36,0.004657754011,24h odds delta=-0.170
+odds_shock_catchup,ethereum-etf-approved-by-may-31,ETH,2024-05-23 21:00:00+00:00,2024-05-23 22:00:00+00:00,2024-05-24 22:00:00+00:00,1,67992.78,68875.99,0.00998976156,24h odds delta=0.100
+favorite_longshot_bias,ethereum-etf-approved-by-may-31,POLY_NATIVE,2024-05-30 12:00:00+00:00,2024-05-30 12:00:00+00:00,2024-05-31 12:00:00+00:00,1,0.999,1,-0.002998998999,buy_yes_24h_before
+favorite_longshot_bias,fed-rate-cut-by-september-18,POLY_NATIVE,2024-09-17 00:00:00+00:00,2024-09-17 00:00:00+00:00,2024-09-18 00:00:00+00:00,1,0.987,1,0.009171225937,buy_yes_24h_before
+favorite_longshot_bias,will-joe-biden-win-the-popular-vote-in-the-2024-presidential-election,POLY_NATIVE,2024-11-03 12:00:00+00:00,2024-11-03 12:00:00+00:00,2024-11-04 12:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-robert-f-kennedy-jr-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-03 12:00:00+00:00,2024-11-03 12:00:00+00:00,2024-11-04 12:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-any-other-republican-politician-win-the-popular-vote-in-the-2024-presidential-election,POLY_NATIVE,2024-11-03 12:00:00+00:00,2024-11-03 12:00:00+00:00,2024-11-04 12:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-chris-christie-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-elizabeth-warren-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-any-other-democrat-politician-win-the-popular-vote-in-the-2024-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-michelle-obama-win-the-popular-vote-in-the-2024-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-nikki-haley-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-ron-desantis-win-the-popular-vote-in-the-2024-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-rfk-jr-win-the-popular-vote-in-the-2024-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-gavin-newsom-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-nikki-haley-win-the-popular-vote-in-the-2024-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-any-other-republican-politician-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-michelle-obama-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-any-other-democratic-politician-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-vivek-ramaswamy-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-hillary-clinton-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-hillary-clinton-win-the-popular-vote-in-the-2024-presidential-election,POLY_NATIVE,2024-11-04 00:00:00+00:00,2024-11-04 00:00:00+00:00,2024-11-05 00:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-joe-biden-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 12:00:00+00:00,2024-11-04 12:00:00+00:00,2024-11-05 12:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-ron-desantis-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 12:00:00+00:00,2024-11-04 12:00:00+00:00,2024-11-05 12:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+favorite_longshot_bias,will-aoc-win-the-2024-us-presidential-election,POLY_NATIVE,2024-11-04 12:00:00+00:00,2024-11-04 12:00:00+00:00,2024-11-05 12:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2024-11-23 00:00:00+00:00,2024-11-23 01:00:00+00:00,2024-11-25 01:00:00+00:00,-1,255.46,251.06,0.01422383152,24h odds delta=-0.120
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2024-11-23 00:00:00+00:00,2024-11-23 01:00:00+00:00,2024-11-24 01:00:00+00:00,-1,98634.88,97919.51,0.00425270817,24h odds delta=-0.120
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2024-12-06 04:00:00+00:00,2024-12-06 05:00:00+00:00,2024-12-07 05:00:00+00:00,1,97877.51,99494.58,0.01352136431,24h odds delta=0.210
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2024-12-06 04:00:00+00:00,2024-12-06 05:00:00+00:00,2024-12-08 05:00:00+00:00,1,241,238.41,-0.01374688797,24h odds delta=0.210
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2024-12-07 21:00:00+00:00,2024-12-07 22:00:00+00:00,2024-12-08 22:00:00+00:00,-1,99869.81,100026.98,-0.004573748864,24h odds delta=-0.170
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2024-12-10 17:00:00+00:00,2024-12-10 18:00:00+00:00,2024-12-11 18:00:00+00:00,-1,94484.01,99781.89,-0.05907170991,24h odds delta=-0.163
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2024-12-10 17:00:00+00:00,2024-12-10 18:00:00+00:00,2024-12-12 18:00:00+00:00,-1,203.75,234.04,-0.1516625767,24h odds delta=-0.163
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2024-12-12 07:00:00+00:00,2024-12-12 08:00:00+00:00,2024-12-13 08:00:00+00:00,-1,100499.99,100130.01,0.0006813934011,24h odds delta=-0.090
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2024-12-14 15:00:00+00:00,2024-12-14 16:00:00+00:00,2024-12-15 16:00:00+00:00,-1,101625.12,102704,-0.01361627283,24h odds delta=-0.085
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2024-12-14 15:00:00+00:00,2024-12-14 16:00:00+00:00,2024-12-16 16:00:00+00:00,-1,222.55,216.97,0.0220730173,24h odds delta=-0.085
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2024-12-16 16:00:00+00:00,2024-12-16 17:00:00+00:00,2024-12-17 17:00:00+00:00,1,106824.94,107075.73,-0.0006523272562,24h odds delta=0.080
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2024-12-17 18:00:00+00:00,2024-12-17 19:00:00+00:00,2024-12-19 19:00:00+00:00,1,227.82,194.72,-0.1482901413,24h odds delta=0.090
+favorite_longshot_bias,will-fed-cut-interest-rates-6-times-by-dec-meeting,POLY_NATIVE,2024-12-29 12:00:00+00:00,2024-12-29 12:00:00+00:00,2024-12-30 12:00:00+00:00,-1,0.999,1,-0.002998998999,buy_no_24h_before
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-01-02 13:00:00+00:00,2025-01-02 14:00:00+00:00,2025-01-04 14:00:00+00:00,-1,208.16,217.02,-0.04556341276,24h odds delta=-0.100
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-01-02 13:00:00+00:00,2025-01-02 14:00:00+00:00,2025-01-03 14:00:00+00:00,-1,96458.17,96504.8,-0.003483421985,24h odds delta=-0.100
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-01-13 06:00:00+00:00,2025-01-13 07:00:00+00:00,2025-01-14 07:00:00+00:00,-1,93637.38,95031.93,-0.01789309077,24h odds delta=-0.090
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-01-13 06:00:00+00:00,2025-01-13 07:00:00+00:00,2025-01-15 07:00:00+00:00,-1,182.08,189.36,-0.04298242531,24h odds delta=-0.090
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-01-15 15:00:00+00:00,2025-01-15 16:00:00+00:00,2025-01-16 16:00:00+00:00,1,98992.42,99296.17,6.841675353e-05,24h odds delta=0.140
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-01-16 08:00:00+00:00,2025-01-16 09:00:00+00:00,2025-01-18 09:00:00+00:00,1,199.7,238.79,0.1927436154,24h odds delta=0.100
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-01-18 14:00:00+00:00,2025-01-18 15:00:00+00:00,2025-01-19 15:00:00+00:00,-1,103993.02,105159.99,-0.01422161853,24h odds delta=-0.110
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-01-19 14:00:00+00:00,2025-01-19 15:00:00+00:00,2025-01-21 15:00:00+00:00,1,270.62,239.15,-0.1192885227,24h odds delta=0.130
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-01-20 13:00:00+00:00,2025-01-20 14:00:00+00:00,2025-01-21 14:00:00+00:00,-1,107956.31,104457.08,0.02941339019,24h odds delta=-0.090
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-01-29 18:00:00+00:00,2025-01-29 19:00:00+00:00,2025-01-31 19:00:00+00:00,-1,230.98,230.4,-0.0004889600831,24h odds delta=-0.100
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-01-29 18:00:00+00:00,2025-01-29 19:00:00+00:00,2025-01-30 19:00:00+00:00,-1,102854.14,105578.96,-0.02949207898,24h odds delta=-0.100
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-02-01 10:00:00+00:00,2025-02-01 11:00:00+00:00,2025-02-02 11:00:00+00:00,-1,101638,99417.07,0.01885137449,24h odds delta=-0.120
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-02-01 20:00:00+00:00,2025-02-01 21:00:00+00:00,2025-02-03 21:00:00+00:00,-1,218.45,211.52,0.02872350652,24h odds delta=-0.110
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-02-03 13:00:00+00:00,2025-02-03 14:00:00+00:00,2025-02-04 14:00:00+00:00,-1,94664.52,99007.22,-0.04887463181,24h odds delta=-0.100
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-02-07 09:00:00+00:00,2025-02-07 10:00:00+00:00,2025-02-09 10:00:00+00:00,-1,197.41,201.94,-0.0259471658,24h odds delta=-0.080
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-02-07 09:00:00+00:00,2025-02-07 10:00:00+00:00,2025-02-08 10:00:00+00:00,-1,97295.24,96163.05,0.008636643273,24h odds delta=-0.080
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-02-27 17:00:00+00:00,2025-02-27 18:00:00+00:00,2025-02-28 18:00:00+00:00,-1,84597,83605.11,0.008724883861,24h odds delta=-0.100
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-02-27 17:00:00+00:00,2025-02-27 18:00:00+00:00,2025-03-01 18:00:00+00:00,-1,138.8,139.97,-0.01142939481,24h odds delta=-0.100
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-03-03 04:00:00+00:00,2025-03-03 05:00:00+00:00,2025-03-04 05:00:00+00:00,1,92866.01,83416.95,-0.1047493914,24h odds delta=0.080
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-03-03 09:00:00+00:00,2025-03-03 10:00:00+00:00,2025-03-05 10:00:00+00:00,1,159.93,145.75,-0.09166379041,24h odds delta=0.096
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-03-04 19:00:00+00:00,2025-03-04 20:00:00+00:00,2025-03-05 20:00:00+00:00,-1,88206.19,89750,-0.0205022864,24h odds delta=-0.100
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-03-07 22:00:00+00:00,2025-03-07 23:00:00+00:00,2025-03-09 23:00:00+00:00,-1,141.09,126.93,0.0973614714,24h odds delta=-0.090
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-03-07 22:00:00+00:00,2025-03-07 23:00:00+00:00,2025-03-08 23:00:00+00:00,-1,86745.14,86350.01,0.001555067869,24h odds delta=-0.090
+crypto_specific_lead_lag,will-trump-create-a-national-bitcoin-reserve-in-his-first-100-days,BTC,2025-03-08 14:00:00+00:00,2025-03-08 15:00:00+00:00,2025-03-10 15:00:00+00:00,-1,86361.68,79847.09,0.07243380351,24h odds delta=-0.150
+crypto_specific_lead_lag,will-trump-create-a-national-bitcoin-reserve-in-his-first-100-days,BTC,2025-03-14 20:00:00+00:00,2025-03-14 21:00:00+00:00,2025-03-16 21:00:00+00:00,-1,84127.21,83216.99,0.007819567177,24h odds delta=-0.080
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-03-19 20:00:00+00:00,2025-03-19 21:00:00+00:00,2025-03-20 21:00:00+00:00,1,85354,84530.09,-0.01265285751,24h odds delta=0.116
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-03-19 20:00:00+00:00,2025-03-19 21:00:00+00:00,2025-03-21 21:00:00+00:00,1,133.93,128.47,-0.04376756515,24h odds delta=0.116
+crypto_specific_lead_lag,will-trump-create-a-national-bitcoin-reserve-in-his-first-100-days,BTC,2025-03-20 22:00:00+00:00,2025-03-20 23:00:00+00:00,2025-03-22 23:00:00+00:00,-1,84141.3,83961.39,-0.000861811025,24h odds delta=-0.100
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-03-24 18:00:00+00:00,2025-03-24 19:00:00+00:00,2025-03-26 19:00:00+00:00,1,142.22,137.38,-0.03703178175,24h odds delta=0.142
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-03-24 18:00:00+00:00,2025-03-24 19:00:00+00:00,2025-03-25 19:00:00+00:00,1,88464.38,87822,-0.01026145371,24h odds delta=0.142
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-03-26 22:00:00+00:00,2025-03-26 23:00:00+00:00,2025-03-27 23:00:00+00:00,-1,86829.48,87350.7,-0.009002799971,24h odds delta=-0.080
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-03-29 13:00:00+00:00,2025-03-29 14:00:00+00:00,2025-03-30 14:00:00+00:00,1,82851.95,82678.42,-0.005094458851,24h odds delta=0.140
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-03-29 13:00:00+00:00,2025-03-29 14:00:00+00:00,2025-03-31 14:00:00+00:00,1,126.76,125.49,-0.01301893342,24h odds delta=0.140
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-03-31 03:00:00+00:00,2025-03-31 04:00:00+00:00,2025-04-01 04:00:00+00:00,-1,81530,82962.84,-0.0205743898,24h odds delta=-0.120
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-04-03 22:00:00+00:00,2025-04-03 23:00:00+00:00,2025-04-05 23:00:00+00:00,-1,117,119.24,-0.02214529915,24h odds delta=-0.090
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-04-03 22:00:00+00:00,2025-04-03 23:00:00+00:00,2025-04-04 23:00:00+00:00,-1,82743.46,84056.75,-0.01887182842,24h odds delta=-0.090
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-04-22 23:00:00+00:00,2025-04-23 00:00:00+00:00,2025-04-25 00:00:00+00:00,1,148.78,152.55,0.02233942734,24h odds delta=0.120
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-04-22 23:00:00+00:00,2025-04-23 00:00:00+00:00,2025-04-24 00:00:00+00:00,1,93442.99,93691.07,-0.0003451192005,24h odds delta=0.120
+favorite_longshot_bias,will-trump-create-a-national-bitcoin-reserve-in-his-first-100-days,POLY_NATIVE,2025-04-28 12:00:00+00:00,2025-04-28 12:00:00+00:00,2025-04-29 12:00:00+00:00,-1,0.9400000014,1,0.05982978565,buy_no_24h_before
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-05-05 18:00:00+00:00,2025-05-05 19:00:00+00:00,2025-05-07 19:00:00+00:00,1,146.7,146.6,-0.003681663258,24h odds delta=0.105
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-05-05 18:00:00+00:00,2025-05-05 19:00:00+00:00,2025-05-06 19:00:00+00:00,1,94730.39,95067.36,0.0005571478171,24h odds delta=0.105
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-05-09 06:00:00+00:00,2025-05-09 07:00:00+00:00,2025-05-11 07:00:00+00:00,1,164.26,174.75,0.06086216973,24h odds delta=0.100
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-05-09 06:00:00+00:00,2025-05-09 07:00:00+00:00,2025-05-10 07:00:00+00:00,1,103230.11,103930.72,0.003786876426,24h odds delta=0.100
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-05-10 22:00:00+00:00,2025-05-10 23:00:00+00:00,2025-05-11 23:00:00+00:00,-1,103597.53,103793.67,-0.004893288382,24h odds delta=-0.130
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-05-12 09:00:00+00:00,2025-05-12 10:00:00+00:00,2025-05-14 10:00:00+00:00,1,175.68,179.78,0.02033788707,24h odds delta=0.120
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-05-12 12:00:00+00:00,2025-05-12 13:00:00+00:00,2025-05-13 13:00:00+00:00,1,103881.14,103682.52,-0.00491199288,24h odds delta=0.120
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-05-14 02:00:00+00:00,2025-05-14 03:00:00+00:00,2025-05-15 03:00:00+00:00,-1,103713.27,103047.62,0.003418175803,24h odds delta=-0.139
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-05-15 19:00:00+00:00,2025-05-15 20:00:00+00:00,2025-05-16 20:00:00+00:00,1,103157.26,104032.6,0.005485490987,24h odds delta=0.149
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-05-15 19:00:00+00:00,2025-05-15 20:00:00+00:00,2025-05-17 20:00:00+00:00,1,169.77,165.25,-0.02962425635,24h odds delta=0.149
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-05-24 03:00:00+00:00,2025-05-24 04:00:00+00:00,2025-05-25 04:00:00+00:00,1,108366.31,108095.76,-0.005496624643,24h odds delta=0.130
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-05-24 03:00:00+00:00,2025-05-24 04:00:00+00:00,2025-05-26 04:00:00+00:00,1,175.11,177.02,0.007907429616,24h odds delta=0.130
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-05-25 17:00:00+00:00,2025-05-25 18:00:00+00:00,2025-05-26 18:00:00+00:00,-1,107363.36,109171.9,-0.01984503913,24h odds delta=-0.140
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-06-10 18:00:00+00:00,2025-06-10 19:00:00+00:00,2025-06-12 19:00:00+00:00,1,163.95,157.73,-0.04093839585,24h odds delta=0.316
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-10 18:00:00+00:00,2025-06-10 19:00:00+00:00,2025-06-11 19:00:00+00:00,1,109282.38,108807.25,-0.00734772742,24h odds delta=0.316
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-12 08:00:00+00:00,2025-06-12 09:00:00+00:00,2025-06-13 09:00:00+00:00,-1,107731.67,104739.44,0.02477484095,24h odds delta=-0.220
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-06-13 21:00:00+00:00,2025-06-13 22:00:00+00:00,2025-06-15 22:00:00+00:00,1,147.11,150.54,0.02031588607,24h odds delta=0.115
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-13 22:00:00+00:00,2025-06-13 23:00:00+00:00,2025-06-14 23:00:00+00:00,1,105751.29,105428.75,-0.006049986435,24h odds delta=0.105
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-16 12:00:00+00:00,2025-06-16 13:00:00+00:00,2025-06-17 13:00:00+00:00,1,106690.47,105506.99,-0.01409264961,24h odds delta=0.100
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-06-16 23:00:00+00:00,2025-06-17 00:00:00+00:00,2025-06-19 00:00:00+00:00,1,150.73,146.35,-0.03205858157,24h odds delta=0.080
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-18 02:00:00+00:00,2025-06-18 03:00:00+00:00,2025-06-19 03:00:00+00:00,-1,104856.06,104722.5,-0.001726253876,24h odds delta=-0.100
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-06-20 01:00:00+00:00,2025-06-20 02:00:00+00:00,2025-06-22 02:00:00+00:00,-1,147.13,135.06,0.07903629443,24h odds delta=-0.090
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-20 01:00:00+00:00,2025-06-20 02:00:00+00:00,2025-06-21 02:00:00+00:00,-1,104778.5,103515.36,0.00905533578,24h odds delta=-0.090
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-21 15:00:00+00:00,2025-06-21 16:00:00+00:00,2025-06-22 16:00:00+00:00,1,103560.9,98906.21,-0.04794640352,24h odds delta=0.110
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-06-23 03:00:00+00:00,2025-06-23 04:00:00+00:00,2025-06-25 04:00:00+00:00,-1,132.67,145.51,-0.0997814879,24h odds delta=-0.110
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-23 06:00:00+00:00,2025-06-23 07:00:00+00:00,2025-06-24 07:00:00+00:00,-1,101940.28,105655.23,-0.03944241511,24h odds delta=-0.090
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-25 13:00:00+00:00,2025-06-25 14:00:00+00:00,2025-06-26 14:00:00+00:00,-1,107923.22,106960.01,0.005924956094,24h odds delta=-0.080
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-06-26 12:00:00+00:00,2025-06-26 13:00:00+00:00,2025-06-28 13:00:00+00:00,1,143.01,146.44,0.02098433676,24h odds delta=0.090
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-27 03:00:00+00:00,2025-06-27 04:00:00+00:00,2025-06-28 04:00:00+00:00,-1,107477.76,107300.13,-0.001347285987,24h odds delta=-0.130
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-28 17:00:00+00:00,2025-06-28 18:00:00+00:00,2025-06-29 18:00:00+00:00,1,107465.13,107544.44,-0.002261993169,24h odds delta=0.345
+crypto_specific_lead_lag,solana-etf-approved-by-july-31-2025,SOL,2025-06-29 14:00:00+00:00,2025-06-29 15:00:00+00:00,2025-07-01 15:00:00+00:00,1,151.29,147.22,-0.02990197634,24h odds delta=0.290
+odds_shock_catchup,solana-etf-approved-by-july-31-2025,SOL,2025-06-30 15:00:00+00:00,2025-06-30 16:00:00+00:00,2025-07-01 16:00:00+00:00,1,107580.47,105955.19,-0.01810757482,24h odds delta=0.154
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2025-10-01 07:00:00+00:00,2025-10-01 08:00:00+00:00,2025-10-02 08:00:00+00:00,1,114539.02,118489.76,0.03149252491,24h odds delta=-0.210
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2025-10-03 00:00:00+00:00,2025-10-03 01:00:00+00:00,2025-10-04 01:00:00+00:00,-1,120132.8,122100,-0.01937521143,24h odds delta=0.088
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2025-10-30 19:00:00+00:00,2025-10-30 20:00:00+00:00,2025-10-31 20:00:00+00:00,-1,106536.39,109828.78,-0.03390390054,24h odds delta=0.090
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2026-03-06 18:00:00+00:00,2026-03-06 19:00:00+00:00,2026-03-07 19:00:00+00:00,-1,68181.2,67568.13,0.005991774859,24h odds delta=0.080
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2026-03-09 02:00:00+00:00,2026-03-09 03:00:00+00:00,2026-03-10 03:00:00+00:00,-1,66537.32,70272,-0.05912910168,24h odds delta=0.087
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2026-04-07 23:00:00+00:00,2026-04-08 00:00:00+00:00,2026-04-09 00:00:00+00:00,-1,71924.22,71069.93,0.008877640105,24h odds delta=0.100
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2026-04-10 14:00:00+00:00,2026-04-10 15:00:00+00:00,2026-04-11 15:00:00+00:00,1,72909,72704.66,-0.005802671824,24h odds delta=-0.080
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2026-04-13 00:00:00+00:00,2026-04-13 01:00:00+00:00,2026-04-14 01:00:00+00:00,-1,71172.63,74163.82,-0.04502725121,24h odds delta=0.090
+odds_shock_catchup,us-recession-by-end-of-2026,BTC,2026-07-18 06:00:00+00:00,2026-07-18 07:00:00+00:00,2026-07-19 07:00:00+00:00,-1,63979.67,64711.69,-0.01444144695,24h odds delta=0.094

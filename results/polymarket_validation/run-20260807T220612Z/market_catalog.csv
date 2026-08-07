@@ -1,0 +1,205 @@
+slug,query,asset,family,bullish_when_yes,notes,question,condition_id,outcomes,outcome_prices,volume,active,closed,end_date,description
+will-trump-create-a-national-bitcoin-reserve-in-his-first-100-days,bitcoin reserve,BTC,bitcoin_reserve,True,Bitcoin strategic reserve policy odds,Will Trump create Bitcoin reserve in first 100 days?,0xd6c186dd4a5167684c27462d0bb541bd22ca4861298c00ade1991c6240364762,"[""Yes"", ""No""]","[""0"", ""1""]",23324353.367396,True,True,2025-04-29T12:00:00Z,"This market will resolve to ""Yes"" if the US government holds any amount of Bitcoin in its reserves at any point between January 20, 2025, ET and  April 29, 2025, 11:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+Note that the US government confiscating Bitcoin does not count as holding Bitcoin reserves.
+
+The primary resolution source for this market will be official information from the US government and/or the US federal reserve, however a consensus of credible reporting will also be used."
+bitcoin-etf-approved-by-jan-15,bitcoin etf approved by jan 15,BTC,btc_etf,True,Spot BTC ETF approval catalyst,Bitcoin ETF approved by Jan 15?,0xb36886bb0cf7cede4fd57fedbbbf80342ec76921d567fa9958275c22e1df04bd,"[""Yes"", ""No""]","[""1"", ""0""]",12622418.419238001,True,True,2024-01-15T00:00:00Z,"This market will resolve to ""Yes"" if any spot Bitcoin ETF receives approval from the SEC by January 15, 2024, 11:59:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+The primary resolution source for this market will be information from the SEC, however a consensus of credible reporting may also be used."
+ethereum-etf-approved-by-may-31,ethereum etf approved,ETH,eth_etf,True,Spot ETH ETF approval catalyst,Ethereum ETF approved by May 31?,0x4fdc8c72f3013001dccc152e318cb3fcb16da16c741816c3078a42947702ece5,"[""Yes"", ""No""]","[""1"", ""0""]",13226512.327129,True,True,2024-05-31T12:00:00Z,"This market will resolve to ""Yes"" if any spot Ethereum ETF receives approval from the SEC by May 31, 2024, 11:59:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+The primary resolution source for this market will be information from the SEC, however a consensus of credible reporting may also be used."
+fed-rate-cut-by-june-12,fed cut interest rates,ETH,fed_cut,True,Front-end Fed easing odds,Fed rate cut by June 12?,0x1e14c1e407a8aa7a727fadf74049b255a93f1c22f137d6a244ea64604b5b36d5,"[""Yes"", ""No""]","[""0"", ""1""]",1253483.915707,True,True,2024-06-12T00:00:00Z,"This market will resolve to “Yes” if the upper bound of the target federal funds rate is decreased at any point between January 31, 2024 ET and June 12, 2024 ET. Otherwise, this market will resolve to “No.”
+
+This market may not resolve to ""No"" until June 12, 2024, 11:59 PM ET has passed.
+
+The primary resolution source for this market will be the official website of the Federal Reserve (https://www.federalreserve.gov/monetarypolicy/openmarket.htm), however a consensus of credible reporting may also be used."
+fed-rate-cut-by-march-20,fed cut interest rates,ETH,fed_cut,True,Front-end Fed easing odds,Fed rate cut by March 20?,0xa81f535a21c9fc890b335131ad726476605c563ad6b9a096568a0556db26987a,"[""Yes"", ""No""]","[""0"", ""1""]",1907759.255828,True,True,2024-03-20T00:00:00Z,"This market will resolve to “Yes” if the upper bound of the target federal funds rate is decreased at any point between December 17, 2023 ET and March 20, 2024 ET. Otherwise, this market will resolve to “No.”
+
+This market may not resolve to ""No"" until March 20, 2024, 11:59 PM ET has passed.
+
+The primary resolution source for this market will be the official website of the Federal Reserve (https://www.federalreserve.gov/monetarypolicy/openmarket.htm), however a consensus of credible reporting may also be used."
+fed-rate-cut-by-may-1,fed cut interest rates,ETH,fed_cut,True,Front-end Fed easing odds,Fed rate cut by May 1?,0x29f8437fee9a3c972bcdc483874dc6f5192142a2158e999ace849dedb342d671,"[""Yes"", ""No""]","[""0"", ""1""]",1608415.69825,True,True,2024-05-01T00:00:00Z,"This market will resolve to “Yes” if the upper bound of the target federal funds rate is decreased at any point between December 6, 2023 ET and May 1, 2024 ET. Otherwise, this market will resolve to “No.”
+
+This market may not resolve to ""No"" until May 1, 2024, 11:59:59 PM ET has passed.
+
+
+The primary resolution source for this market will be the official website of the Federal Reserve (https://www.federalreserve.gov/monetarypolicy/openmarket.htm), however a consensus of credible reporting may also be used."
+us-recession-by-end-of-2026,us recession by end of 2026,BTC,recession,False,Macro risk-off odds,US recession by end of 2026?,0xfdc73f10edf0266756686f35b5712cffa828b0940fc015e0426c76c934c2105d,"[""Yes"", ""No""]","[""0.08"", ""0.92""]",1698307.4778850004,True,False,2027-01-31T00:00:00Z,"This market will resolve to “Yes” if either of the following conditions is met:
+
+1.  The seasonally adjusted annualized percent change in quarterly U.S. real GDP from the previous quarter is less than 0.0 for two consecutive quarters between Q2 2025 and Q4 2026 (inclusive), as reported by the Bureau of Economic Analysis (BEA). 
+
+2.  The National Bureau of Economic Research (NBER) publicly announces that a recession has occurred in the United States, at any point during 2025 or 2026, with the announcement made by the time the BEA releases the advance estimate for Q4 2026.
+
+Otherwise, this market will resolve to ""No"". 
+
+Note that advance estimates will be considered. For example, if upon release, the advance estimate for Q3 2025 was negative, and the Q2 2025's most recent, up-to-date estimate was also negative, this market would resolve to ""Yes"". If on December 31, 2026 the latest estimate for quarterly GDP in Q3 2025 was negative, this market will stay open until the Advance estimate of Q4 2026 is published, at which point it will resolve to ""Yes"" if Q4 2026 was negative or if the NBER declares a recession by then.
+
+The resolution source will be the official announcements from the NBER and the BEA’s estimate of seasonally adjusted annualized percent change in quarterly US real GDP from previous quarters as released by the Bureau of Economic Analysis (BEA), https://www.bea.gov/data/gdp/gross-domestic-product"
+solana-etf-approved-by-july-31-2025,solana etf approved,SOL,sol_etf,True,Spot SOL ETF approval catalyst,Solana ETF approved by July 31?,0x4f6d8832d32181a0efdf34349d7eb340b2064345f58a9659ae6d4a177f2f63eb,"[""Yes"", ""No""]","[""1"", ""0""]",1882646.590054,True,True,2025-07-31T12:00:00Z,"This market will resolve to ""Yes"" if any spot Solana ETF receives approval from the SEC by July 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+Approval under Rule 19-4b will qualify for a ""Yes"" resolution, even if there has not been an S-1 approval. Similarly, an S-1 approval without a 19-4b approval will also qualify for a ""Yes"" resolution.
+
+The primary resolution source for this market will be information from the SEC, however a consensus of credible reporting may also be used."
+will-donald-trump-win-the-2024-us-presidential-election,presidential election winner 2024,BTC,trump_election,True,Trump odds used as pro-crypto policy proxy,Will Donald Trump win the 2024 US Presidential Election?,0xdd22472e552920b8438158ea7238bfadfa4f736aa4cee91a6b86c39ead110917,"[""Yes"", ""No""]","[""1"", ""0""]",1531479284.504353,True,True,2024-11-05T12:00:00Z,"This market will resolve to “Yes” if Donald J. Trump wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated."
+will-kamala-harris-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Kamala Harris win the 2024 US Presidential Election?,0xc6485bb7ea46d7bb89beb9c91e7572ecfc72a6273789496f78bc5e989e4d1638,,"[""0"", ""1""]",1037039118.18879,True,True,2024-11-04 12:00:00+00:00,"This market will resolve to “Yes” if Kamala Harris wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-any-other-republican-politician-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will any other Republican Politician win the 2024 US Presidential Election?,0x55c551896c10a74861f2fd88b4f928694310114704cc74b29b9760d1156cade6,,"[""0"", ""1""]",241655099.850067,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if any other Republican Politician other than Donald J. Trump, Nikki Haley, Robert F. Kennedy Jr., Ron DeSantis, Vivek Ramaswamy, and Chris Christie wins. Otherwise this market will resolve to “No.”
+
+For the purposes of this market a Republican Politician is defined as an individual who has held elected office at either the state or federal level (i.e. including but not limited to US Senator, US Representative, Governor, Lieutenant Governor, State Senator, State Representative) and runs as a Republican for the 2024 US Presidential election. 
+
+If their affiliation changes to Independent or a party other than Republican before election day, the individual will not be considered as a Republican Politician."
+will-kamala-harris-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Kamala Harris wins the popular vote?,0x265366ede72d73e137b2b9095a6cdc9be6149290caa295738a95e3d881ad0865,,"[""0"", ""1""]",163779786.645492,True,True,2024-11-05 12:00:00+00:00,"This market will resolve to “Yes” if Kamala Harris is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency.
+"
+will-michelle-obama-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Michelle Obama win the 2024 US Presidential Election?,0x230144e34a84dfd0ebdc6de7fde37780e28154f6f84dd8880c7f0e58d302d448,,"[""0"", ""1""]",153382275.618594,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Michelle Obama wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-robert-f-kennedy-jr-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Robert F. Kennedy Jr. win the 2024 US Presidential Election?,0x7da35195ac3c7bf167f88ab0c27067a99020e36de67d39968b71d9debcdd925e,,"[""0"", ""1""]",141605110.748029,True,True,2024-11-04 12:00:00+00:00,"This market will resolve to “Yes” if Robert F. Kennedy Jr. wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-donald-trump-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Donald Trump win the popular vote in the 2024 Presidential Election?,0xcd1b6b71a1964f15e2c14809594cbfa0d576270e8ef94c8c24913121097e09e5,,"[""1"", ""0""]",119932620.818624,True,True,2024-11-05 12:00:00+00:00,"This market will resolve to “Yes” if Donald Trump is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote."
+will-any-other-democratic-politician-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will any other Democratic Politician win the 2024 US Presidential Election?,0xb92f22143e7b48609a82573fa8197dc73683a15acb467b0f51ee63da7e3f520b,,"[""0"", ""1""]",116558196.386525,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if any other Democratic Politician other than Joe Biden, Gavin Newsom, Robert F. Kennedy Jr., Kamala Harris, Michelle Obama, Hillary Clinton, AOC, Bernie Sanders, and Elizabeth Warren wins. Otherwise this market will resolve to “No.”
+
+For the purposes of this market a Democratic Politician is defined as an individual who has held elected office at either the state or federal level (i.e. including but not limited to US Senator, US Representative, Governor, Lieutenant Governor, State Senator, State Representative) and runs as a Democrat for the 2024 US Presidential election. 
+
+If their affiliation changes to Independent or a party other than Democrat before election day, the individual will not be considered as a Democratic Politician."
+will-nikki-haley-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Nikki Haley win the 2024 US Presidential Election?,0xced9f9d90c94db9f1e1dbd7d9fba82fe4fa7431c0d4e91e28896c8ac2d6acadd,,"[""0"", ""1""]",107529158.083605,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Nikki Haley wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-hillary-clinton-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Hillary Clinton win the 2024 US Presidential Election?,0x63634b4e14297a748923f86dca4fa0c6c659db0f5fadeeb8e419e48e20759c34,,"[""0"", ""1""]",93307167.686999,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Hillary Clinton wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-joe-biden-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Joe Biden win the 2024 US Presidential Election?,0x14018049e265a2d88f284be9588e2e3542e3a3df08ccdb344d28355dd7fdd8ef,,"[""0"", ""1""]",72176112.338298,True,True,2024-11-05 12:00:00+00:00,"This market will resolve to “Yes” if Joe Biden wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated."
+will-hillary-clinton-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Hillary Clinton win the popular vote in the 2024 Presidential Election?,0xf3a7a2365b6ec113117184bb2d1b020577355a1028fde0b32671c4cfbbbbd589,,"[""0"", ""1""]",70237132.505143,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Hillary Clinton is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency.
+"
+will-gavin-newsom-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Gavin Newsom win the 2024 US Presidential Election?,0x40bbdd26dc08406eedcb913efee7f7faddf50e16fc21caedb4972d57fd71e0d1,,"[""0"", ""1""]",54161276.228088,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Gavin Newsom wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-rfk-jr-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will RFK Jr. win the popular vote in the 2024 Presidential Election?,0xf488aacaba74914fe181c68d8b6195e13c4ec8b6c1b215c299d297666297200e,,"[""0"", ""1""]",47770370.83836,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Robert F. Kennedy Jr. is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency.
+"
+will-ron-desantis-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Ron DeSantis win the 2024 US Presidential Election?,0xad6d309aaa500d96855996e84da00dfb2379548a693ca684d0877cf94fec05d1,,"[""0"", ""1""]",46309049.202369,True,True,2024-11-05 12:00:00+00:00,"This market will resolve to “Yes” if Ron DeSantis wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-ron-desantis-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Ron DeSantis win the popular vote in the 2024 Presidential Election?,0x037c9d29c04a2f6a5373ae7db7779cb40a751ca372de1e55999397a8f571c67e,,"[""0"", ""1""]",39315353.333832,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Ron DeSantis is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency.
+"
+will-michelle-obama-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Michelle Obama win the popular vote in the 2024 Presidential Election?,0x215625b9e962f3f499f832c77dd4caa400bd8435369b5fd65e8673c8b2c4da66,,"[""0"", ""1""]",36970806.278363,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Michelle Obama is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency.
+"
+will-any-other-democrat-politician-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will any other Democrat Politician win the popular vote in the 2024 Presidential Election?,0x198d833c085ed0c858165192e9fd446c5392dbcdedd1132d89c578c0b5c29b2f,,"[""0"", ""1""]",36496306.548087,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if any other Democratic Politician other than Joe Biden, Gavin Newsom, Robert F. Kennedy Jr., Kamala Harris, Michelle Obama, Hillary Clinton, AOC, Bernie Sanders, and Elizabeth Warren is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote."
+will-any-other-republican-politician-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will any other Republican Politician win the popular vote in the 2024 Presidential Election?,0x34b8fa269775d034f3d98b6848e0a7c5212efcaa0c98e6f8fb54c5d6f72b3705,,"[""0"", ""1""]",35232789.166403,True,True,2024-11-04 12:00:00+00:00,"This market will resolve to “Yes” if any other Republican Politician other than Donald J. Trump, Nikki Haley, Robert F. Kennedy Jr., Ron DeSantis, Vivek Ramaswamy, and Chris Christie is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote."
+will-aoc-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will AOC win the 2024 US Presidential Election?,0xd1cce1f51effdf3957144fdc87b5e8aace1d1f7ab21976a046b71744ecad8443,,"[""0"", ""1""]",22011560.654836,True,True,2024-11-05 12:00:00+00:00,"This market will resolve to “Yes” if Alexandria Ocasio-Cortez wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-nikki-haley-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Nikki Haley win the popular vote in the 2024 Presidential Election?,0x0c12d7b5322f432a0c4ac8806b476c7483c4d44061ca1188b6f749ec9db34996,,"[""0"", ""1""]",21923974.494067,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Nikki Haley is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency.
+"
+will-vivek-ramaswamy-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Vivek Ramaswamy win the 2024 US Presidential Election?,0x696baf880832d000a37ea87cc94235b1ac58e7e9fe7a144ccf5d141877629134,,"[""0"", ""1""]",21181731.472915,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Vivek Ramaswamy wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+fed-rate-cut-by-september-18,fed cut interest rates,POLY_NATIVE,universe,True,universe,Fed rate cut by September 18?,0xa0811c97f529d627b7774a5b188e605736b745a1f892c39e16c5a022fdb84b8b,,"[""1"", ""0""]",20345317.826273,True,True,2024-09-18 00:00:00+00:00,"This market will resolve to “Yes” if the upper bound of the target federal funds rate is decreased at any point between March 6, 2024 ET and September 18, 2024 ET. Otherwise, this market will resolve to “No.”
+
+This market may not resolve to ""No"" until September 18, 2024, 11:59 PM ET has passed.
+
+The primary resolution source for this market will be the official website of the Federal Reserve (https://www.federalreserve.gov/monetarypolicy/openmarket.htm), however a consensus of credible reporting may also be used."
+will-fed-cut-interest-rates-6-times-by-dec-meeting,fed cut interest rates,POLY_NATIVE,universe,True,universe,Will Fed cut interest rates 6+ times in 2024?,0x1070c27e30447364ed6602778729203d29aaa8860cb0a24779eb3a26f68b245f,,"[""0"", ""1""]",20169086.258574,True,True,2024-12-30 12:00:00+00:00,"The FED interest rates are defined in this market by the upper bound of the target federal funds range. The decisions on the target federal fund range are made by the Federal Open Market Committee (FOMC) meetings.
+
+This market will resolve to “Yes” if the there are 6 or more cuts of 25 basis points by the Fed's December meeting (including any cuts made during Dec meeting). Otherwise, this market will resolve to “No.” 
+
+For example, if the FED cuts rates by 50 bps after a meeting, it would be considered 2 cuts (of 25 bps each).
+
+The resolution source for this market will be FOMC statements after meetings scheduled in 2024 according to the official calendar: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm. The level and change of the target federal funds rate is also published at the official website of the Federal Reserve at https://www.federalreserve.gov/monetarypolicy/openmarket.htm."
+will-elizabeth-warren-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Elizabeth Warren win the 2024 US Presidential Election?,0x3120827dc12167d09fd9f08233e2b540054a2ed90aad65c023bc1da9d38b29d9,,"[""0"", ""1""]",14714813.728,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Elizabeth Warren wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-chris-christie-win-the-2024-us-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Will Chris Christie win the 2024 US Presidential Election?,0xf6106065ec5d5dae7eca350be64e5246ae331b35937ea55b64152f65fbc0b37f,,"[""0"", ""1""]",14192736.345,True,True,2024-11-05 00:00:00+00:00,"This market will resolve to “Yes” if Chris Christie wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated.
+
+Note: An update may be made to this market to allow for early expiration if the candidate is definitively no longer in contention for the presidency."
+will-joe-biden-win-the-popular-vote-in-the-2024-presidential-election,presidential election winner 2024,POLY_NATIVE,universe,True,universe,Biden wins the Popular Vote?,0xb26fd99a7b7bae4e13c9bb3becf65353708a805f9c1aea74484d107e6ba512cd,,"[""0"", ""1""]",12582924.999919,True,True,2024-11-04 12:00:00+00:00,"This market will resolve to “Yes” if Joe Biden is the candidate who receives the most votes in the 2024 U.S. presidential election, otherwise this market will resolve to “No.”
+
+In case of a tie, this market will resolve in favor of the candidate whose last name comes first in alphabetical order.
+
+The resolution source will be an overwhelming consensus of credible reporting as to who is the winner of the popular vote.
+"
+bitcoin-etf-flows-on-october-23,bitcoin etf,POLY_NATIVE,universe,True,universe,Bitcoin ETF Flows on October 23?,0x88010f19bf81669a838918942633d0043e61a466187cc7c94def26b591b413d2,,"[""1"", ""0""]",25700.85678,True,True,2025-10-23 22:00:00+00:00,"This market will resolve to ""Positive"" if total Bitcoin ETF flows on Thursday, October 23, 2025 are greater than 0, and to ""Negative"" if they are less than 0.
+
+If flows are exactly 0, the market will resolve to 50-50.
+
+The resolution source is Farside Investors, specifically the ETF Flow tab available at https://farside.co.uk/btc/ in the ""Total"" column for the date specified in the title.
+
+The total flows will be considered finalized for that day once flows for all ETF providers have been published. If data for any ETF provider remains unpublished by 12 PM ET, 2 days after the date specified in the title, the market will resolve based on all available data published up to that time.
+
+If the resolution source becomes permanently unavailable or fails to publish any data by 12 PM ET, 2 days after the specified date, the market will resolve 50-50."

@@ -5,6 +5,7 @@ import argparse
 from .config import Paths, project_root
 from .data import collect
 from .pipeline import require_inputs, run
+from .polymarket_crypto_validation import run_polymarket_crypto_validation
 from .regimes import generate as generate_regimes
 from .report import generate as generate_report
 from .verify import verify
@@ -21,6 +22,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser("report", help="Regenerate charts and REPORT.md from saved results")
     check = subcommands.add_parser("verify", help="Verify checksums, data invariants, and outputs")
     check.add_argument("--data-only", action="store_true", help="Do not require generated results")
+    subcommands.add_parser(
+        "validate-polymarket-crypto",
+        help="Backtest Polymarket event-odds strategies against crypto price action",
+    )
     subcommands.add_parser("all", help="Fetch if needed, run, report, and verify")
     return command
 
@@ -39,6 +44,9 @@ def main() -> None:
         generate_report(paths)
     elif args.command == "verify":
         verify(paths, require_results=not args.data_only)
+    elif args.command == "validate-polymarket-crypto":
+        require_inputs(paths)
+        run_polymarket_crypto_validation(paths)
     elif args.command == "all":
         try:
             require_inputs(paths)

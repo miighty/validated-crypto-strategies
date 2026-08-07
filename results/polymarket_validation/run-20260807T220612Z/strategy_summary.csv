@@ -1,0 +1,11 @@
+strategy,status,trade_count,win_rate,avg_return,median_return,ending_equity,total_return,max_drawdown,note
+cross_venue_disagreement,blocked,0,,,,10000,0,0,"Kalshi historical API is publicly reachable, but matching and fetching the exact comparable market tickers/candles was not completed in this run. This strategy remains blocked rather than fabricated."
+eth_etf_spread,completed,1,1,0.09154296035,0.09154296035,10915.4296,0.09154296035,0,Long ETH / short BTC for 72h after large ETH ETF approval-odds shocks above a 60% level.
+trump_policy_beta,completed,0,,,,10000,0,0,"Long BTC after positive Trump-election odds shocks when the market is already above 50%, treating odds as a pro-crypto policy proxy."
+wick_with_odds_confirmation,completed,0,,,,10000,0,0,Buy violent BTC wick flushes only when supportive ETF/election/reserve odds are not simultaneously collapsing.
+resolution_time_decay,completed,0,,,,10000,0,0,"Fade late 24h-to-6h surges into the 85%-97% or 3%-15% zone, then hold to resolution."
+bitcoin_etf_flow_prediction,completed,0,,,,10000,0,0,Trade BTC for 24h when pre-resolution ETF-flow odds are strongly skewed toward positive or negative flows.
+favorite_longshot_bias,completed,26,0.07692307692,-0.0001144217073,-0.002998998999,9951.653458,-0.004834654163,-0.06394131814,"On resolved markets, buy YES favorites >65% or buy NO against YES longshots <35% one day before resolution."
+fed_cut_macro_beta,completed,9,0.3333333333,-0.008179954788,-0.009012237297,9255.089378,-0.07449106217,-0.09516588094,"Trade ETH on front-end Fed-cut probability shocks, using ETH as the higher-beta macro proxy."
+odds_shock_catchup,completed,81,0.3703703704,-0.008784051493,-0.005094458851,4755.5249,-0.52444751,-0.5418262334,Buy/short BTC when a major Polymarket event reprices >8 points in 24h and BTC has not already overreacted.
+crypto_specific_lead_lag,completed,54,0.4074074074,-0.01432096979,-0.009591307387,4072.48163,-0.592751837,-0.6064804563,Trade the coin directly when a crypto-specific Polymarket market reprices sharply and spot has not yet caught up.

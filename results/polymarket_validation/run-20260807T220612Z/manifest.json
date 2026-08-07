@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-08-07T22:06:13.604378+00:00",
+  "report": "results/polymarket_validation/run-20260807T220612Z/REPORT.md",
+  "metadata_sha256": "8996c6a3030db03f94a7baead48e3b66e4e02f745895e393f0675a8c5f81e395",
+  "summary_sha256": "c912a522fd551aea3730ae37935a014ddd9e891bbf362fc0d6aab4d270bbff64",
+  "hourly_sha256": "bb495b1c4b3a2323217fa1f686673d4c8106921b4f1483a6ed9e36a51a25bc12",
+  "strategy_count": 10,
+  "completed_count": 9,
+  "blocked_count": 1
+}
