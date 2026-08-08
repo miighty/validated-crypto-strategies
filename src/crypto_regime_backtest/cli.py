@@ -4,9 +4,12 @@ import argparse
 
 from .breakout_compression_validation import run_breakout_compression_validation
 from .btc_alt_response_validation import run_btc_alt_response_validation
+from .btc_drawdown_dca_validation import run_btc_drawdown_dca_validation
 from .btc_reserve_validation import run_btc_reserve_validation
 from .config import Paths, project_root
 from .data import collect
+from .dominance_etf_validation import run_dominance_etf_validation
+from .edge_validation import run_validation
 from .eth_btc_etf_validation import run_eth_btc_etf_validation
 from .pipeline import require_inputs, run
 from .polymarket_crypto_validation import run_polymarket_crypto_validation
@@ -51,6 +54,18 @@ def parser() -> argparse.ArgumentParser:
         "validate-btc-reserve",
         help="Validate Bitcoin-reserve odds -> BTC swing entries against BTC DCA baselines",
     )
+    subcommands.add_parser(
+        "validate-btc-drawdown-dca",
+        help="Validate BTC crash-buy reserve deployment against daily and weekly BTC DCA",
+    )
+    subcommands.add_parser(
+        "validate-edge",
+        help="Run the executable BTC extreme-move edge suite and fail-closed external studies",
+    )
+    subcommands.add_parser(
+        "validate-dominance-etf",
+        help="Fail-closed BTC dominance and ETF flow validation with point-in-time input checks",
+    )
     subcommands.add_parser("all", help="Fetch if needed, run, report, and verify")
     return command
 
@@ -87,6 +102,15 @@ def main() -> None:
     elif args.command == "validate-btc-reserve":
         require_inputs(paths)
         run_btc_reserve_validation(paths)
+    elif args.command == "validate-btc-drawdown-dca":
+        require_inputs(paths)
+        run_btc_drawdown_dca_validation(paths)
+    elif args.command == "validate-edge":
+        require_inputs(paths)
+        run_validation(paths)
+    elif args.command == "validate-dominance-etf":
+        require_inputs(paths)
+        run_dominance_etf_validation(paths)
     elif args.command == "all":
         try:
             require_inputs(paths)

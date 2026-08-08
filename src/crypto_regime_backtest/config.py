@@ -93,6 +93,23 @@ class Paths:
     def returns(self) -> Path:
         return self.results / "returns"
 
+    @property
+    def edge_data(self) -> Path:
+        """User-supplied, point-in-time inputs for the Crypto Edge Validation Suite."""
+        return self.data / "edge_validation"
+
+    @property
+    def edge_results(self) -> Path:
+        return self.results / "edge_validation"
+
+    @property
+    def dominance_etf_data(self) -> Path:
+        return self.data / "dominance_etf"
+
+    @property
+    def dominance_etf_results(self) -> Path:
+        return self.results / "dominance_etf"
+
     def create(self) -> None:
         for path in (
             self.raw,
@@ -102,6 +119,10 @@ class Paths:
             self.trades,
             self.returns,
             self.charts,
+            self.edge_data,
+            self.edge_results,
+            self.dominance_etf_data,
+            self.dominance_etf_results,
         ):
             path.mkdir(parents=True, exist_ok=True)
 
