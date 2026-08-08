@@ -1,0 +1,93 @@
+{
+  "config": {
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "contribution_hour_utc": 9,
+    "sample_start": "2023-12-18T00:00:00Z",
+    "validation_start": "2024-04-01T00:00:00Z",
+    "holdout_start": "2024-06-01T00:00:00Z",
+    "primary_lookback_hours": 24,
+    "primary_delta_threshold": 0.12,
+    "primary_level_threshold": 0.45,
+    "primary_hold_hours": 72,
+    "primary_cooldown_hours": 24,
+    "primary_rule": "Across the real Polymarket Fed-cut family, if YES odds fall by at least 12 points over the prior 24 completed hours and remain at or below 45%, enter spot BTC long at the next hourly open, hold 72h, then exit and wait 24h before the next entry."
+  },
+  "assets": {
+    "BTC": {
+      "spot_path": "data/raw/BTC_1h.csv.gz",
+      "spot_sha256": "8c594e1fb43e69088efd8d5980ae7e6db1e3d7dba7f943bde82ba54f008eeadc",
+      "spot_rows": 74998,
+      "spot_first_timestamp": "2018-01-01T00:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00"
+    },
+    "ETH": {
+      "spot_path": "data/raw/ETH_1h.csv.gz",
+      "spot_sha256": "2de408f963ab72324e508830740f1477818d8c80417b33bbdd4cd4889f221058",
+      "spot_rows": 74998,
+      "spot_first_timestamp": "2018-01-01T00:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00"
+    },
+    "SOL": {
+      "spot_path": "data/raw/SOL_1h.csv.gz",
+      "spot_sha256": "1ca418b22b2ff84376a7d38b7b3e8e0a9578e2351b176ebcc9f6c33058f6a694",
+      "spot_rows": 52222,
+      "spot_first_timestamp": "2020-08-11T06:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00"
+    },
+    "XRP": {
+      "spot_path": "data/raw/XRP_1h.csv.gz",
+      "spot_sha256": "07f195a69b57bd66398d8c51c984bc72253778985d30c1a52d63d0011ccfa0a9",
+      "spot_rows": 72072,
+      "spot_first_timestamp": "2018-05-04T08:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00"
+    }
+  },
+  "market_slugs": [
+    "fed-rate-cut-by-march-20",
+    "fed-rate-cut-by-may-1",
+    "fed-rate-cut-by-june-12",
+    "fed-rate-cut-by-september-18",
+    "will-fed-cut-interest-rates-6-times-by-dec-meeting"
+  ],
+  "market_questions": [
+    {
+      "slug": "fed-rate-cut-by-june-12",
+      "question": "Fed rate cut by June 12?"
+    },
+    {
+      "slug": "fed-rate-cut-by-march-20",
+      "question": "Fed rate cut by March 20?"
+    },
+    {
+      "slug": "fed-rate-cut-by-may-1",
+      "question": "Fed rate cut by May 1?"
+    },
+    {
+      "slug": "fed-rate-cut-by-september-18",
+      "question": "Fed rate cut by September 18?"
+    },
+    {
+      "slug": "will-fed-cut-interest-rates-6-times-by-dec-meeting",
+      "question": "Will Fed cut interest rates 6+ times in 2024?"
+    }
+  ],
+  "market_paths": {
+    "fed-rate-cut-by-march-20": "data/polymarket_validation/hourly/fed-rate-cut-by-march-20.csv.gz",
+    "fed-rate-cut-by-may-1": "data/polymarket_validation/hourly/fed-rate-cut-by-may-1.csv.gz",
+    "fed-rate-cut-by-june-12": "data/polymarket_validation/hourly/fed-rate-cut-by-june-12.csv.gz",
+    "fed-rate-cut-by-september-18": "data/polymarket_validation/hourly/fed-rate-cut-by-september-18.csv.gz",
+    "will-fed-cut-interest-rates-6-times-by-dec-meeting": "data/polymarket_validation/hourly/will-fed-cut-interest-rates-6-times-by-dec-meeting.csv.gz"
+  },
+  "market_sha256": {
+    "fed-rate-cut-by-march-20": "30e5d0a12b3f8f13b3d80accb9336417a5ed378e16e74e298f20a930a66a6710",
+    "fed-rate-cut-by-may-1": "66b3b0accbb7ec36b75acb3933383e2c4e981bd59940816f007ef7dd29c32739",
+    "fed-rate-cut-by-june-12": "36cc87a6bd0a458f362d9f381a02e1afdb51f454b824c074a80202f2d0098de0",
+    "fed-rate-cut-by-september-18": "640c1b7686c7c3ad03e417c89bdd416497782e6609ef6d4efae26f0cb00bcecb",
+    "will-fed-cut-interest-rates-6-times-by-dec-meeting": "f5f449b3145eece026fafc5d73d76f0e44058da98c3c6c9ead57a010c850a00a"
+  },
+  "sample_start": "2023-12-18T00:00:00+00:00",
+  "sample_end": "2024-12-18T17:00:00+00:00",
+  "raw_signal_count": 9,
+  "verdict_reason": "The strategy failed the decisive BTC DCA benchmark on the same released-capital schedule."
+}

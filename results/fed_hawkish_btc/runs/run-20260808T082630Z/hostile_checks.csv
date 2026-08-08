@@ -1,0 +1,5 @@
+check,terminal_value,net_return,beats_primary
+doubled_cost,10236.086595166273,0.023608659516627162,False
+exclude_best_trade,10106.796826202042,0.010679682620204245,False
+always_long_same_schedule,9932.38957046822,-0.0067610429531780314,False
+random_asset_schedule,9789.8359869085161,-0.021016401309148391,False

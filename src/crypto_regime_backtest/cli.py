@@ -14,6 +14,7 @@ from .data import collect
 from .dominance_etf_validation import run_dominance_etf_validation
 from .edge_validation import run_validation
 from .eth_btc_etf_validation import run_eth_btc_etf_validation
+from .fed_hawkish_btc_validation import run_fed_hawkish_btc_validation
 from .funding_negative_panel_validation import run_funding_negative_panel_validation
 from .funding_positive_panel_validation import run_funding_positive_panel_validation
 from .xrp_btc_etf_validation import run_xrp_btc_etf_validation
@@ -56,6 +57,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-alt-etf-btc-panel",
         help="Validate a pooled ETH/SOL/XRP ETF-odds family of long-alt/short-BTC spread trades",
+    )
+    subcommands.add_parser(
+        "validate-fed-hawkish-btc",
+        help="Validate falling Fed-cut odds -> BTC swing entries against DCA and schedule-matched baselines",
     )
     subcommands.add_parser(
         "validate-funding-negative-panel",
@@ -125,6 +130,9 @@ def main() -> None:
     elif args.command == "validate-eth-btc-etf":
         require_inputs(paths)
         run_eth_btc_etf_validation(paths)
+    elif args.command == "validate-fed-hawkish-btc":
+        require_inputs(paths)
+        run_fed_hawkish_btc_validation(paths)
     elif args.command == "validate-sol-eth-etf":
         require_inputs(paths)
         run_sol_eth_etf_validation(paths)
