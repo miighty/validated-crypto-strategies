@@ -1,0 +1,43 @@
+{
+  "config": {
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "contribution_hour_utc": 9,
+    "sample_start": "2023-10-01T00:00:00Z",
+    "holdout_start": "2025-01-01T00:00:00Z",
+    "supportive_families": [
+      "btc_etf",
+      "eth_etf",
+      "trump_election",
+      "bitcoin_reserve"
+    ],
+    "primary_wick_window_hours": 48,
+    "primary_drawdown_threshold": -0.1,
+    "primary_support_delta_floor": -0.02,
+    "primary_bounce_threshold": 0.03,
+    "primary_bounce_window_hours": 24,
+    "primary_hold_hours": 72,
+    "primary_cooldown_hours": 48
+  },
+  "btc_data": {
+    "path": "data/raw/BTC_1h.csv.gz",
+    "kind": "spot_ohlcv",
+    "coin": "BTC",
+    "timeframe": "1h",
+    "source": "Binance",
+    "source_symbols": "BTCUSDT",
+    "first_timestamp": "2018-01-01T00:00:00+00:00",
+    "last_timestamp": "2026-07-27T23:00:00+00:00",
+    "rows": 74998,
+    "sha256": "8c594e1fb43e69088efd8d5980ae7e6db1e3d7dba7f943bde82ba54f008eeadc"
+  },
+  "sample_rows": 24744,
+  "sample_start": "2023-10-01T00:00:00+00:00",
+  "sample_end": "2026-07-27T23:00:00+00:00",
+  "supportive_families": [
+    "btc_etf",
+    "eth_etf",
+    "trump_election",
+    "bitcoin_reserve"
+  ]
+}

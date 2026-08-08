@@ -7,6 +7,7 @@ from .btc_alt_response_validation import run_btc_alt_response_validation
 from .btc_drawdown_dca_validation import run_btc_drawdown_dca_validation
 from .btc_etf_validation import run_btc_etf_validation
 from .btc_reserve_validation import run_btc_reserve_validation
+from .btc_wick_odds_validation import run_btc_wick_odds_validation
 from .config import Paths, project_root
 from .data import collect
 from .dominance_etf_validation import run_dominance_etf_validation
@@ -65,6 +66,10 @@ def parser() -> argparse.ArgumentParser:
         help="Validate Bitcoin-reserve odds -> BTC swing entries against BTC DCA baselines",
     )
     subcommands.add_parser(
+        "validate-btc-wick-odds",
+        help="Validate BTC wick flush rebound entries gated by supportive Polymarket odds against BTC DCA baselines",
+    )
+    subcommands.add_parser(
         "validate-btc-drawdown-dca",
         help="Validate BTC crash-buy reserve deployment against daily and weekly BTC DCA",
     )
@@ -115,6 +120,9 @@ def main() -> None:
     elif args.command == "validate-btc-reserve":
         require_inputs(paths)
         run_btc_reserve_validation(paths)
+    elif args.command == "validate-btc-wick-odds":
+        require_inputs(paths)
+        run_btc_wick_odds_validation(paths)
     elif args.command == "validate-btc-etf":
         require_inputs(paths)
         run_btc_etf_validation(paths)
