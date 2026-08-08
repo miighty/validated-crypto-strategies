@@ -1,0 +1,2 @@
+check,skipped_entry_time,skipped_asset,trade_count,final_usd_value,final_btc_equivalent,final_eth_equivalent,final_sol_equivalent,final_xrp_equivalent,delta_usd_vs_primary
+exclude_best_trade,2025-01-15 16:00:00+00:00,SOL,16,9008.3905679956424,0.14129509927394349,4.7599724009636004,121.40688097029167,8449.8551430406551,-201.54368936906212

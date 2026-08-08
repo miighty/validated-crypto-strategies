@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 
+from .alt_etf_btc_panel_validation import run_alt_etf_btc_panel_validation
 from .breakout_compression_validation import run_breakout_compression_validation
 from .btc_alt_response_validation import run_btc_alt_response_validation
 from .btc_drawdown_dca_validation import run_btc_drawdown_dca_validation
@@ -48,6 +49,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-xrp-btc-etf",
         help="Validate XRP ETF odds -> XRP/BTC spread against XRP DCA baselines",
+    )
+    subcommands.add_parser(
+        "validate-alt-etf-btc-panel",
+        help="Validate a pooled ETH/SOL/XRP ETF-odds family of long-alt/short-BTC spread trades",
     )
     subcommands.add_parser(
         "validate-breakout-compression",
@@ -111,6 +116,9 @@ def main() -> None:
     elif args.command == "validate-xrp-btc-etf":
         require_inputs(paths)
         run_xrp_btc_etf_validation(paths)
+    elif args.command == "validate-alt-etf-btc-panel":
+        require_inputs(paths)
+        run_alt_etf_btc_panel_validation(paths)
     elif args.command == "validate-breakout-compression":
         require_inputs(paths)
         run_breakout_compression_validation(paths)
