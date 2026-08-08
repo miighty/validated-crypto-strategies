@@ -19,6 +19,7 @@ from .funding_positive_panel_validation import run_funding_positive_panel_valida
 from .xrp_btc_etf_validation import run_xrp_btc_etf_validation
 from .pipeline import require_inputs, run
 from .polymarket_crypto_validation import run_polymarket_crypto_validation
+from .recession_btc_validation import run_recession_btc_validation
 from .regimes import generate as generate_regimes
 from .report import generate as generate_report
 from .sol_eth_etf_validation import run_sol_eth_etf_validation
@@ -83,6 +84,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-btc-wick-odds",
         help="Validate BTC wick flush rebound entries gated by supportive Polymarket odds against BTC DCA baselines",
+    )
+    subcommands.add_parser(
+        "validate-recession-btc",
+        help="Validate falling recession-odds relief entries against BTC and cross-asset DCA baselines",
     )
     subcommands.add_parser(
         "validate-btc-drawdown-dca",
@@ -153,6 +158,9 @@ def main() -> None:
     elif args.command == "validate-btc-drawdown-dca":
         require_inputs(paths)
         run_btc_drawdown_dca_validation(paths)
+    elif args.command == "validate-recession-btc":
+        require_inputs(paths)
+        run_recession_btc_validation(paths)
     elif args.command == "validate-edge":
         require_inputs(paths)
         run_validation(paths)
