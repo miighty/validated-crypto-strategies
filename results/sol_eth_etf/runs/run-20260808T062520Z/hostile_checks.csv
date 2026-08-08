@@ -1,0 +1,3 @@
+check,value,secondary_value,passes,event_timestamp
+primary_edge_vs_dca,67.531945807878728,67.348932168532386,True,
+exclude_best_event,-27.902086866901257,-28.085100506247599,False,2025-06-26 02:00:00+00:00

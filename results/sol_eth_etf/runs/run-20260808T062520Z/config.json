@@ -1,0 +1,42 @@
+{
+  "config": {
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "contribution_hour_utc": 9,
+    "sample_start": "2024-01-01T00:00:00Z",
+    "holdout_start": "2025-01-01T00:00:00Z",
+    "primary_delta_threshold": 0.1,
+    "primary_level_threshold": 0.55,
+    "primary_hold_hours": 72,
+    "primary_cooldown_hours": 24
+  },
+  "sol_data": {
+    "path": "data/raw/SOL_1h.csv.gz",
+    "kind": "spot_ohlcv",
+    "coin": "SOL",
+    "timeframe": "1h",
+    "source": "Binance",
+    "source_symbols": "SOLUSDT",
+    "first_timestamp": "2020-08-11T06:00:00+00:00",
+    "last_timestamp": "2026-07-27T23:00:00+00:00",
+    "rows": 52222,
+    "sha256": "1ca418b22b2ff84376a7d38b7b3e8e0a9578e2351b176ebcc9f6c33058f6a694"
+  },
+  "eth_data": {
+    "path": "data/raw/ETH_1h.csv.gz",
+    "kind": "spot_ohlcv",
+    "coin": "ETH",
+    "timeframe": "1h",
+    "source": "Binance",
+    "source_symbols": "ETHUSDT",
+    "first_timestamp": "2018-01-01T00:00:00+00:00",
+    "last_timestamp": "2026-07-27T23:00:00+00:00",
+    "rows": 74998,
+    "sha256": "2de408f963ab72324e508830740f1477818d8c80417b33bbdd4cd4889f221058"
+  },
+  "sample_rows": 22536,
+  "sample_start": "2024-01-01T00:00:00+00:00",
+  "sample_end": "2026-07-27T23:00:00+00:00",
+  "market_slug": "solana-etf-approved-by-july-31-2025",
+  "market_question": "Solana ETF approved by July 31?"
+}
