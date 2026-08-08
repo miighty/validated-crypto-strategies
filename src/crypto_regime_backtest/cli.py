@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 
 from .breakout_compression_validation import run_breakout_compression_validation
+from .btc_alt_response_validation import run_btc_alt_response_validation
 from .btc_reserve_validation import run_btc_reserve_validation
 from .config import Paths, project_root
 from .data import collect
@@ -43,6 +44,10 @@ def parser() -> argparse.ArgumentParser:
         help="Validate a volatility-compression filter on accepted 4h crypto breakouts",
     )
     subcommands.add_parser(
+        "validate-btc-alt-response",
+        help="Validate BTC shock -> alt underreaction entries against alt DCA benchmarks",
+    )
+    subcommands.add_parser(
         "validate-btc-reserve",
         help="Validate Bitcoin-reserve odds -> BTC swing entries against BTC DCA baselines",
     )
@@ -76,6 +81,9 @@ def main() -> None:
     elif args.command == "validate-breakout-compression":
         require_inputs(paths)
         run_breakout_compression_validation(paths)
+    elif args.command == "validate-btc-alt-response":
+        require_inputs(paths)
+        run_btc_alt_response_validation(paths)
     elif args.command == "validate-btc-reserve":
         require_inputs(paths)
         run_btc_reserve_validation(paths)
