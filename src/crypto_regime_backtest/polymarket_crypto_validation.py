@@ -84,6 +84,13 @@ SEEDS: tuple[MarketSeed, ...] = (
         notes="Spot SOL ETF approval catalyst",
     ),
     MarketSeed(
+        slug="ripple-etf-approved-by-july-31-2025",
+        query="xrp etf approved",
+        asset="XRP",
+        family="xrp_etf",
+        notes="Spot XRP ETF approval catalyst",
+    ),
+    MarketSeed(
         slug="fed-rate-cut-by-march-20",
         query="fed cut interest rates",
         asset="ETH",

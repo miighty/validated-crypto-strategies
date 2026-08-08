@@ -1,0 +1,42 @@
+{
+  "config": {
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "contribution_hour_utc": 9,
+    "sample_start": "2025-01-01T00:00:00Z",
+    "holdout_start": "2025-05-01T00:00:00Z",
+    "primary_delta_threshold": 0.1,
+    "primary_level_threshold": 0.55,
+    "primary_hold_hours": 72,
+    "primary_cooldown_hours": 24
+  },
+  "xrp_data": {
+    "path": "data/raw/XRP_1h.csv.gz",
+    "kind": "spot_ohlcv",
+    "coin": "XRP",
+    "timeframe": "1h",
+    "source": "Binance",
+    "source_symbols": "XRPUSDT",
+    "first_timestamp": "2018-05-04T08:00:00+00:00",
+    "last_timestamp": "2026-07-27T23:00:00+00:00",
+    "rows": 72072,
+    "sha256": "07f195a69b57bd66398d8c51c984bc72253778985d30c1a52d63d0011ccfa0a9"
+  },
+  "btc_data": {
+    "path": "data/raw/BTC_1h.csv.gz",
+    "kind": "spot_ohlcv",
+    "coin": "BTC",
+    "timeframe": "1h",
+    "source": "Binance",
+    "source_symbols": "BTCUSDT",
+    "first_timestamp": "2018-01-01T00:00:00+00:00",
+    "last_timestamp": "2026-07-27T23:00:00+00:00",
+    "rows": 74998,
+    "sha256": "8c594e1fb43e69088efd8d5980ae7e6db1e3d7dba7f943bde82ba54f008eeadc"
+  },
+  "sample_rows": 13752,
+  "sample_start": "2025-01-01T00:00:00+00:00",
+  "sample_end": "2026-07-27T23:00:00+00:00",
+  "market_slug": "ripple-etf-approved-by-july-31-2025",
+  "market_question": "Ripple ETF approved by July 31?"
+}

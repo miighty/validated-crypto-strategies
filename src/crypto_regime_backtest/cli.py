@@ -12,6 +12,7 @@ from .data import collect
 from .dominance_etf_validation import run_dominance_etf_validation
 from .edge_validation import run_validation
 from .eth_btc_etf_validation import run_eth_btc_etf_validation
+from .xrp_btc_etf_validation import run_xrp_btc_etf_validation
 from .pipeline import require_inputs, run
 from .polymarket_crypto_validation import run_polymarket_crypto_validation
 from .regimes import generate as generate_regimes
@@ -42,6 +43,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-sol-eth-etf",
         help="Validate SOL ETF odds -> SOL/ETH spread against SOL DCA baselines",
+    )
+    subcommands.add_parser(
+        "validate-xrp-btc-etf",
+        help="Validate XRP ETF odds -> XRP/BTC spread against XRP DCA baselines",
     )
     subcommands.add_parser(
         "validate-breakout-compression",
@@ -98,6 +103,9 @@ def main() -> None:
     elif args.command == "validate-sol-eth-etf":
         require_inputs(paths)
         run_sol_eth_etf_validation(paths)
+    elif args.command == "validate-xrp-btc-etf":
+        require_inputs(paths)
+        run_xrp_btc_etf_validation(paths)
     elif args.command == "validate-breakout-compression":
         require_inputs(paths)
         run_breakout_compression_validation(paths)

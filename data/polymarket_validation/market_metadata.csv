@@ -1,0 +1,53 @@
+slug,query,asset,family,bullish_when_yes,notes,question,condition_id,outcomes,outcome_prices,volume,active,closed,end_date,description
+will-trump-create-a-national-bitcoin-reserve-in-his-first-100-days,bitcoin reserve,BTC,bitcoin_reserve,True,Bitcoin strategic reserve policy odds,Will Trump create Bitcoin reserve in first 100 days?,0xd6c186dd4a5167684c27462d0bb541bd22ca4861298c00ade1991c6240364762,"[""Yes"", ""No""]","[""0"", ""1""]",23324353.367396,True,True,2025-04-29T12:00:00Z,"This market will resolve to ""Yes"" if the US government holds any amount of Bitcoin in its reserves at any point between January 20, 2025, ET and  April 29, 2025, 11:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+Note that the US government confiscating Bitcoin does not count as holding Bitcoin reserves.
+
+The primary resolution source for this market will be official information from the US government and/or the US federal reserve, however a consensus of credible reporting will also be used."
+bitcoin-etf-approved-by-jan-15,bitcoin etf approved by jan 15,BTC,btc_etf,True,Spot BTC ETF approval catalyst,Bitcoin ETF approved by Jan 15?,0xb36886bb0cf7cede4fd57fedbbbf80342ec76921d567fa9958275c22e1df04bd,"[""Yes"", ""No""]","[""1"", ""0""]",12622418.419238001,True,True,2024-01-15T00:00:00Z,"This market will resolve to ""Yes"" if any spot Bitcoin ETF receives approval from the SEC by January 15, 2024, 11:59:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+The primary resolution source for this market will be information from the SEC, however a consensus of credible reporting may also be used."
+ethereum-etf-approved-by-may-31,ethereum etf approved,ETH,eth_etf,True,Spot ETH ETF approval catalyst,Ethereum ETF approved by May 31?,0x4fdc8c72f3013001dccc152e318cb3fcb16da16c741816c3078a42947702ece5,"[""Yes"", ""No""]","[""1"", ""0""]",13226512.327129,True,True,2024-05-31T12:00:00Z,"This market will resolve to ""Yes"" if any spot Ethereum ETF receives approval from the SEC by May 31, 2024, 11:59:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+The primary resolution source for this market will be information from the SEC, however a consensus of credible reporting may also be used."
+fed-rate-cut-by-june-12,fed cut interest rates,ETH,fed_cut,True,Front-end Fed easing odds,Fed rate cut by June 12?,0x1e14c1e407a8aa7a727fadf74049b255a93f1c22f137d6a244ea64604b5b36d5,"[""Yes"", ""No""]","[""0"", ""1""]",1253483.915707,True,True,2024-06-12T00:00:00Z,"This market will resolve to “Yes” if the upper bound of the target federal funds rate is decreased at any point between January 31, 2024 ET and June 12, 2024 ET. Otherwise, this market will resolve to “No.”
+
+This market may not resolve to ""No"" until June 12, 2024, 11:59 PM ET has passed.
+
+The primary resolution source for this market will be the official website of the Federal Reserve (https://www.federalreserve.gov/monetarypolicy/openmarket.htm), however a consensus of credible reporting may also be used."
+fed-rate-cut-by-march-20,fed cut interest rates,ETH,fed_cut,True,Front-end Fed easing odds,Fed rate cut by March 20?,0xa81f535a21c9fc890b335131ad726476605c563ad6b9a096568a0556db26987a,"[""Yes"", ""No""]","[""0"", ""1""]",1907759.255828,True,True,2024-03-20T00:00:00Z,"This market will resolve to “Yes” if the upper bound of the target federal funds rate is decreased at any point between December 17, 2023 ET and March 20, 2024 ET. Otherwise, this market will resolve to “No.”
+
+This market may not resolve to ""No"" until March 20, 2024, 11:59 PM ET has passed.
+
+The primary resolution source for this market will be the official website of the Federal Reserve (https://www.federalreserve.gov/monetarypolicy/openmarket.htm), however a consensus of credible reporting may also be used."
+fed-rate-cut-by-may-1,fed cut interest rates,ETH,fed_cut,True,Front-end Fed easing odds,Fed rate cut by May 1?,0x29f8437fee9a3c972bcdc483874dc6f5192142a2158e999ace849dedb342d671,"[""Yes"", ""No""]","[""0"", ""1""]",1608415.69825,True,True,2024-05-01T00:00:00Z,"This market will resolve to “Yes” if the upper bound of the target federal funds rate is decreased at any point between December 6, 2023 ET and May 1, 2024 ET. Otherwise, this market will resolve to “No.”
+
+This market may not resolve to ""No"" until May 1, 2024, 11:59:59 PM ET has passed.
+
+
+The primary resolution source for this market will be the official website of the Federal Reserve (https://www.federalreserve.gov/monetarypolicy/openmarket.htm), however a consensus of credible reporting may also be used."
+us-recession-by-end-of-2026,us recession by end of 2026,BTC,recession,False,Macro risk-off odds,US recession by end of 2026?,0xfdc73f10edf0266756686f35b5712cffa828b0940fc015e0426c76c934c2105d,"[""Yes"", ""No""]","[""0.08"", ""0.92""]",1698307.4778850002,True,False,2027-01-31T00:00:00Z,"This market will resolve to “Yes” if either of the following conditions is met:
+
+1.  The seasonally adjusted annualized percent change in quarterly U.S. real GDP from the previous quarter is less than 0.0 for two consecutive quarters between Q2 2025 and Q4 2026 (inclusive), as reported by the Bureau of Economic Analysis (BEA). 
+
+2.  The National Bureau of Economic Research (NBER) publicly announces that a recession has occurred in the United States, at any point during 2025 or 2026, with the announcement made by the time the BEA releases the advance estimate for Q4 2026.
+
+Otherwise, this market will resolve to ""No"". 
+
+Note that advance estimates will be considered. For example, if upon release, the advance estimate for Q3 2025 was negative, and the Q2 2025's most recent, up-to-date estimate was also negative, this market would resolve to ""Yes"". If on December 31, 2026 the latest estimate for quarterly GDP in Q3 2025 was negative, this market will stay open until the Advance estimate of Q4 2026 is published, at which point it will resolve to ""Yes"" if Q4 2026 was negative or if the NBER declares a recession by then.
+
+The resolution source will be the official announcements from the NBER and the BEA’s estimate of seasonally adjusted annualized percent change in quarterly US real GDP from previous quarters as released by the Bureau of Economic Analysis (BEA), https://www.bea.gov/data/gdp/gross-domestic-product"
+solana-etf-approved-by-july-31-2025,solana etf approved,SOL,sol_etf,True,Spot SOL ETF approval catalyst,Solana ETF approved by July 31?,0x4f6d8832d32181a0efdf34349d7eb340b2064345f58a9659ae6d4a177f2f63eb,"[""Yes"", ""No""]","[""1"", ""0""]",1882646.590054,True,True,2025-07-31T12:00:00Z,"This market will resolve to ""Yes"" if any spot Solana ETF receives approval from the SEC by July 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+Approval under Rule 19-4b will qualify for a ""Yes"" resolution, even if there has not been an S-1 approval. Similarly, an S-1 approval without a 19-4b approval will also qualify for a ""Yes"" resolution.
+
+The primary resolution source for this market will be information from the SEC, however a consensus of credible reporting may also be used."
+will-donald-trump-win-the-2024-us-presidential-election,presidential election winner 2024,BTC,trump_election,True,Trump odds used as pro-crypto policy proxy,Will Donald Trump win the 2024 US Presidential Election?,0xdd22472e552920b8438158ea7238bfadfa4f736aa4cee91a6b86c39ead110917,"[""Yes"", ""No""]","[""1"", ""0""]",1531479284.504353,True,True,2024-11-05T12:00:00Z,"This market will resolve to “Yes” if Donald J. Trump wins the 2024 US Presidential Election. Otherwise, this market will resolve to “No.”
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2025) this market will resolve based on who is inaugurated."
+ripple-etf-approved-by-july-31-2025,xrp etf approved,XRP,xrp_etf,True,Spot XRP ETF approval catalyst,Ripple ETF approved by July 31?,0x62b6cde136dde43f72ef7335b3292b422e6ba7dbe22fd903de90f290ad621ed6,"[""Yes"", ""No""]","[""0"", ""1""]",271638.267685,True,True,2025-07-31T12:00:00Z,"This market will resolve to ""Yes"" if any spot Ripple ETF receives approval from the SEC by July 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+Approval under Rule 19-4b will qualify for a ""Yes"" resolution, even if there has not been an S-1 approval. Similarly, an S-1 approval without a 19-4b approval will also qualify for a ""Yes"" resolution.
+
+The primary resolution source for this market will be information from the SEC, however a consensus of credible reporting may also be used.
+"
