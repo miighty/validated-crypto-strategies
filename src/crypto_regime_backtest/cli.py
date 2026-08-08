@@ -14,6 +14,7 @@ from .data import collect
 from .dominance_etf_validation import run_dominance_etf_validation
 from .edge_validation import run_validation
 from .eth_btc_etf_validation import run_eth_btc_etf_validation
+from .funding_negative_panel_validation import run_funding_negative_panel_validation
 from .xrp_btc_etf_validation import run_xrp_btc_etf_validation
 from .pipeline import require_inputs, run
 from .polymarket_crypto_validation import run_polymarket_crypto_validation
@@ -53,6 +54,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-alt-etf-btc-panel",
         help="Validate a pooled ETH/SOL/XRP ETF-odds family of long-alt/short-BTC spread trades",
+    )
+    subcommands.add_parser(
+        "validate-funding-negative-panel",
+        help="Validate a negative-funding rebound panel strategy against DCA and matched-schedule baselines",
     )
     subcommands.add_parser(
         "validate-breakout-compression",
@@ -122,6 +127,9 @@ def main() -> None:
     elif args.command == "validate-breakout-compression":
         require_inputs(paths)
         run_breakout_compression_validation(paths)
+    elif args.command == "validate-funding-negative-panel":
+        require_inputs(paths)
+        run_funding_negative_panel_validation(paths)
     elif args.command == "validate-btc-alt-response":
         require_inputs(paths)
         run_btc_alt_response_validation(paths)
