@@ -1,6 +1,6 @@
 # Breakout Compression Validation
 
-Run artifact: `results/breakout_compression/runs/run-20260808T003008Z/REPORT.md`
+Run artifact: `results/breakout_compression/runs/run-20260808T083331Z/REPORT.md`
 
 ## Key findings
 
@@ -15,8 +15,8 @@ Run artifact: `results/breakout_compression/runs/run-20260808T003008Z/REPORT.md`
 
 ## Files
 
-- `results/breakout_compression/runs/run-20260808T003008Z/REPORT.md`
-- `results/breakout_compression/runs/run-20260808T003008Z/strategy_summary.csv`
-- `results/breakout_compression/runs/run-20260808T003008Z/partition_summary.csv`
-- `results/breakout_compression/runs/run-20260808T003008Z/benchmark_summary.csv`
-- `results/breakout_compression/runs/run-20260808T003008Z/hostile_checks.csv`
+- `results/breakout_compression/runs/run-20260808T083331Z/REPORT.md`
+- `results/breakout_compression/runs/run-20260808T083331Z/strategy_summary.csv`
+- `results/breakout_compression/runs/run-20260808T083331Z/partition_summary.csv`
+- `results/breakout_compression/runs/run-20260808T083331Z/benchmark_summary.csv`
+- `results/breakout_compression/runs/run-20260808T083331Z/hostile_checks.csv`

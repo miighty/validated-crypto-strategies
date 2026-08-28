@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-08-08 08:33 UTC",
+  "done": {
+    "breakout_compression": {
+      "status": "done",
+      "finished_at": "2026-08-08 08:34 UTC",
+      "summary": "Breakout Compression Validation \u2014 rejected"
+    },
+    "funding_negative_panel": {
+      "status": "done",
+      "finished_at": "2026-08-08 08:54 UTC",
+      "summary": "Negative funding panel validation \u2014 rejected"
+    },
+    "funding_positive_panel": {
+      "status": "done",
+      "finished_at": "2026-08-08 09:16 UTC",
+      "summary": "Positive funding panel validation \u2014 validated"
+    },
+    "btc_alt_response": {
+      "status": "done",
+      "finished_at": "2026-08-08 09:36 UTC",
+      "summary": "BTC Shock -> Alt Underreaction Validation \u2014 Rejected"
+    },
+    "recession_btc": {
+      "status": "done",
+      "finished_at": "2026-08-08 09:57 UTC",
+      "summary": "Recession Odds \u2192 BTC Relief Validation \u2014 validated"
+    },
+    "btc_wick_odds": {
+      "status": "failed",
+      "finished_at": "2026-08-08 10:19 UTC",
+      "summary": "warning: `VIRTUAL_ENV=/Users/vr/.hermes/hermes-agent/venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead Traceback (most recent call last"
+    }
+  },
+  "completion_notified": false
+}

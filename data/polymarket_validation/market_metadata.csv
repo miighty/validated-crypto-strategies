@@ -26,7 +26,7 @@ This market may not resolve to ""No"" until May 1, 2024, 11:59:59 PM ET has pass
 
 
 The primary resolution source for this market will be the official website of the Federal Reserve (https://www.federalreserve.gov/monetarypolicy/openmarket.htm), however a consensus of credible reporting may also be used."
-us-recession-by-end-of-2026,us recession by end of 2026,BTC,recession,False,Macro risk-off odds,US recession by end of 2026?,0xfdc73f10edf0266756686f35b5712cffa828b0940fc015e0426c76c934c2105d,"[""Yes"", ""No""]","[""0.08"", ""0.92""]",1698307.4778850002,True,False,2027-01-31T00:00:00Z,"This market will resolve to “Yes” if either of the following conditions is met:
+us-recession-by-end-of-2026,us recession by end of 2026,BTC,recession,False,Macro risk-off odds,US recession by end of 2026?,0xfdc73f10edf0266756686f35b5712cffa828b0940fc015e0426c76c934c2105d,"[""Yes"", ""No""]","[""0.075"", ""0.925""]",1698307.4778849997,True,False,2027-01-31T00:00:00Z,"This market will resolve to “Yes” if either of the following conditions is met:
 
 1.  The seasonally adjusted annualized percent change in quarterly U.S. real GDP from the previous quarter is less than 0.0 for two consecutive quarters between Q2 2025 and Q4 2026 (inclusive), as reported by the Bureau of Economic Analysis (BEA). 
 

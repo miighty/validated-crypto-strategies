@@ -1,0 +1,99 @@
+{
+  "config": {
+    "sample_start": "2018-01-01T00:00:00Z",
+    "development_end": "2020-01-01T00:00:00Z",
+    "validation_end": "2024-01-01T00:00:00Z",
+    "contribution_hour_utc": 0,
+    "strategy_universe": [
+      "BTC",
+      "ETH",
+      "SOL"
+    ],
+    "benchmark_assets": [
+      "BTC",
+      "ETH",
+      "SOL",
+      "XRP"
+    ],
+    "lookback": 50,
+    "acceptance_window": 2,
+    "atr_buffer": 0.1,
+    "stop_atr_multiple": 2.0,
+    "holding_bars": 24,
+    "compression_lookback": 252,
+    "compression_thresholds": [
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "entry_delay_bars": 1,
+    "fee_rate": 0.0005,
+    "slippage_rate": 0.0005,
+    "initial_capital": 10000.0
+  },
+  "strategy_universe": [
+    "BTC",
+    "ETH",
+    "SOL"
+  ],
+  "benchmark_assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+  ],
+  "selected_threshold": 0.5,
+  "sample_start": "2018-01-01T00:00:00+00:00",
+  "sample_end": "2026-07-27T20:00:00+00:00",
+  "provenance": [
+    {
+      "path": "data/raw/BTC_4h.csv.gz",
+      "kind": "spot_ohlcv",
+      "coin": "BTC",
+      "timeframe": "4h",
+      "source": "Binance",
+      "source_symbols": "BTCUSDT",
+      "first_timestamp": "2018-01-01T00:00:00+00:00",
+      "last_timestamp": "2026-07-27T20:00:00+00:00",
+      "rows": 18764,
+      "sha256": "c06bb236b9a99b26e26895e8057440dc0ac79c7d78a07003133a35b319099073"
+    },
+    {
+      "path": "data/raw/ETH_4h.csv.gz",
+      "kind": "spot_ohlcv",
+      "coin": "ETH",
+      "timeframe": "4h",
+      "source": "Binance",
+      "source_symbols": "ETHUSDT",
+      "first_timestamp": "2018-01-01T00:00:00+00:00",
+      "last_timestamp": "2026-07-27T20:00:00+00:00",
+      "rows": 18764,
+      "sha256": "40e8b10de32c8c8ea8b6e06cab35e99d590b926c3c4848a423d6c12c7eda964d"
+    },
+    {
+      "path": "data/raw/SOL_4h.csv.gz",
+      "kind": "spot_ohlcv",
+      "coin": "SOL",
+      "timeframe": "4h",
+      "source": "Binance",
+      "source_symbols": "SOLUSDT",
+      "first_timestamp": "2020-08-11T04:00:00+00:00",
+      "last_timestamp": "2026-07-27T20:00:00+00:00",
+      "rows": 13061,
+      "sha256": "91bd3208c49a2c737a53fff9db981e0a33eca2a811647a9f5c5ee1ce0ad25bca"
+    },
+    {
+      "path": "data/raw/XRP_4h.csv.gz",
+      "kind": "spot_ohlcv",
+      "coin": "XRP",
+      "timeframe": "4h",
+      "source": "Binance",
+      "source_symbols": "XRPUSDT",
+      "first_timestamp": "2018-05-04T08:00:00+00:00",
+      "last_timestamp": "2026-07-27T20:00:00+00:00",
+      "rows": 18031,
+      "sha256": "36f29afded7e37187568d66671d03ce3956007df497e636e6bf128393a9fd80d"
+    }
+  ]
+}

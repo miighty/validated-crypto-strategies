@@ -1,0 +1,32 @@
+{
+  "config": {
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "contribution_hour_utc": 9,
+    "sample_start": "2021-01-01T00:00:00Z",
+    "validation_start": "2024-01-01T00:00:00Z",
+    "holdout_start": "2025-01-01T00:00:00Z",
+    "primary_threshold": 0.3,
+    "primary_window_hours": 72,
+    "primary_delay_hours": 1,
+    "primary_cooldown_hours": 24,
+    "spend_rule": "all_available_reserve",
+    "multiple_signal_rule": "Earliest qualifying signal wins; ignore new signals until cooldown expires and the pending next-open entry has either fired or been skipped.",
+    "cash_rule": "Each strategy receives the same initial funded reserve, released as equal daily contributions at 09:00 UTC. Daily DCA spends the same-day tranche immediately; weekly DCA spends the accrued reserve every Monday 09:00 UTC; drawdown buys spend the entire currently accrued reserve on a qualifying signal."
+  },
+  "btc_data": {
+    "path": "data/raw/BTC_1h.csv.gz",
+    "kind": "spot_ohlcv",
+    "coin": "BTC",
+    "timeframe": "1h",
+    "source": "Binance",
+    "source_symbols": "BTCUSDT",
+    "first_timestamp": "2018-01-01T00:00:00+00:00",
+    "last_timestamp": "2026-07-27T23:00:00+00:00",
+    "rows": 74998,
+    "sha256": "8c594e1fb43e69088efd8d5980ae7e6db1e3d7dba7f943bde82ba54f008eeadc"
+  },
+  "sample_rows": 48802,
+  "sample_start": "2021-01-01T00:00:00+00:00",
+  "sample_end": "2026-07-27T23:00:00+00:00"
+}

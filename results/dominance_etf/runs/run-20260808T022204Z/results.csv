@@ -1,0 +1,2 @@
+study,variant,decision,event_count,explanation
+btc_dominance_and_etf_flows,all,insufficient_data,0,"Missing required point-in-time files: dominance.csv, alt_universe.csv.gz, etf_flows.csv"

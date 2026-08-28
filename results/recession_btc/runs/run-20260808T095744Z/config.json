@@ -1,0 +1,54 @@
+{
+  "config": {
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "contribution_hour_utc": 9,
+    "sample_start": "2025-09-30T00:00:00Z",
+    "validation_start": "2026-01-01T00:00:00Z",
+    "holdout_start": "2026-04-01T00:00:00Z",
+    "primary_lookback_hours": 24,
+    "primary_delta_threshold": 0.05,
+    "primary_level_threshold": 0.45,
+    "primary_hold_hours": 72,
+    "primary_cooldown_hours": 24,
+    "primary_rule": "If real Polymarket US recession YES odds fall by at least 5 points over the prior 24 completed hours and remain at or below 45%, enter spot BTC long at the next hourly open, hold 72h, then exit and remain in cash for a 24h cooldown."
+  },
+  "assets": {
+    "BTC": {
+      "spot_path": "data/raw/BTC_1h.csv.gz",
+      "spot_sha256": "8c594e1fb43e69088efd8d5980ae7e6db1e3d7dba7f943bde82ba54f008eeadc",
+      "spot_rows": 74998,
+      "spot_first_timestamp": "2018-01-01T00:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00"
+    },
+    "ETH": {
+      "spot_path": "data/raw/ETH_1h.csv.gz",
+      "spot_sha256": "2de408f963ab72324e508830740f1477818d8c80417b33bbdd4cd4889f221058",
+      "spot_rows": 74998,
+      "spot_first_timestamp": "2018-01-01T00:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00"
+    },
+    "SOL": {
+      "spot_path": "data/raw/SOL_1h.csv.gz",
+      "spot_sha256": "1ca418b22b2ff84376a7d38b7b3e8e0a9578e2351b176ebcc9f6c33058f6a694",
+      "spot_rows": 52222,
+      "spot_first_timestamp": "2020-08-11T06:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00"
+    },
+    "XRP": {
+      "spot_path": "data/raw/XRP_1h.csv.gz",
+      "spot_sha256": "07f195a69b57bd66398d8c51c984bc72253778985d30c1a52d63d0011ccfa0a9",
+      "spot_rows": 72072,
+      "spot_first_timestamp": "2018-05-04T08:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00"
+    }
+  },
+  "market_slug": "us-recession-by-end-of-2026",
+  "market_question": "US recession by end of 2026?",
+  "market_path": "data/polymarket_validation/hourly/us-recession-by-end-of-2026.csv.gz",
+  "market_sha256": "2728b16f525012edc9c75eddaf569e34eb147769b4142495df8eafdba78e6ee5",
+  "sample_start": "2025-09-30T07:00:00+00:00",
+  "sample_end": "2026-07-27T23:00:00+00:00",
+  "raw_signal_count": 15,
+  "verdict_reason": "A same-schedule baseline matched or beat the signal, so the odds filter added no value."
+}

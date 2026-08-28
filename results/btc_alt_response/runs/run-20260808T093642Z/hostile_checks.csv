@@ -1,0 +1,10 @@
+check,trade_count,mean_trade_return,asset
+btc_shock_without_lag_filter,172,0.013840841486004719,ETH
+same_asset_momentum,246,0.0027311479881503855,ETH
+matched_random,3,-0.0057837385244611612,ETH
+btc_shock_without_lag_filter,172,0.027541643470318958,SOL
+same_asset_momentum,330,0.017572395521232929,SOL
+matched_random,3,-0.015255130081520166,SOL
+btc_shock_without_lag_filter,172,0.011667026181356623,XRP
+same_asset_momentum,262,0.01396216330749441,XRP
+matched_random,3,0.015639080463258015,XRP
