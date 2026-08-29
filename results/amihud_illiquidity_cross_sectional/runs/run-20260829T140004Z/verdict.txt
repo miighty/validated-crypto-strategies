@@ -1,0 +1,4 @@
+beats_random_control=True
+beats_cash=False
+concentration_ok=False
+verdict=REJECTED
