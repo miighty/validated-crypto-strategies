@@ -1,0 +1,30 @@
+{
+  "config": {
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "contribution_hour_utc": 9,
+    "sample_start": "2023-10-01T00:00:00Z",
+    "holdout_start": "2025-01-01T00:00:00Z",
+    "supportive_families": [
+      "btc_etf",
+      "eth_etf",
+      "trump_election",
+      "bitcoin_reserve"
+    ],
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL",
+      "XRP"
+    ],
+    "primary_rule": "Identical to the frozen BTC-only rule (wick_window=48h, drawdown<=-10%, support_delta_floor>=-2pts, bounce>=3% within 24h, hold=72h, cooldown=48h), applied independently to BTC/ETH/SOL/XRP 1h bars sharing ONE non-overlapping capital sleeve (earliest qualifying signal across assets wins; no other asset may enter until the open trade exits and the cooldown elapses)."
+  },
+  "raw_signal_counts_per_asset": {
+    "BTC": 6,
+    "ETH": 12,
+    "SOL": 21,
+    "XRP": 12
+  },
+  "sample_start": "2023-10-01T00:00:00+00:00",
+  "sample_end": "2026-07-27T23:00:00+00:00"
+}

@@ -1,0 +1,8 @@
+check,terminal_value,beats_daily,beats_weekly,excluded_event_asset,excluded_event_timestamp
+doubled_cost,9713.335324507156,True,True,,
+exclude_best_event,9651.153652881929,True,True,XRP,2025-04-10 02:00:00+00:00
+best_event_pnl_share,,,,,
+per_asset_trades_BTC,0.1131107979921896,1,,,
+per_asset_trades_ETH,-0.01828421089094382,6,,,
+per_asset_trades_SOL,0.01019022893256685,9,,,
+per_asset_trades_XRP,0.01371158444366378,7,,,
