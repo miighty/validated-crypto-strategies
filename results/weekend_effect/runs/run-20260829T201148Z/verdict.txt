@@ -1,0 +1,4 @@
+beats_all_assets=False
+beats_doubled_cost=False
+test_partition_pass=False
+verdict=REJECTED
