@@ -1,0 +1,3 @@
+beats_random_control=True
+beats_cash=False
+verdict=REJECTED

@@ -1,0 +1,5 @@
+beats_random_control_8h=True
+beats_cash_8h=False
+beats_random_control_daily=True
+beats_cash_daily=False
+verdict=REJECTED
