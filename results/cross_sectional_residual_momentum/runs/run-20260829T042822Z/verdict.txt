@@ -1,0 +1,3 @@
+beats_raw_momentum=False
+beats_equal_weight_bh=True
+verdict=REJECTED
