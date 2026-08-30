@@ -1,0 +1,13 @@
+asset,partition,n_prints,n_trades,final_capital,total_return_pct
+BTC,development_pre_2024,3283,4,13097.01987,30.97019874
+BTC,validation_2024,1098,3,10508.30126,5.08301263
+BTC,test_2025_onward,1719,0,10000,0
+ETH,development_pre_2024,3283,5,14237.47621,42.37476211
+ETH,validation_2024,1098,3,10563.83723,5.638372268
+ETH,test_2025_onward,1719,0,10000,0
+SOL,development_pre_2024,3358,10,13433.04831,34.33048307
+SOL,validation_2024,1098,3,10762.24605,7.622460539
+SOL,test_2025_onward,1719,0,10000,0
+XRP,development_pre_2024,3283,4,15917.87949,59.17879487
+XRP,validation_2024,1098,3,10695.14481,6.951448123
+XRP,test_2025_onward,1719,0,10000,0

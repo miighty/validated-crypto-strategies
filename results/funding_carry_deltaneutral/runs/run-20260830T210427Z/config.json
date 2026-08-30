@@ -1,0 +1,21 @@
+{
+  "config": {
+    "sample_start": "2021-01-01T00:00:00Z",
+    "validation_start": "2024-01-01T00:00:00Z",
+    "holdout_start": "2025-01-01T00:00:00Z",
+    "lookback_prints": 3,
+    "entry_threshold": 0.0003,
+    "exit_threshold": 0.0001,
+    "entry_cost": 0.003,
+    "exit_cost": 0.003,
+    "initial_capital": 10000.0,
+    "primary_rule": "Single-asset delta-neutral cash-and-carry (long spot + short perp, equal notional). Enter/remain hedged while the trailing mean of the last 3 completed 8h funding prints >= +30bps/24h-equivalent (+3bps/8h mean); exit to fully unhedged cash-equivalent (flat, no position, no price exposure) when that trailing mean falls below +1bps/8h (hysteresis band). While hedged, capital compounds by the realized funding print each 8h; no price risk is modeled while hedged (idealized 1:1 hedge, no basis/liquidation risk, no separate margin financing spread)."
+  },
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+  ],
+  "generated_at": "2026-08-30T21:04:30.922855+00:00"
+}
