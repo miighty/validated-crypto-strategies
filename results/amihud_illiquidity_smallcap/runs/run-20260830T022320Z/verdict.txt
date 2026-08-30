@@ -1,0 +1,5 @@
+beats_random_control=True
+beats_cash=True
+concentration_ok=True
+verdict=CANDIDATE
+universe_size=54

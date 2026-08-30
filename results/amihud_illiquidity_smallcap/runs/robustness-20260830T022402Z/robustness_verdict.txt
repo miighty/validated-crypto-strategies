@@ -1,0 +1,9 @@
+doubled_cost_beats_cash=True
+delayed_1d_beats_cash=True
+first_half_beats_cash=True
+second_half_beats_cash=True
+best_trade_exclusion_still_positive=True
+bootstrap_mean_trade_return=0.007187957670537368
+bootstrap_ci_lo=0.003206722829262803
+bootstrap_ci_hi=0.010951886132958
+bootstrap_ci_excludes_zero=True

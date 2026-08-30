@@ -1,0 +1,6 @@
+observed_final_capital=77485.86780960276
+observed_sharpe=1.429177337070289
+n_trials=500
+p_value_final_capital=0.0
+p_value_sharpe=0.0
+significant_at_0.05=True
