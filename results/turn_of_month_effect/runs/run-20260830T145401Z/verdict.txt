@@ -1,0 +1,5 @@
+beats_all_assets=False
+beats_doubled_cost=False
+test_partition_pass=False
+survives_best_trade_exclusion=False
+verdict=REJECTED
