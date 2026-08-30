@@ -1,0 +1,5 @@
+n_assets_beat=3
+beats_majority=True
+doubled_cost_ok=True
+test_partition_losses=1
+verdict=CANDIDATE
