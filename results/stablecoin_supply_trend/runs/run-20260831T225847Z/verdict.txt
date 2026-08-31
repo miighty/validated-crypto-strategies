@@ -1,0 +1,7 @@
+beats_bh_all=False
+beats_momentum_control_all=False
+beats_random_control_all=False
+beats_doubled_cost_all=False
+beats_excl_best_block_all=False
+test_partition_pass=True
+verdict=REJECTED
