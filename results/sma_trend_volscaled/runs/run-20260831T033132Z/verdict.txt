@@ -1,0 +1,6 @@
+n_assets_beat=1
+beats_majority=False
+concentration_ok=False
+doubled_cost_ok=False
+test_partition_losses=2
+verdict=PROMISING BUT INCONCLUSIVE
