@@ -19,6 +19,7 @@ from .fed_hawkish_btc_validation import run_fed_hawkish_btc_validation
 from .funding_negative_panel_validation import run_funding_negative_panel_validation
 from .funding_positive_panel_validation import run_funding_positive_panel_validation
 from .funding_carry_deltaneutral_validation import run_funding_carry_deltaneutral_validation
+from .funding_crossexchange_divergence_validation import run_funding_crossexchange_divergence_validation
 from .xrp_btc_etf_validation import run_xrp_btc_etf_validation
 from .pipeline import require_inputs, run
 from .polymarket_crypto_validation import run_polymarket_crypto_validation
@@ -75,6 +76,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-funding-carry-deltaneutral",
         help="Validate a single-asset delta-neutral (long spot + short perp) funding-carry harvest timed by rolling funding persistence",
+    )
+    subcommands.add_parser(
+        "validate-funding-crossexchange-divergence",
+        help="Validate a Binance-vs-Hyperliquid cross-exchange funding divergence perp-vs-perp basis trade",
     )
     subcommands.add_parser(
         "validate-breakout-compression",
@@ -164,6 +169,9 @@ def main() -> None:
     elif args.command == "validate-funding-carry-deltaneutral":
         require_inputs(paths)
         run_funding_carry_deltaneutral_validation(paths)
+    elif args.command == "validate-funding-crossexchange-divergence":
+        require_inputs(paths)
+        run_funding_crossexchange_divergence_validation(paths)
     elif args.command == "validate-btc-alt-response":
         require_inputs(paths)
         run_btc_alt_response_validation(paths)

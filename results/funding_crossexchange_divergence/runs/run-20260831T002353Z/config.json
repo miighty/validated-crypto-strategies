@@ -1,0 +1,11 @@
+{
+  "run_id": "run-20260831T002353Z",
+  "config": {
+    "divergence_threshold": 0.0005,
+    "hold_prints": 1,
+    "entry_cost": 0.003,
+    "exit_cost": 0.003,
+    "initial_capital": 10000.0,
+    "primary_rule": "Cross-exchange funding basis: at each real Binance 8h settlement, compute the matching real Hyperliquid 8h-compounded funding rate for the same asset. If |Binance_8h - Hyperliquid_8h| >= 5bps, enter a perp-vs-perp basis trade: long the perp on the exchange with the LOWER funding rate, short the perp on the exchange with the HIGHER funding rate, equal notional (net price-neutral by construction). Hold exactly 1 settlement (8h), collect the realized funding differential, exit, and reassess at the next settlement. No spot leg is used (distinct from the already-rejected single-exchange delta-neutral carry study)."
+  }
+}
