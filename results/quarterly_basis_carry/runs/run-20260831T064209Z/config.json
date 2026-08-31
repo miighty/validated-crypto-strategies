@@ -1,0 +1,29 @@
+{
+  "config": {
+    "sample_start": "2021-02-01 00:00:00+00:00",
+    "validation_start": "2024-01-01 00:00:00+00:00",
+    "holdout_start": "2025-06-01 00:00:00+00:00",
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "primary_annualized_threshold": 0.08,
+    "cooldown_days": 1,
+    "primary_rule": "At each real Binance daily close, if the current-quarter futures contract's annualized basis (log-linear extrapolation of (future_close/spot_close - 1) to a 365-day year) is >= 8%, enter a delta-neutral cash-and-carry trade (long spot + short the quarterly future, equal notional) at next day's open with the full accrued reserve; hold to contract expiry (basis converges to zero by settlement), realize the captured basis net of 4-leg round-trip costs (spot buy/sell + futures short/cover), then wait 1 day before re-evaluating."
+  },
+  "assets": {
+    "BTC": {
+      "quarterly_rows": 2001,
+      "quarterly_sample_start": "2021-02-03T00:00:00+00:00",
+      "quarterly_sample_end": "2026-07-27T00:00:00+00:00",
+      "signal_count": 22,
+      "quarterly_futures_sha256": "3578846cae949402223649082519d3399d08b76f9b506eb5b3227043da47b95b"
+    },
+    "ETH": {
+      "quarterly_rows": 2000,
+      "quarterly_sample_start": "2021-02-04T00:00:00+00:00",
+      "quarterly_sample_end": "2026-07-27T00:00:00+00:00",
+      "signal_count": 20,
+      "quarterly_futures_sha256": "9cde31bbe297a99a8ae605620858728c916b1430d1c6f025a25d9c4685e272ff"
+    }
+  },
+  "synthetic_data_used": false
+}

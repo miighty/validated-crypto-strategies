@@ -1,0 +1,7 @@
+strategy,final_equity,invested_total,net_return,trade_count,win_rate,mean_trade_pnl,total_pnl,top_trade_pnl_share,partition,asset
+quarterly_basis_carry,5374.542774,5307.346327,0.01266102542,5,1,13.43928935,67.19644677,0.4200119987,development,BTC
+quarterly_basis_carry,2699.304963,2583.708146,0.04474066368,4,1,28.8992043,115.5968172,0.4162438468,validation,BTC
+quarterly_basis_carry,2108.945527,2108.945527,1.110223025e-15,0,,,0,,holdout,BTC
+quarterly_basis_carry,5354.40535,5305,0.009312978363,7,0.7142857143,7.057907174,49.40535022,0.602221571,development,ETH
+quarterly_basis_carry,2697.335335,2585,0.04345660914,4,1,28.08383366,112.3353346,0.412792874,validation,ETH
+quarterly_basis_carry,2110,2110,0,0,,,0,,holdout,ETH
