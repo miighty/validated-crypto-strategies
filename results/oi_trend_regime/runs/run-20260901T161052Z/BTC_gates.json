@@ -1,0 +1,13 @@
+{
+  "verdict": "REJECTED",
+  "gates": {
+    "beats_buy_and_hold": false,
+    "beats_dca": false,
+    "beats_momentum_control": false,
+    "beats_random_control": false,
+    "survives_doubled_cost": false,
+    "survives_best_block_exclusion": false,
+    "concentration_ok": false,
+    "has_holdout_blocks": true
+  }
+}
