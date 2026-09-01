@@ -1,0 +1,8 @@
+beats_bh_all=False
+beats_dca_all=False
+beats_doubled_cost_all=False
+beats_excl_best_trade_all=False
+beats_random_control_all=True
+concentration_ok_all=False
+test_partition_pass=False
+verdict=REJECTED
