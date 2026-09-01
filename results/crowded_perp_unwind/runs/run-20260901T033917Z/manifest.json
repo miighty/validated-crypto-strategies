@@ -1,0 +1,71 @@
+{
+  "config": {
+    "funding_lookback_prints": 3,
+    "funding_threshold": 0.0005,
+    "oi_lookback_days": 5,
+    "oi_rise_threshold": 0.05,
+    "downside_break_lookback_hours": 24,
+    "hold_hours": 48,
+    "cooldown_hours": 24,
+    "initial_capital": 10000.0,
+    "primary_rule": "SHORT-ONLY: enter short at next hourly open when (a) trailing mean of last 3 completed 8h funding prints >= +5bps/8h AND (b) most recent completed daily open interest is >= +5% higher than 5 days earlier AND (c) the hourly close breaks below the trailing prior-only 24h low for the first time since the joint condition became true. Hold 48h fixed, then flat, 24h cooldown before re-entry. Funding received each completed 8h print while short. 30bps round-trip cost."
+  },
+  "universe": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+  ],
+  "verdicts": {
+    "BTC": "REJECTED",
+    "ETH": "REJECTED",
+    "SOL": "REJECTED",
+    "XRP": "REJECTED"
+  },
+  "gates": {
+    "BTC": {
+      "beats_cash": false,
+      "beats_bh": false,
+      "beats_dca": false,
+      "beats_funding_only_control": false,
+      "beats_random_control": false,
+      "survives_doubled_cost": false,
+      "survives_best_trade_exclusion": false,
+      "concentration_ok": false,
+      "has_holdout_trades": false
+    },
+    "ETH": {
+      "beats_cash": true,
+      "beats_bh": true,
+      "beats_dca": true,
+      "beats_funding_only_control": false,
+      "beats_random_control": true,
+      "survives_doubled_cost": true,
+      "survives_best_trade_exclusion": true,
+      "concentration_ok": false,
+      "has_holdout_trades": false
+    },
+    "SOL": {
+      "beats_cash": false,
+      "beats_bh": true,
+      "beats_dca": false,
+      "beats_funding_only_control": false,
+      "beats_random_control": true,
+      "survives_doubled_cost": false,
+      "survives_best_trade_exclusion": false,
+      "concentration_ok": false,
+      "has_holdout_trades": false
+    },
+    "XRP": {
+      "beats_cash": true,
+      "beats_bh": false,
+      "beats_dca": false,
+      "beats_funding_only_control": true,
+      "beats_random_control": true,
+      "survives_doubled_cost": true,
+      "survives_best_trade_exclusion": false,
+      "concentration_ok": false,
+      "has_holdout_trades": false
+    }
+  }
+}

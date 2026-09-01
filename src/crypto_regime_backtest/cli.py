@@ -11,6 +11,7 @@ from .btc_reserve_validation import run_btc_reserve_validation
 from .btc_wick_odds_validation import run_btc_wick_odds_validation
 from .btc_wick_odds_multiasset_validation import run_btc_wick_odds_multiasset_validation
 from .config import Paths, project_root
+from .crowded_perp_unwind_validation import run_crowded_perp_unwind_validation
 from .data import collect
 from .dominance_etf_validation import run_dominance_etf_validation
 from .edge_validation import run_validation
@@ -80,6 +81,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-funding-crossexchange-divergence",
         help="Validate a Binance-vs-Hyperliquid cross-exchange funding divergence perp-vs-perp basis trade",
+    )
+    subcommands.add_parser(
+        "validate-crowded-perp-unwind",
+        help="Validate a short-only funding+open-interest joint-extreme crowded-unwind rule",
     )
     subcommands.add_parser(
         "validate-breakout-compression",
@@ -157,6 +162,9 @@ def main() -> None:
     elif args.command == "validate-alt-etf-btc-panel":
         require_inputs(paths)
         run_alt_etf_btc_panel_validation(paths)
+    elif args.command == "validate-crowded-perp-unwind":
+        require_inputs(paths)
+        run_crowded_perp_unwind_validation(paths)
     elif args.command == "validate-breakout-compression":
         require_inputs(paths)
         run_breakout_compression_validation(paths)

@@ -1,0 +1,13 @@
+asset,partition,n_trades,mean_trade_return_pct
+BTC,development_pre_2024,9,-2.0229703543457807
+BTC,validation_2024,1,-5.588527375217323
+BTC,test_2025_onward,0,
+ETH,development_pre_2024,0,
+ETH,validation_2024,2,4.709671965917595
+ETH,test_2025_onward,0,
+SOL,development_pre_2024,0,
+SOL,validation_2024,3,-0.039285677012897605
+SOL,test_2025_onward,0,
+XRP,development_pre_2024,0,
+XRP,validation_2024,2,3.3179388454544876
+XRP,test_2025_onward,0,
