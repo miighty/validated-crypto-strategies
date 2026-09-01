@@ -1,0 +1,10 @@
+beats_bh_majority=False
+beats_dca_majority=False
+beats_novol_control_majority=False
+beats_random_control_majority=False
+beats_doubled_cost_majority=False
+beats_excl_best_trade_majority=False
+concentration_ok_majority=False
+has_holdout_trades=True
+n_pass=1/8
+verdict=REJECTED
