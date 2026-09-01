@@ -1,0 +1,73 @@
+{
+  "config": {
+    "breakout_lookback_days": 20,
+    "exit_lookback_days": 10,
+    "oi_lookback_days": 5,
+    "oi_rise_threshold": 0.05,
+    "initial_capital": 10000.0,
+    "primary_rule": "LONG-ONLY: enter at next daily open when (a) close breaks above the trailing prior-only 20-day high AND (b) most recent completed daily open interest is >= +5% higher than 5 days earlier. Exit at next daily open on the first close below the trailing prior-only 10-day low. Flat otherwise, non-overlapping trades. 30bps round-trip cost."
+  },
+  "oi_fall_threshold": -0.05,
+  "universe": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+  ],
+  "verdicts": {
+    "BTC": "REJECTED",
+    "ETH": "REJECTED",
+    "SOL": "REJECTED",
+    "XRP": "REJECTED"
+  },
+  "gates": {
+    "BTC": {
+      "beats_cash": true,
+      "beats_bh": true,
+      "beats_dca": true,
+      "beats_unconfirmed_breakout_control": false,
+      "beats_oi_rising_variant": false,
+      "beats_random_control": true,
+      "survives_doubled_cost": true,
+      "survives_best_trade_exclusion": true,
+      "concentration_ok": true,
+      "has_holdout_trades": true
+    },
+    "ETH": {
+      "beats_cash": true,
+      "beats_bh": true,
+      "beats_dca": true,
+      "beats_unconfirmed_breakout_control": false,
+      "beats_oi_rising_variant": false,
+      "beats_random_control": true,
+      "survives_doubled_cost": true,
+      "survives_best_trade_exclusion": true,
+      "concentration_ok": false,
+      "has_holdout_trades": true
+    },
+    "SOL": {
+      "beats_cash": true,
+      "beats_bh": true,
+      "beats_dca": true,
+      "beats_unconfirmed_breakout_control": false,
+      "beats_oi_rising_variant": false,
+      "beats_random_control": true,
+      "survives_doubled_cost": true,
+      "survives_best_trade_exclusion": true,
+      "concentration_ok": false,
+      "has_holdout_trades": true
+    },
+    "XRP": {
+      "beats_cash": true,
+      "beats_bh": true,
+      "beats_dca": true,
+      "beats_unconfirmed_breakout_control": false,
+      "beats_oi_rising_variant": false,
+      "beats_random_control": true,
+      "survives_doubled_cost": true,
+      "survives_best_trade_exclusion": true,
+      "concentration_ok": false,
+      "has_holdout_trades": true
+    }
+  }
+}
