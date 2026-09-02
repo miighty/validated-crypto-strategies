@@ -1,0 +1,4 @@
+partition,n_trades,mean_trade_return_pct
+development_pre_2021,4,51.661501072906425
+validation_2021_2023,5,7.237912697569573
+test_2024_onward,6,2.9847861824179756
