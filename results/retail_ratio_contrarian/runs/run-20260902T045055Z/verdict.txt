@@ -1,0 +1,5 @@
+per_asset_verdicts={'BTC': 'FAIL', 'ETH': 'FAIL', 'SOL': 'FAIL', 'XRP': 'FAIL'}
+n_pass_gates=0
+n_zero_holdout=0
+n_concentration_fail=4
+verdict=REJECTED
