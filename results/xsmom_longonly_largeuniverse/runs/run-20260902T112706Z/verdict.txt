@@ -1,0 +1,2 @@
+gates={'beats_cash': np.True_, 'beats_equal_weight_universe_bh': np.True_, 'beats_random_control': np.True_, 'survives_doubled_cost_positive': np.True_, 'concentration_ok': np.False_, 'n_majors_beaten_of_4': 4}
+verdict=PROMISING BUT INCONCLUSIVE
