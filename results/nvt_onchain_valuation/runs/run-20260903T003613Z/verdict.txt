@@ -1,0 +1,3 @@
+gates={'beats_bh': False, 'beats_dca': False, 'beats_random_control': True, 'beats_bh_doubled_cost': False, 'beats_bh_excl_best_trade': False, 'concentration_cap_ok': False, 'test_partition_pass': False}
+n_pass=1/7
+verdict=REJECTED

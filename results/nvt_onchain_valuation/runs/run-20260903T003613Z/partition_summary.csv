@@ -1,0 +1,4 @@
+asset,partition,n_trades,strategy_final,bh_final,strategy_beats_bh
+BTC,development,1,1.076536798907211,0.5318371410768415,True
+BTC,validation,7,1.706595838038615,2.3049120665680185,False
+BTC,test,9,1.1997333858375325,3.8570558274908096,False
