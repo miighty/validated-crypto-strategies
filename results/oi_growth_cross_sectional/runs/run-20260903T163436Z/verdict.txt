@@ -1,0 +1,7 @@
+beats_random_control=True
+beats_cash=False
+concentration_ok=False
+delay_retains_edge=False
+mc_p_value=0.266
+mc_significant=False
+verdict=REJECTED
