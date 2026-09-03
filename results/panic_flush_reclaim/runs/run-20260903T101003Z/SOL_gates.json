@@ -1,0 +1,13 @@
+{
+  "verdict": "REJECTED",
+  "gates": {
+    "beats_cash": true,
+    "beats_bh": false,
+    "beats_dca": true,
+    "beats_random_control": true,
+    "survives_doubled_cost": false,
+    "survives_best_trade_exclusion": true,
+    "concentration_ok": false,
+    "has_holdout_trades": true
+  }
+}
