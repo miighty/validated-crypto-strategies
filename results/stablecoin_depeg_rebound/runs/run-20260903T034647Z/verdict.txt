@@ -1,0 +1,8 @@
+beats_cash_majority=True
+beats_random_control_majority=True
+beats_doubled_cost_majority=False
+beats_excl_best_trade_majority=True
+concentration_ok_majority=False
+has_holdout_trades=True
+n_pass=4/6
+verdict=REJECTED
