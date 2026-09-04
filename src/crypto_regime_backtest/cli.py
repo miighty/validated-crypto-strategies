@@ -4,6 +4,7 @@ import argparse
 
 from .alt_etf_btc_panel_validation import run_alt_etf_btc_panel_validation
 from .breakout_compression_validation import run_breakout_compression_validation
+from .breakout_orderbook_confirmation_validation import run_breakout_orderbook_confirmation_validation
 from .btc_alt_response_validation import run_btc_alt_response_validation
 from .btc_drawdown_dca_validation import run_btc_drawdown_dca_validation
 from .btc_etf_validation import run_btc_etf_validation
@@ -91,6 +92,10 @@ def parser() -> argparse.ArgumentParser:
         help="Validate a volatility-compression filter on accepted 4h crypto breakouts",
     )
     subcommands.add_parser(
+        "validate-breakout-orderbook-confirmation",
+        help="Validate real Binance order-book depth as a confirmation filter on the daily breakout control system",
+    )
+    subcommands.add_parser(
         "validate-btc-alt-response",
         help="Validate BTC shock -> alt underreaction entries against alt DCA benchmarks",
     )
@@ -168,6 +173,9 @@ def main() -> None:
     elif args.command == "validate-breakout-compression":
         require_inputs(paths)
         run_breakout_compression_validation(paths)
+    elif args.command == "validate-breakout-orderbook-confirmation":
+        require_inputs(paths)
+        run_breakout_orderbook_confirmation_validation(paths)
     elif args.command == "validate-funding-negative-panel":
         require_inputs(paths)
         run_funding_negative_panel_validation(paths)

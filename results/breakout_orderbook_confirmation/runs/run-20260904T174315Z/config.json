@@ -1,0 +1,39 @@
+{
+  "config": {
+    "depth_z_window": 90,
+    "depth_z_min_periods": 30,
+    "depth_z_threshold": 0.5,
+    "depth_start": "2023-01-01T00:00:00+00:00",
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "breakout_lookback_days": 20,
+    "exit_lookback_days": 10,
+    "primary_rule": "Enter at next daily open when close breaks above the prior-only 20-day high AND the same day's real Binance futures order-book depth imbalance z-score is >= +0.5 vs its own prior-only trailing 90-day history. Exit at next daily open on the first close below the prior-only 10-day low. Non-overlapping, 30bps round-trip cost."
+  },
+  "data": {
+    "BTC": {
+      "price_path": "data/raw/BTC_1d.csv.gz",
+      "depth_path": "data/orderbook_depth/BTC_depth_imbalance_1d.csv.gz",
+      "price_sha256": "663af61952561de58c1bfe8ebcbef5827eeff1673424f7a65ec40863d6811da0",
+      "depth_sha256": "973fcb59d436b41bb22180c730aa79df4d281f60d0b0a3e60057d92073bb455e"
+    },
+    "ETH": {
+      "price_path": "data/raw/ETH_1d.csv.gz",
+      "depth_path": "data/orderbook_depth/ETH_depth_imbalance_1d.csv.gz",
+      "price_sha256": "8b330b99309678d15195967823bc528776ae3aa46bc96ce14afdc7f89f3867dd",
+      "depth_sha256": "d624410f3a1c2e1e9fe55efa990cf01a59d3a46fe56da92cac06a2ce06071efa"
+    },
+    "SOL": {
+      "price_path": "data/raw/SOL_1d.csv.gz",
+      "depth_path": "data/orderbook_depth/SOL_depth_imbalance_1d.csv.gz",
+      "price_sha256": "c4d79f93226994da402cbb61fc6935501c084bdfbcd106ff22b0b9693d031467",
+      "depth_sha256": "6b8eb54b8493a426f726d9f671ca67db9d5bf8fd0acbf059acc6cdb2ee424d95"
+    },
+    "XRP": {
+      "price_path": "data/raw/XRP_1d.csv.gz",
+      "depth_path": "data/orderbook_depth/XRP_depth_imbalance_1d.csv.gz",
+      "price_sha256": "30a33d4e18f22a8a212a14dbfa15b71a8986470c27e58d5319e56fe0ce75886e",
+      "depth_sha256": "5e1e12cba8a0a1983940c4dd54c0f048eaf2dbf4830d8345a5fd7293d724a672"
+    }
+  }
+}
