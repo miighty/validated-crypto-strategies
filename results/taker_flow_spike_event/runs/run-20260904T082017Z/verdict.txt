@@ -1,0 +1,8 @@
+beats_bh=1/4
+beats_random_control=2/4
+beats_doubled_cost=1/4
+concentration_ok=0/4
+beats_excl_best_trade=1/4
+delay_robust=2/4
+test_partition_pass=4/4
+verdict=REJECTED
