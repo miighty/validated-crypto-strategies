@@ -19,6 +19,9 @@ from .edge_validation import run_validation
 from .eth_btc_etf_validation import run_eth_btc_etf_validation
 from .fed_hawkish_btc_validation import run_fed_hawkish_btc_validation
 from .funding_negative_panel_validation import run_funding_negative_panel_validation
+from .funding_moderate_positive_persistence_validation import (
+    run_funding_moderate_positive_persistence_validation,
+)
 from .funding_positive_panel_validation import run_funding_positive_panel_validation
 from .funding_carry_deltaneutral_validation import run_funding_carry_deltaneutral_validation
 from .funding_crossexchange_divergence_validation import run_funding_crossexchange_divergence_validation
@@ -74,6 +77,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-funding-positive-panel",
         help="Validate a positive-funding persistence panel strategy against DCA and matched-schedule baselines",
+    )
+    subcommands.add_parser(
+        "validate-funding-moderate-positive-persistence",
+        help="Validate a moderate-positive-funding persistence panel strategy against DCA and matched-schedule baselines",
     )
     subcommands.add_parser(
         "validate-funding-carry-deltaneutral",
@@ -182,6 +189,9 @@ def main() -> None:
     elif args.command == "validate-funding-positive-panel":
         require_inputs(paths)
         run_funding_positive_panel_validation(paths)
+    elif args.command == "validate-funding-moderate-positive-persistence":
+        require_inputs(paths)
+        run_funding_moderate_positive_persistence_validation(paths)
     elif args.command == "validate-funding-carry-deltaneutral":
         require_inputs(paths)
         run_funding_carry_deltaneutral_validation(paths)

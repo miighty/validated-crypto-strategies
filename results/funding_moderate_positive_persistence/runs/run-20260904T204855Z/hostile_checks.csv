@@ -1,0 +1,4 @@
+check,terminal_value,net_return,beats_primary
+doubled_cost,1671.6250444031452,-0.83283749555968545,False
+exclude_best_trade,2723.217883216651,-0.72767821167833491,False
+random_baseline,2906.7699407130553,-0.70932300592869446,True

@@ -1,0 +1,135 @@
+{
+  "config": {
+    "sample_start": "2021-01-01T00:00:00Z",
+    "validation_start": "2024-01-01T00:00:00Z",
+    "holdout_start": "2025-01-01T00:00:00Z",
+    "contribution_hour_utc": 9,
+    "initial_capital": 10000.0,
+    "one_way_cost": 0.0015,
+    "primary_min_threshold": 0.0001,
+    "primary_max_threshold": 0.0005,
+    "primary_hold_hours": 8,
+    "primary_cooldown_hours": 24,
+    "primary_rule": "At each completed Binance 8h funding print from the nine-asset spot universe, if one or more assets have MODERATELY positive funding in the preregistered +1 to +5 bps bucket, select the single most positive asset below +5 bps, enter spot long at the next hourly open with the full accrued reserve, hold 8h, then exit at the close and remain in cash for a 24h cooldown."
+  },
+  "spec": {
+    "name": "moderate_positive_funding_persistence_panel",
+    "min_funding_threshold": 0.0001,
+    "max_funding_threshold": 0.0005,
+    "hold_hours": 8,
+    "cooldown_hours": 24
+  },
+  "assets": {
+    "BTC": {
+      "spot_path": "data/raw/BTC_1h.csv.gz",
+      "spot_sha256": "8c594e1fb43e69088efd8d5980ae7e6db1e3d7dba7f943bde82ba54f008eeadc",
+      "spot_rows": 74998,
+      "spot_first_timestamp": "2018-01-01T00:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/BTC_funding.csv.gz",
+      "funding_sha256": "a7c3843751c865955dcbc40d0af2b0985fe4f222903509123e522117397d98b6",
+      "funding_rows": 7538,
+      "funding_first_timestamp": "2019-09-10T08:00:00+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    },
+    "ETH": {
+      "spot_path": "data/raw/ETH_1h.csv.gz",
+      "spot_sha256": "2de408f963ab72324e508830740f1477818d8c80417b33bbdd4cd4889f221058",
+      "spot_rows": 74998,
+      "spot_first_timestamp": "2018-01-01T00:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/ETH_funding.csv.gz",
+      "funding_sha256": "8abe144cad344a8e892de45472367101686f2928755912de1ab85f79dc68d2d3",
+      "funding_rows": 7304,
+      "funding_first_timestamp": "2019-11-27T08:00:00+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    },
+    "SOL": {
+      "spot_path": "data/raw/SOL_1h.csv.gz",
+      "spot_sha256": "1ca418b22b2ff84376a7d38b7b3e8e0a9578e2351b176ebcc9f6c33058f6a694",
+      "spot_rows": 52222,
+      "spot_first_timestamp": "2020-08-11T06:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/SOL_funding.csv.gz",
+      "funding_sha256": "8647daaefeb6aeb60df38926371f4097dba33be3dd65be9c5fcd14acb3c8ee09",
+      "funding_rows": 6505,
+      "funding_first_timestamp": "2020-09-13T16:00:00.004000+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    },
+    "XRP": {
+      "spot_path": "data/raw/XRP_1h.csv.gz",
+      "spot_sha256": "07f195a69b57bd66398d8c51c984bc72253778985d30c1a52d63d0011ccfa0a9",
+      "spot_rows": 72072,
+      "spot_first_timestamp": "2018-05-04T08:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/XRP_funding.csv.gz",
+      "funding_sha256": "5bbb2f70c42add98d2805a6e53e28b37d54b077261e5d8bfebae18e3f4c5884c",
+      "funding_rows": 7184,
+      "funding_first_timestamp": "2020-01-06T08:00:00+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    },
+    "BNB": {
+      "spot_path": "data/raw/BNB_1h.csv.gz",
+      "spot_sha256": "d5271854db28f6b66b14a5fa29f7ca0fe3c76fb0ce9be364c98db96d0409ef88",
+      "spot_rows": 74998,
+      "spot_first_timestamp": "2018-01-01T00:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/BNB_funding.csv.gz",
+      "funding_sha256": "7a95b8740597aebbbf0d3857696c9f8374a8c53e3934e8f5797df0e98a3de405",
+      "funding_rows": 7079,
+      "funding_first_timestamp": "2020-02-10T08:00:00+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    },
+    "ADA": {
+      "spot_path": "data/raw/ADA_1h.csv.gz",
+      "spot_sha256": "bbd68812f14034a6d24da08223b9b80498a4de1587950a7a3ddeb43486c144f4",
+      "spot_rows": 72484,
+      "spot_first_timestamp": "2018-04-17T04:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/ADA_funding.csv.gz",
+      "funding_sha256": "dbbb834e58da3fccec91ef540177df9643c4bb41fedf5f566cd556cf2ca9f2c1",
+      "funding_rows": 7144,
+      "funding_first_timestamp": "2020-01-19T16:00:00+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    },
+    "DOGE": {
+      "spot_path": "data/raw/DOGE_1h.csv.gz",
+      "spot_sha256": "48503ad3dc7313140f648b9091a7cabe9d9c71a8769a9d5154c08b1552c822c8",
+      "spot_rows": 61864,
+      "spot_first_timestamp": "2019-07-05T12:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/DOGE_funding.csv.gz",
+      "funding_sha256": "4808282466cbd09303ba24bfa6f9e41bad8fe239cca3882751666de2211648be",
+      "funding_rows": 6626,
+      "funding_first_timestamp": "2020-07-10T08:00:00.001000+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    },
+    "AVAX": {
+      "spot_path": "data/raw/AVAX_1h.csv.gz",
+      "spot_sha256": "7afe0b9394e16a78f326a0879118afe082498d336fa60effbe6cb338a1bba825",
+      "spot_rows": 51214,
+      "spot_first_timestamp": "2020-09-22T06:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/AVAX_funding.csv.gz",
+      "funding_sha256": "97a0f3b480b10ecec2555137cf137b8bf5d1264ecb7b5e9dc167195def213cae",
+      "funding_rows": 6403,
+      "funding_first_timestamp": "2020-09-22T16:00:00.004000+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    },
+    "LINK": {
+      "spot_path": "data/raw/LINK_1h.csv.gz",
+      "spot_sha256": "e7fd0c7246e0856e5ac254d9d3fe06a6444ce607f9494f019013d17f8e109c12",
+      "spot_rows": 65930,
+      "spot_first_timestamp": "2019-01-16T10:00:00+00:00",
+      "spot_last_timestamp": "2026-07-27T23:00:00+00:00",
+      "funding_path": "data/funding/LINK_funding.csv.gz",
+      "funding_sha256": "cc8a0b0bfbf9278e65eb504455b60ef0aa689a4075eb2b985659f4774141e93a",
+      "funding_rows": 7151,
+      "funding_first_timestamp": "2020-01-17T08:00:00+00:00",
+      "funding_last_timestamp": "2026-07-27T16:00:00.001000+00:00"
+    }
+  },
+  "raw_signal_count": 1046,
+  "sample_start": "2021-01-01T00:00:00+00:00",
+  "sample_end": "2026-07-27T23:00:00+00:00"
+}
