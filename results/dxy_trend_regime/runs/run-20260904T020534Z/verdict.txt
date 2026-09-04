@@ -1,0 +1,8 @@
+beats_bh=0/4
+beats_momentum_control=0/4
+beats_random_control=1/4
+beats_doubled_cost=0/4
+beats_excl_best_block=0/4
+concentration_ok=0/4
+test_partition_pass=False
+verdict=REJECTED
