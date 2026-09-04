@@ -1,0 +1,4 @@
+partition,n_trades,final_capital_rel,bh_total_return_plus1
+development,0,1.0,
+validation,19,2.080430608601314,3.377943418600712
+test,27,0.9005290416704127,7.4274274274274275

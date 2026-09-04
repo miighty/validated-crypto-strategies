@@ -1,0 +1,5 @@
+asset,beats_bh,beats_dca,beats_random,survives_doubled_cost,survives_best_trade_exclusion,clears_concentration_cap,passes_test_partition
+BTC,False,False,True,True,True,False,False
+ETH,False,False,True,True,True,False,False
+SOL,False,False,True,True,True,False,False
+XRP,True,False,True,True,True,False,False
