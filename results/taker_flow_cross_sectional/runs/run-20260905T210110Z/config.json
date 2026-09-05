@@ -1,0 +1,16 @@
+{
+  "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+  ],
+  "sample_start": "2021-01-01T00:00:00Z",
+  "holdout_start": "2025-01-01T00:00:00Z",
+  "lookback_days": 7,
+  "rebalance_weekday": 0,
+  "initial_capital": 10000.0,
+  "one_way_cost": 0.0015,
+  "round_trip_cost_bps": 30.0,
+  "primary_rule": "Each Monday 00:00 UTC, rank BTC/ETH/SOL/XRP by the prior-only 7-day mean of real Binance spot taker-buy volume ratio. Allocate 100% to the highest-ranked asset at that day's open, rebalance weekly, and deduct 15 bps one-way cost on each entry/exit/switch. No same-bar signal execution."
+}

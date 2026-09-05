@@ -25,6 +25,7 @@ from .funding_moderate_positive_persistence_validation import (
 from .funding_positive_panel_validation import run_funding_positive_panel_validation
 from .funding_carry_deltaneutral_validation import run_funding_carry_deltaneutral_validation
 from .funding_crossexchange_divergence_validation import run_funding_crossexchange_divergence_validation
+from .taker_flow_cross_sectional_validation import run_taker_flow_cross_sectional_validation
 from .xrp_btc_etf_validation import run_xrp_btc_etf_validation
 from .pipeline import require_inputs, run
 from .polymarket_crypto_validation import run_polymarket_crypto_validation
@@ -81,6 +82,10 @@ def parser() -> argparse.ArgumentParser:
     subcommands.add_parser(
         "validate-funding-moderate-positive-persistence",
         help="Validate a moderate-positive-funding persistence panel strategy against DCA and matched-schedule baselines",
+    )
+    subcommands.add_parser(
+        "validate-taker-flow-cross-sectional",
+        help="Validate weekly cross-sectional ranking by real Binance spot taker-buy ratio",
     )
     subcommands.add_parser(
         "validate-funding-carry-deltaneutral",
@@ -192,6 +197,9 @@ def main() -> None:
     elif args.command == "validate-funding-moderate-positive-persistence":
         require_inputs(paths)
         run_funding_moderate_positive_persistence_validation(paths)
+    elif args.command == "validate-taker-flow-cross-sectional":
+        require_inputs(paths)
+        run_taker_flow_cross_sectional_validation(paths)
     elif args.command == "validate-funding-carry-deltaneutral":
         require_inputs(paths)
         run_funding_carry_deltaneutral_validation(paths)
