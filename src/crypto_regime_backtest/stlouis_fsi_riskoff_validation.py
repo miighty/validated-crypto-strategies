@@ -258,7 +258,7 @@ def main() -> None:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     out = pd.DataFrame(results)
     out.to_csv(RESULTS_DIR / "summary.csv", index=False)
-    state.to_csv(RESULTS_DIR / "high_yield_oas_state.csv")
+    state.to_csv(RESULTS_DIR / "stlouis_fsi_state.csv")
     write_report(results, state)
     print(out.to_string(index=False))
     print(f"REPORT {REPORT_PATH}")
